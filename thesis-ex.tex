@@ -1,0 +1,213 @@
+%%
+%% This is file `thesis-ex.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% uiucthesis2009.dtx  (with options: `example')
+%% 
+\documentclass[fullpage]{uiucthesis2009}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage[
+    backend=biber,
+	citestyle=numeric-comp,
+	refsegment=section,
+	sorting=none
+]{biblatex}
+\usepackage{hyperref}
+
+\input{macros}
+
+\addbibresource{thesis-ex.bib}
+%\addbibresource{bibtex/bib/ATLAS.bib}
+%\addbibresource{bibtex/bib/CMS.bib}
+%\addbibresource{bibtex/bib/ConfNotes.bib}
+%\addbibresource{bibtex/bib/PubNotes.bib}
+
+
+\includeonly{   % Of course this list allows many more file
+%  intro,       % should also work with files in different paths
+%  chapter1,
+   thesisintro.tex,
+%  chapter3
+}
+
+\begin{document}
+
+\title{Measurement of angular and momentum distributions of charged particles within and around jets in P\MakeLowercase{b}+P\MakeLowercase{b} and \MakeLowercase{$pp$} collisions at $\sqrt{s_{\mathrm{NN}}}=$~5.02~T\MakeLowercase{e}V with ATLAS at the LHC}
+\author{Akshat Puri}
+\department{Physics}
+\schools{B.Sc., State University of New York At Stony Brook, 2014}
+\phdthesis
+\advisor{Anne Marie Sickles}
+\degreeyear{2019}
+\committee{Professor Matthias Grosse Perdekamp, Chair\\Professor Anne Marie Sickles, Advisor\\ Professor Aida El-Khadra \\ Professor Bryce Gadaway}
+\maketitle
+
+\frontmatter
+
+%% Create an abstract that can also be used for the ProQuest abstract.
+%% Note that ProQuest truncates their abstracts at 350 words.
+\setcounter{page}{2}
+\begin{abstract}
+
+Studies of the fragmentation of jets into charged particles in heavy-ion collisions can help in understanding the mechanism of jet quenching by the hot and dense matter created in such collisions, the quark-gluon plasma. This thesis presents a measurement of the angular distribution of charged particles around the jet axis as measured in \pbpb\ and \pp\ collisions collided at a center of mass energy of $\sqrt{s_{\mathrm{NN}}}=$~5.02~\TeV. The measurement is done using the ATLAS detector at the Large Hadron Collider, and utilizes 0.49 \pb\ of \PbPb\ and 25 \pb\ of \pp\ data collected in 2015. The measurement is performed inside jets reconstructed with the \antikt\ algorithm with radius parameter $R = $~0.4, and is extended to regions outside the jet cone. Results are presented as a function of \pbpb\ collision centrality, and both jet and charged-particle transverse momenta. It was observed that in \pbpb\ collisions there is a broadening of the jet for charged particles with \mbox{$\pt < 4$ \GeV}, along with a narrowing for  charged particles with $\pt > 4$ \GeV. Ratios between the angular distributions in \pbpb\ and \pp\ showed an enhancement for particles with $\pt < 4$ \GeV\ in \pbpb\ collisions, with the enhancement increasing up to 2 for \mbox{$\rvar < 0.3$}, and remaining constant for \mbox{$0.3 < \rvar < 0.6$}. Charged particles with $\pt\ > 4$ \GeV show a growing suppression of up to 0.5 for \mbox{$\rvar < 0.3$} in \pbpb\ collisions, with the depletion remaining constant for \mbox{$0.3 < \rvar < 0.6$}.
+
+%This dissertation presents a measurement of forward--forward and forward--central dijet azimuthal angular correlations and conditional yields in proton--proton ($pp$) and proton--lead ($p$+Pb) collisions as a probe for possible gluon-density saturation in regions where the momentum fraction of a parton compared to a nucleon in the lead nucleus is low. In these regions, gluon saturation can modify the rapidly increasing parton distribution function of the gluon. The analysis utilizes 25 pb$^{-1}$ of $pp$ data and 360 $\mu \mathrm{b}^{-1}$ of $p$+Pb data, both at $\sqrt{s_{_{\mathrm{NN}}}}$ = 5.02 TeV, collected in 2015 and 2016, respectively, with the ATLAS detector at the LHC. The measurement is performed in the center-of-mass frame of the nucleon--nucleon system in the center-of-mass rapidity range between -4.0 and 4.0 using the two highest transverse momentum jets in each event. The highest transverse momentum jet is restricted to the forward rapidity range where it is possible to probe the region where the momentum fraction of a parton compared to a nucleon in the lead nucleus is low. No significant broadening of azimuthal angular correlations is observed for forward--forward or forward--central dijets in $p$+Pb compared to $pp$ collisions within the uncertainties. The ratio of conditional yields of  forward--forward jet pairs in the proton-going direction in $p$+Pb collisions compared to $pp$ collisions is suppressed by approximately 20\%, with no significant dependence on the transverse momentum of the dijets system. No modification of conditional yields is observed for forward--central dijets. 
+\end{abstract}
+
+% Create a dedication in italics with no heading, centered vertically
+% on the page.
+\begin{dedication}
+For my Mother, Father, and Brother
+\end{dedication}
+
+% Create an Acknowledgements page, many departments require you to
+% include funding support in this.
+% \chapter*{Acknowledgments}
+
+% The thesis format requires the Table of Contents to come
+% before any other major sections, all of these sections after
+% the Table of Contents must be listed therein (i.e., use \chapter,
+% not \chapter*).  Common sections to have between the Table of
+% Contents and the main text are:
+%
+% List of Tables
+% List of Figures
+% List Symbols and/or Abbreviations
+% etc.
+
+
+%\chapter*{Acknowledgments}
+%\input{acknowledgments.tex}
+%
+%\begin{dedication}
+%To Anna Glazatova
+%\end{dedication}
+%
+%\tableofcontents
+%% \listoftables
+%% \listoffigures
+%
+%%% Create a List of Abbreviations. The left column
+%%% is 1 inch wide and left-justified
+%\chapter{List of Abbreviations}
+%\input{abbreviations.tex}
+%
+%%% Create a List of Symbols. The left column
+%%% is 0.7 inch wide and centered
+%\chapter{List of Symbols}
+%\input{symbols.tex}
+
+\mainmatter
+%-------------------------------------------------------------------------------
+
+\chapter{Introduction}
+\input{thesisintro.tex}
+
+%\chapter{Experimental Setup}
+%\label{sec:setup}
+%\input{setup.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Theoretical Introduction}
+%\label{sec:intro}
+%\input{intro.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{ATLAS Required Qualification Work}
+%\label{sec:qualification}
+%\input{qualification.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Measurement of Dijet Azimuthal Correlations}
+%\label{sec:mainanalysis}
+%\section{Overview}
+%\input{overview.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Data Sets}
+%\label{sec:data}
+%\input{data.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Trigger and Event Selection}
+%\label{sec:event}
+%\input{event.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Jet Selection and Reconstruction Performance}
+%\label{sec:reconstruction}
+%\input{reconstruction.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Analysis Procedure}
+%\label{sec:analysis}
+%\input{analysis.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Systematic Uncertainties}
+%\label{sec:systematics}
+%\input{systematics.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Results}
+%\label{sec:results}
+%\input{results.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Summary}
+%\label{sec:summary}
+%\input{summary.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\chapter{Data Sets}
+%\label{sec:appendixdata}
+%\input{appendixZ.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Bin-by-bin Unfolding Procedure}
+%\label{sec:appendixbbb}
+%\input{appendixA.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{\Dphi\ Correction Factors From \pp\ MC Samples}
+%\label{sec:appendixcfactorpp}
+%\input{appendixB.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{\Dphi\ Correction Factors From \pPb\ MC Samples}
+%\label{sec:appendixcfactorpPb}
+%\input{appendixY.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Effect of Isolation Cuts}
+%\label{sec:appendixisolation}
+%\input{appendixD.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Effect of New JES Systematic Uncertainties}
+%\label{sec:appendixjes}
+%\input{appendixE.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\section{Appendix: Comparison of Results Before and After HEC/JES Fix}
+%%\label{sec:appendixhec}
+%%\input{appendixF.tex}
+%%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Fitting Systematic Uncertainties}
+%\label{sec:appendixfitting}
+%\input{appendixC.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Unfolded \conetwo\ Distributions from Data with Systematic Uncertainties}
+%\label{sec:appendixfinalplots}
+%\input{appendixX.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\chapter{Comparison of Results From \pp\ Data and MC Samples}
+%%\label{sec:appendixppdatavsmc}
+%%\input{appendixQ.tex}
+%%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\section{Appendix: $r_{\mathrm{trk}}$ in \pPb}
+%%\label{sec:appendixG}
+%%\input{appendixG.tex}
+\clearpage%---------------
+
+\printbibliography[heading=bibintoc,title={References}]
+
+\end{document}

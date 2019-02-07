@@ -1,0 +1,247 @@
+\subsection{Overview}
+This section gives an overview of the major sources of systematic uncertainties on the \pp\ and \pPb\ azimuthal angular correlations. Careful treatment of these known variations is necessary for a precise physics result. The systematic uncertainties in the measurement originate from:
+
+\begin{itemize}
+
+\item Jet energy scale
+
+\item Jet energy resolution
+
+\item Jet Position resolution
+
+\item Unfolding of jet \pt\ spectra and \conetwo\ distributions
+
+\item Fitting of the \conetwo\ distributions
+
+\item Differences in conditions between data and MC samples
+
+\end{itemize}
+
+The systematic uncertainties have been evaluated for the \conetwo\ distributions as a function of \ystar\ for \pp\ and \pPb\ collisions. For each source of systematic uncertainties, the entire unfolding and fitting procedure is repeated (1D unfolding of the \conetwo\ distributions as a function of \Dphi, and the 1D unfolding of leading jet \pt\ spectra as a function of jet \pt) and the \wonetwo, \ionetwo, and ratios of these distributions, \cppb\ and \ippb, in \pPb\ and \pp\ collisions are re-evaluated. The difference between the varied and nominal distributions is used as an estimate of the uncertainty. All sources of systematic uncertainty discussed in this section have been combined in quadrature to obtain the total systematic uncertainty. 
+
+\subsection{Systematic Uncertainty Due to the Jet Energy Scale}
+
+The systematic uncertainty due to the JES is determined from \textit{in situ} studies of the calorimeter response~\cite{Aad:2011he,HIjesnote,Run2jetpubnote,Aaboud:2018twu}, and studies of the relative energy scale difference between the heavy ion style jet reconstruction procedure~\cite{HIjesnote} and the procedure used in \pp\ collisions~\cite{Aad:2014bia}. For the \pp\ and \pPb\ JES uncertainties, part a globally reduced set of nuisance parameters derived by the JetEtMiss group are used. The heavy ion specific components are from the a cross calibration and the jet flavor uncertainties at 5.02~TeV. The latter uncertainties come from the fact that jets from different quark flavors will have minor differences in jet shape and fragmentation, but in the analysis all jets are treated identically. As a result, a systematic ucnertainty must be introduced, and should also account for the affect of the boost in \pPb\ collisions. For each component of the variation the response matrices are regenerated with the shifted \ptjet:
+
+\begin{equation}
+   \pT^{\star,\mathrm{reco}} = \pT^{\mathrm{reco}} (1\pm U^{\mathrm{JES}}(\pT , \eta)).
+\end{equation}
+where $U^{\mathrm{JES}}$ is the uncertainty in the JES. The data is then re-unfolded with these response matrices and the variation in the widths of \conetwo\ distributions is taken as the systematic uncertainty.
+
+\subsection{Additional Systematic Uncertainty in \pPb\ Due to the Jet Energy Scale} 
+The JES in the 2016 \pPb\ MC with data overlay differs from the 2016 \pPb\ signal only MC, and from the 2015 \pp\ MC. The JES for the different configurations is show in in the top plots Fig.~\ref{fig:systjes}, and the difference in the JES between the overlay and signal MC samples, and the difference between the signal and \pp\ MC samples is shown in the bottom plots. These two differences are used as an additional systematic on the JES in \pPb, and are added together in quadrature. 
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_mc_pythia8/h_meanComp_recoTruthRpt_45_Eta_27.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_mc_pythia8/h_meanComp_recoTruthRpt_18_Eta_0.pdf} \\
+		\end{tabular}
+	}
+	\caption{Top row shows the JES in the \pPb\ MC with overlay (black points), \pPb\ signal only MC (red points), and \pp\ MC (blue points). Green points show recent and small validation sample where the HEC issue was fixed. This is done for testing purposes and does not have a significant effect. Bottom row shows the difference between the overlay and signal (empty blue points) and between the signal and \pp\ (empty black points). Shown for forward, proton going direction (left plot) and barrel region (right plot). The differences are used as an additional JES systematic in \pPb.}
+	\label{fig:systjes}
+\end{figure}
+
+The absolute effect of the additional systematic on the final uncertainties on \conetwo\ and \ionetwo\ distributions is shown in Fig.~\ref{fig:systjeseffect}, where the total uncertainty before the new JES systematics is compared to the total uncertainty with the new JES systematics. All figures showing the relative effect of the new systematics on \conetwo\ and \ionetwo\ distributions are shown in  Fig.~\ref{fig:jessyswidth} and Fig.~\ref{fig:jessysyield} of the appendix. Generally, the effect is below 3\%, with some bins having up to a 5\% effect. This additional uncertainty is acceptable for the analysis and does not change the results sufficiently. 
+
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_width_JEScomp_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_yield_JEScomp_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} \\
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_width_JEScomp_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_yield_JEScomp_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\			
+		\end{tabular}
+	}
+	\caption{Effect on total systematic uncertainty on \conetwo\ (left) and \ionetwo\ (right) after adding new JES uncertainties. Shown for two different bins of \ptone\ and \pttwo. Generally the relative effect is below 10\%, with some bins reaching 25\%. Fig.s in all bins of \pT\ and \ystar\ are shown in Appendix~\ref{sec:appendixjes}. }
+	\label{fig:systjeseffect}
+\end{figure}
+
+
+The effect of the additional systematic on \cppb\ and \ippb\ is shown in Fig.~\ref{fig:systjesrateffect}, where the total uncertainty on the ratio before the new JES systematics is compared to the total uncertainty on the ratio with the new JES systematics. All figures showing the relative effect of the new systematics on on \cppb\ and \ippb\ are shown in in Fig.~\ref{fig:jessysratwidth} and Fig.~\ref{fig:jessysratyield} of the appendix. The effect is minor, not increasing any total systematic uncertainty by more than 2\%.
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.45\textwidth]{output/All/pp_data_0/h_width_JEScomp_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/All/pp_data_0/h_yield_JEScomp_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} \\
+			\includegraphics[width=0.45\textwidth]{output/All/pp_data_0/h_width_JEScomp_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/All/pp_data_0/h_yield_JEScomp_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\	
+		\end{tabular}
+	}
+	\caption{Difference between total systematic uncertainty on \cppb\ (left) and \ippb\ (right) before and after adding new JES uncertainties. The total systematic uncertainty on the ratio before the addition of the new JES uncertainties is shown as the dotted red line, and after the addition of the new JES uncertainties in the solid black line. Overall effect on uncertainties on the ratios is small, with the difference in uncertainties generally below 2\%, with one bin reaching 5\%. Fig.s in all bins of \pT\ and \ystar\ are shown in Appendix~\ref{sec:appendixjes}. }
+	\label{fig:systjesrateffect}
+\end{figure}
+
+\subsection{Systematic Uncertainty Due to the Jet Energy Resolution}
+
+The uncertainty due to the JER is evaluated by repeating the unfolding procedure with modified correlation matrices, where an additional contribution is added to the resolution of the simulated \ptjet\ using a Gaussian smearing procedure~\cite{Aad:2014bia}. The smearing factor is evaluated using an \textit{in situ} technique in 13~TeV \pp\ data involving studies of dijet energy balance~~\cite{Aaboud:2018kfi}. The jet $\pt^{\mathrm{reco}}$ is then smeared by
+\begin{equation}
+	\pt^{\star, \mathrm{reco}} = \pt^{\mathrm{reco}}\times \mathcal{N}(1,\sigma^{\mathrm{eff}}_{\mathrm{JER}})\,,
+\end{equation}
+where $\mathcal{N}(1,\sigma^{\mathrm{eff}}_{\mathrm{JER}})$ is the normal distribution with the effective resolution $\sigma^{\mathrm{eff}}_{\mathrm{JER}}=\sqrt{(\sigma_{\mathrm{JER}} + \sigma^{\mathrm{syst}}_{\mathrm{JER}})^{2} - \sigma_{\mathrm{JER}}^{2}}$. 
+
+An additional uncertainty is included to account for differences between the heavy ion style jet reconstruction and that used in the analyses of 13~TeV \pp\ data. The resulting uncertainty from the JER is symmetrized to account for negative variations of the JER.  The size of the resulting uncertainty due to the JER  on the \ionetwo\ distributions reaches up to 30\% and is typically below 10\% in the \wonetwo\ distributions. 
+
+\subsection{Systematic Uncertainty Due to the Jet Angular Resolution}
+To account for the systematic uncertainties due to the disagreement between JAR in data and MC, the procedure used in previous measurements~\cite{RYBAR2014455} based on the comparison of relative angular resolutions between calorimetric jets and track jets in the data and the MC cannot be used due to the limited pseudorapidity coverage of the ID.  The uncertainty in this analysis is derived as the difference in the JARs evaluated using the two different MC generators. Jets from \herwig\ and \pythiaeight\ MC samples are used. The comparison of pseudorapidity and azimuthal angular resolutions between \pp\ \herwig\ and \pythiaeight\ MC performance for forward and central bins of \ystar\ are shown in Fig.~\ref{fig:systematicposcomparison}. Since the \pPb\ MC sample utilizes the overlay procedure, ensuring that the underlying event is the same in the MC and data, the \pp\ MC is used for the uncertainty on the \pPb\ JAR. The difference in pseudorapidity and azimuthal angular resolutions between \pythiaeight\ and \herwig\ MC samples is less than $0.5$\% in both the forward and central directions.
+
+The uncertainty on the the widths of azimuthal correlation distributions associated with the jet angular resolution in $\eta$ and $\phi$ is estimated similarly to the uncertainty in JER. A modified response matrix where the reconstructed jet angular in $\eta$ and $\phi$ is smeared to reflect uncertainties on the JAR evaluated in previous paragraphs. The Gaussian probability density function is estimated for each jet \pt\ and jet \ystar. The new unfolded results are compared with the original distributions and the difference is used as an estimate of the systematic uncertainty. 
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.45\textwidth]{output/output_pp_mc_pythia8/hEta_angularResEta.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pp_mc_pythia8/hEta_angularResPhi.pdf} \\
+		\end{tabular}
+	}
+	\caption{Comparison of angular resolutions in $\eta$ (left) and $\phi$ (right) between \pythiaeight\ and \herwig. }
+	\label{fig:systematicposcomparison}
+\end{figure}
+
+
+\subsection{Systematic Uncertainty Due to Unfolding}
+The systematic uncertainty associated with the unfolding procedure is connected with its  sensitivity to the choice of input distributions. The default version of the unfolding uses the MC reweighted such that the reconstructed MC is matched to the reconstructed data in the shapes of the \conetwo\ distributions. Conservatively, the systematic is evaluated by using the MC without re-weighting. A comparison of correction factors with and without re-weighting is shown for two different phase space bins for the \pp\ and \pPb\ MCs in Fig.~\ref{fig:weightingcfactorscomp}. The effect on the correction factors is minor (below 5\%) and the resulting uncertainty on the measurement is also below $5\%$. This indicates that the correction factors are robust against re-weighting.
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.4\textwidth]{output/output_pp_mc_pythia8/h_dPhi_cFactor_All_40_Ystar1_27_28_Pt1_35_28_Pt2_35_40_Ystar2_27_ratio.pdf} &
+			\includegraphics[width=0.4\textwidth]{output/output_pp_mc_pythia8/h_dPhi_cFactor_All_40_Ystar1_27_35_Pt1_45_28_Pt2_35_40_Ystar2_27_ratio.pdf} \\
+			\includegraphics[width=0.4\textwidth]{output/output_pPb_mc_pythia8/h_dPhi_cFactor_All_40_Ystar1_27_28_Pt1_35_28_Pt2_35_40_Ystar2_27_ratio.pdf} &
+			\includegraphics[width=0.4\textwidth]{output/output_pPb_mc_pythia8/h_dPhi_cFactor_All_40_Ystar1_27_35_Pt1_45_28_Pt2_35_40_Ystar2_27_ratio.pdf} \\
+		\end{tabular}
+	}
+	\caption{ Comparison of correction factors with and without re-weighting for the \pp\ MC (top row) and the \pPb\ MC (bottom row)}
+	\label{fig:weightingcfactorscomp}
+\end{figure}
+
+\subsection{Systematic Uncertainty Due to Fitting}
+The systematic uncertainty due to the fitting to \conetwo\ distributions is associated with the sensitivity of the measured widths to the choice of fit range. The default fitting is in the range $2.5<\Dphi<\pi$, and a varied fit range of $2.1<\Dphi<\pi$ is used to evaluate the systematic uncertainty. This systematic only affects the \conetwo\ widths, not the normalized yields where no fitting is used. Resulting widths, with two different fit ranges are shown for \pp\ and \pPb\ data in Fig.~\ref{fig:fittingwidthsscomp}. The changes in the widths of azimuthal correlation distributions are below $8\%$ in most bins. However, there are large statistical uncertainties in some fit results and the resulting statistical fluctuations in turn affect the resulting systematic uncertainty, which is related to the ratio between the results using two different fit ranges. To account for this, the ratios, shown in the bottom of Fig.~\ref{fig:fittingwidthsscomp}, are fitted to a constant. The resulting systematic uncertainty is conservatively taken as the fit result plus error on the fit. For reference, results in all combinations of \ptone\ and \pttwo\ are shown in Appendix~\ref{sec:appendixfitting}.
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.4\textwidth]{output/output_pp_data/h_dPhi_unfolded_width_All_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.4\textwidth]{output/output_pp_data/h_dPhi_unfolded_width_All_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.4\textwidth]{output/output_pPb_data/h_dPhi_unfolded_width_All_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.4\textwidth]{output/output_pPb_data/h_dPhi_unfolded_width_All_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} \\
+		\end{tabular}
+	}
+	\caption{ Comparison widths from fitting on two different ranges,  $2.5<\Dphi<\pi$ for the solid black points, and $2.1<\Dphi<\pi$ for the open red points, and their respective ratios. Shown for \pp\ data (top row) and  \pPb\ data (bottom row). Empty black points show result of statistical RMS calculation. }
+	\label{fig:fittingwidthsscomp}
+\end{figure}
+
+\subsection{Systematic Uncertainty Due to the HEC}
+The systematic uncertainty associated with excluding reconstructed level jets that are in the region covered by the lead-going HEC, as discussed in Section~\ref{sec:hecdisabled}, is taken by increasing excluded region by 0.1 in all directions in azimuth and pseudorapidity. This number was chosen to introduce some variation and at the same time not drastically decrease the sampled statistics . The resulting widths and yields, with default HEC region excluded, and with the increased region excluded, shown for two bin in \pttwo\ for \conetwo\ and \ionetwo\ in Fig.~\ref{fig:hecsystematics}. The effect on the widths is consistent with unity, and on the yields, there is up to a 10\% effect in the most negative \ystartwo\ bin, which are the two the center-of-mass rapidity bins affected by the HEC issue.
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{cc}
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_dPhi_unfolded_width_All_hec_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_dPhi_unfolded_width_All_hec_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} \\
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_dPhi_unfolded_yield_All_hec_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.45\textwidth]{output/output_pPb_data/h_dPhi_unfolded_yield_All_hec_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} \\
+		\end{tabular}
+	}
+	\caption{Effect of using removing jets that are in the default region that the HEC affects (black points), and with the region with 0.1 increase in all directions in azimuth and pseudorapidity (red points). The uncertainty is represented by the ratio of results using the two different excluded regions.}
+	\label{fig:hecsystematics}
+\end{figure}
+
+\subsection{Summary of Systematic Uncertainties}
+The total and individual systematic uncertainties on the \pp\ widths are shown in ~\ref{fig:ppwidthsyst}, and on the \pp\ yields in ~\ref{fig:ppyieldsyst}. Similarly, the total and individual systematic uncertainties on the \pPb\ widths are shown in ~\ref{fig:pPbwidthsyst}, and for the yields in ~\ref{fig:pPbyieldsyst}.
+
+The correlations between the various systematic components are considered in evaluating the \pPb\ to \pp\ ratios \cppb\ and \ippb\ for widths and yields respectively. The unfolding and fitting  are taken to be uncorrelated between the two collision systems and are added in quadrature. The new JES and HEC detector condition systematics are present in \pPb\ only and by construction considered to also be uncorrelated between the two collision systems. All other uncertainties associated with the JES, JER, and JAR are taken to be correlated. The ratios are re-evaluated by applying the variation to both collision systems and the resulting variations of the ratios from their central values is used as the correlated systematic uncertainty from a given source. The summary of systematic uncertainties on \cppb\ and \ippb\ distributions is presented in Fig.~\ref{fig:allwidthratsyst} and Fig.~\ref{fig:allyieldratsyst}, respectively. The systematic uncertainty due to the JES is dominant (up to 20\%) on both \cppb\ and \ippb\ distributions.
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{Total and individual systematic uncertainties on the widths of \conetwo\ distributions in \pp\ data. Some bins have been removed due to very high statistical and systematic uncertainties in those bins.}
+	\label{fig:ppwidthsyst}
+\end{figure}
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pp_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{ Total and individual systematic uncertainties on the dijet conditional yields in \pp\ data.}
+	\label{fig:ppyieldsyst}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{Total and individual systematic uncertainties on the widths of \conetwo\ distributions in \pPb\ data.}
+	\label{fig:pPbwidthsyst}
+\end{figure}
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/output_pPb_data/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{ Total and individual systematic uncertainties on the dijet conditional yields in \pPb\ data.}
+	\label{fig:pPbyieldsyst}
+\end{figure}
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_width_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{Total and individual systematics on \cppb. Some bins have been removed due to very high statistical and systematic uncertainties in those bins.}
+	\label{fig:allwidthratsyst}
+\end{figure}
+
+\begin{figure}[ht]
+	\centerline{
+		\begin{tabular}{ccc}
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_28_Pt1_35_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_35_Pt1_45_35_Pt2_45.pdf} \\
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_28_Pt2_35.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_35_Pt2_45.pdf} &
+			\includegraphics[width=0.33\textwidth]{output/All/pp_data_0/h_yield_systematics_final_40_Ystar1_27_45_Pt1_90_45_Pt2_90.pdf} \\
+		\end{tabular}
+	}
+	\caption{ Total and individual systematics on \ippb. Some bins have been removed due to very high statistical and systematic uncertainties in those bins.}
+	\label{fig:allyieldratsyst}
+\end{figure}
+\FloatBarrier

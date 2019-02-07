@@ -1,0 +1,72 @@
+% !TEX root = thesis-ex.tex
+
+
+The Large Hadron Collider (LHC) at the European Center for Nuclear Research (CERN), is one of the worlds most expensive and complicated machines, and was built with the purpose of accelerating subatomic particles to close to the speed of light and colliding them to study their underlying structure. Detectors around the LHC ring, the biggest of which are  ATLAS (A Toroidal LHC ApparatuS), CMS (Compact Muon Solenoid), ALICE (A Large Ion-Collider Experiment), and LHCb (LHC-Beauty), study these collisions and use the debris as a playground to verify and expand the "Standard Model" of particle physics. This thesis will focus on measurements of collisions involving heavy ions, as measured by the  ATLAS detector.
+
+Relativistic heavy ion collisions such as those at the LHC provide insight into the interactions between quarks and gluons. These fundamental building blocks of all matter interact via the strong force, the theoretical framework of which is described by Quantum Chromodynamics (QCD). This theory dictates that quarks and gluons are confined, i.e. locked together to form composite particles and cannot exist independently, making their study extremely difficult. Relativistic heavy ion collisions provide an extreme environment where nuclear matter can "melt" and form a deconfined medium that consists of free quarks and gluons. This state of matter, called the Quark Gluon Plasma (QGP) is what existed a few microseconds after the Big Bang, and is what eventually cooled and expanded to form the existing universe. 
+
+The quark-gluon plasma (see Refs.~\cite{Roland:2014jsa,Busza:2018rrf} for recent reviews) can be probed by jets, sprays of particles that come from hard scattering processes between the nucleons involved in the collision. These jets are produced early in the collision, and interact with the QGP as they make their way to the detector. Studying the rates and characteristics of these jets in \pbpb\ collisions, and comparing them to similar quantities in \pp\ collisions can provide information on the properties of the QGP.
+
+This thesis is split into 4 main chapters. An overview of the LHC and the ATLAS detector is given in Chapter~\ref{sec:setup}, Chapter~\ref{sec:intro} will describe the QCD framework that will give context to the measurements discussed, Chapter~\ref{sec:qualification} will describe the work undertaken to become a member of the ATLAS Collaboration, and Chapter~\ref{sec:mainanalysis} will provide a detailed description of the measurement to determine the angular distributions of charged particles in \pbpb\ and \pp\ collisions. 
+
+%something about the SM??
+
+
+
+
+%
+%Jets with large transverse momenta are observed to be produced in central lead-lead (\pbpb) collisions at the LHC at a rate that is reduced by a factor of two with respect to the expectation from these cross sections measured in \pp\ interactions, re-scaled by the nuclear overlap function of \pbpb\ collisions~\cite{Abelev:2013kqa,Aad:2014bxa,Khachatryan:2016jfl}. 
+%%The rates of jet production are observed to be reduced by  approximately a factor of two in lead-lead~(\PbPb) collisions at LHC energies compared to  expectations from the jet production cross sections measured in \pp\ interactions scaled by the nuclear overlap function of \PbPb\ collisions~\cite{Abelev:2013kqa,Aad:2014bxa,Khachatryan:2016jfl}. 
+%%This reduction is termed ``jet-quenching'' and is due to the interaction of
+%%constituents of the parton shower with the QGP.  
+%Similarly, back-to-back dijet~\cite{Aad:2010bu,Chatrchyan:2011sx,Aaboud:2017eww} 
+%and photon-jet pairs~\cite{Chatrchyan:2012gt} are observed to have
+%unbalanced transverse momenta in \pbpb\ collisions compared to \pp\ collisions.
+%These observations suggest that some of the energy from the hard-scattered parton is
+%transferred outside of the jet through its interaction with the QGP.  
+%
+%Also of interest are measurements sensitive to the distributions of particles
+%within the jet.  Measurements of the jet shape~\cite{Chatrchyan:2013kwa} and  the longitudinal fragmentation functions~\cite{Aad:2014wha,Chatrchyan:2014ava,Aaboud:2017bzv} were performed in 2.76~\TeV\ \pbpb\
+%collisions.
+%These measurements show an excess of both low and high momentum particles inside the jet compared to \pp\ collisions.
+%Particles carrying a large fraction of the jet momentum are generally closely
+%aligned with the jet axis, whereas low momentum particles can have a much broader
+%angular distribution extending outside the jet \cite{Khachatryan:2016tfj,Sirunyan:2018jqr}. 
+%Fragmentation function measurements have shown that particles with transverse momentum, \pT,
+%less than 4~\GeV\
+%are enhanced in \pbpb\ collisions compared to \pp\ collisions~\cite{Aaboud:2017bzv}.
+%These observations suggest that the energy lost by jets through the jet-quenching process is being transferred to soft particles within and around the jet~\cite{Qin:2015srf,Blaizot:2014ula}. Measurements of yields of these particles as a function of transverse momentum and
+%distance between the particle and the jet axis have a potential to constrain
+%the models of jet energy loss processes in \pbpb\ collisions.
+%
+%This note presents a measurement of charged particle \pt\ distributions inside and around jets. The measured yields are defined as\footnote{ATLAS uses a right-handed coordinate system with its origin at the nominal interaction point (IP) in the center of the detector, and the $z$-axis along the beam pipe. The $x$-axis points from the IP to the center of the LHC ring, and the $y$-axis points upward. Cylindrical coordinates $(r, \phi)$ are used the transverse plane, $\phi$ being the azimuthal angle around the $z$-axis. The pseudorapidity is defined in terms of the polar angle $\theta$ as $\eta = - \text{ln} \tan (\theta/2)$. Transverse momentum and transverse energy are defined as $\pt = p \sin\theta$ and $\Et = E \sin\theta$, respectively. $\Delta R = \sqrt{(\Delta \eta )^2 + (\Delta \phi)^2}$ gives the angular distance between two objects with relative differences $\Delta \eta$ and $\Delta \phi$ in pseudorapidity and azimuth respectively.}:
+%  \begin{equation}
+%\Dptr = \frac{1}{N_{\mathrm{jet}}} \frac{1}{2\pi r  } \frac{\fd^{2} n_{\mathrm{ch}} (r)}{\fd r \fd \pt},
+%%D(\pt,\ptjet) = \frac{1}{N_{\mathrm{jet}}} ~ \frac{1}{\epsilon(\pttrk)} ~ \frac{\mathrm{d} N_{\mathrm{ch}}}{\mathrm{d} \pt}~(\ptjet).
+%\end{equation}
+%where $N_{\mathrm{jet}}$ is the total number of jets; $2\pi r \text{d}r$ is the area of the annulus at a given distance $r$ from the jet axis, where $r = \sqrt{\Delta \eta^2 + \Delta \phi^2}$ ($\Delta \eta$ and $\Delta \phi$ are the relative differences between the charged particle and the jet axis, in pseudorapidity and azimuth respectively) and $\fd r$ is the width of the annulus; $n_{\mathrm{ch}}(r)$ is the number of charged particles within a given annulus. The ratios of the charged-particle yields measured in \pbpb\ and \pp\ collisions,
+%\begin{equation}
+%   \RDptr = \frac{\Dptr_\mathrm{Pb+Pb}}{\Dptr_{pp}}
+%   \label{eq:rdptr}
+%\end{equation}
+%%are evaluated to quantify the modifications in \pbpb\ collisions compared to the measurement in \pp\ collisions.
+%allow evaluating the differences between the two yields. 
+%
+%The \RDptr\ distributions are measured using 0.49~nb$^{-1}$ of \pbpb\ collisions and 
+%25~pb$^{-1}$ of \pp\ collisions at center-of-mass energy of 5.02~\TeV\ collected in 2015 by ATLAS.
+%Jets are reconstructed with the \antikt\ algorithm~\cite{Cacciari:2008qp} using a radius parameter \RFour\ over a rapidity range of $|\yjet| <$~1.3. The measurement is presented for jets with transverse momenta (\ptjet) in the 126 to 316~\GeV\ range, for charged particles with $\pT>1.6$~\GeV\ and eight successive intervals of angular distance $r$ with the following edges: 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, and 0.6.
+%
+%
+
+
+%%%The fundamental properties of the matter surrounding us have always been of great interest to humankind. The word atom dates back to ancient Greece, and the electron, a fundamental particle that plays an important role in everyday life was discovered just 125 years ago by J.J Thompson. In recent years, technology has allowed us to probe microscopic distances and study matter at an unprecedented level. To this day, many new breakthroughs in the understanding of microscopic and macroscopic properties of matter have been made.
+%%%
+%%%The LHC, a particle collider in CERN, Switzerland, is currently the worlds most powerful machine for probing the properties of known matter and carrying out searches for new forms of matter. It has contributed to the recent discovery of the Higgs boson and to an improved understanding of physics at high energies. The ATLAS detector is one of the largest instruments that measures collisions at the LHC and is the product of thousands of collaborators from hundreds of institutions from around the world. The author of this thesis is a member of the ATLAS collaboration, and had the privilege to use this wonderful machine to conduct the study which will be presented in this thesis.
+%%%
+%%%One of the fundamental building blocks of matter surrounding us is the proton, which like the electron, is a well known particle to most readers. The properties and structure of the proton have attracted a lot of attention over the years. While many of its macroscopic properties such as its mass, charge, and lifetime are known to a precise degree, there remain many unanswered questions about its microscopic properties. This dissertation will present a measurement probing into one of these unanswered questions - the behavior of subatomic particles called $partons$ at different energy regimes inside of the proton. More specifically, the measurement will focus on studying a parton called the $gluon$, which is a particle that binds together partons called $quarks$. These quarks and gluons, and the interactions between them, are currently described by a globally recognized model called the Standard Model. The system of there quarks, held together by three gluons, describes the simplest picture of the gluon. We will look at a more complex picture of the proton, where present measurements are not able to explain the observation that there is an unrealistically large (tending to infinity) amount of gluons seen in the proton at shorter timescales. This unphysical process has to stop at some point, and this is described by a phenomenon called $saturation$.
+%%%
+%%%This dissertation is split into four chapters. Chapter~\ref{sec:setup} describes the experimental apparatus used throughout this measurement. Chapter~\ref{sec:intro} gives a theoretical background that should help the reader understand the measurement that will be presented in this thesis. Chapter~\ref{sec:qualification} presents a brief overview of the qualification work completed as a requirement for becoming a member of the ATLAS collaboration. Finally, Chapter~\ref{sec:mainanalysis} presents a detailed outline of the measurement along with its results.
+%%%
+%%%In addition to carrying out this analysis into the structure of the proton. The author of this dissertation contributed to the commissioning of a large area drift chamber for the COMPASS experiment at CERN. The contributions included parts procurement, assembly, testing, and data acquisition for the detector. The author also contributed to the simulation work, assembly, and data taking at beam tests for new ATLAS zero degree calorimeter (ZDC) prototype. 
+%%%
+%%%I hope that you learn from, and enjoy reading this dissertation. Thank you.
