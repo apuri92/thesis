@@ -48,6 +48,72 @@ The detector was designed keeping in mind the goals of the physics it aimed to e
 \item Highly efficient trigger system 
 \end{itemize}
 
+The ATLAS detector has three main subsystems: the inner detector, the calorimeter, and the muon spectrometer. Other major components include the forward calorimeters and the trigger system.
+
+\subsection{Inner Detector}
+The inner detector (Fig.~\ref{fig:inner_det}) is designed to reconstruct the charged particle trajectories for particles particles with momenta down to 0.5 geV, in the interval $|\eta| < 2.5$. The entire inner detector is immersed in a 2T magnetic field from teh central soleinoid. The high granularity precision measuremnets of tracks are made using a variety of technoligues, including pixels and silicon microstrip trackers, and straw tuebs in the transision ratdaition tracker. The main subsystems of he inner detector are the pixel layer, the SCT, and the TRT. Their parameters are given in the table below. 
+
+
+
+The pixelss are arranged in three concentric cylinders around the beam axis in the abrrel region, and perpendical to the beam axis in the end cap regions. The layers are segmented in R-\phi, and z, and each track crosses three layers. All the sensors are identical, and are 50 by 400 mucrometer sq. The resolution of the tracker is 10 mu m and 115 mu m in z, with the end caps having a resolution of 10 mu m and 115 (r - \phi) mu m in R. The pixel detector has approximately 80 million channels,  
+The pixel detector consists of four layers of pixels, with the innermost layer at a distance of 33.25 mm from the interaction point. The expected hit resolution of the pixel detector ranges from of $\sim$ 8$\mu$m ($\sim$ 40$\mu$m) in $r-\phi$ ($z$) \cite{ibl_design} for the innermost layer, to $\sim$ 10$\mu$m ($\sim$ 115$\mu$m) in $r-\phi$ ($z$) for the next three layers \cite{Aad:2008zzm}.
+The innermost pixel layer, called the IBL (insertable B layer) surrounds the beam pipe at a mean radius of 33mm and covers eta of < 0.3. It consists of almost 26880 pixel cells, in a matrix of 80 colums (50 mu m pitch by 336 ros (250 mu m) pitch. \cite{LaRosa:2016nbd}.
+
+The SCT has theght strip layers that in the barrel region uses 40 mrad stereo strups to measure both coordinates. An additional strip in each layer is parallel to the beam direction, measuring R-phi. The pitch of the strips is 80 mu m. The end cap region has strips running radially, and a set of sterei struos at an angle of 40 mu rad. The mean pitch is also 80 mu m. The resoutions offered by the SCT are 17 (r-phi) and 580 (z) and in the disks are 17 and 580 (R). The SCT has about 6 M readout channels.
+The SCT has eight strip (80 $\mu$m pitch) layers that are crossed by each track. Small angle stereo strips are used to measure both coordinates, with one set of strips in each layer, parallel to the beam direction. The end cap region has nine layers of double sided modules with strips in the radial direction, with each also having a mean pitch of 80 $\mu$m. The intrinsic resolution is $\sim$ 17$\mu$m ($\sim$ 580$\mu$m) in $r-\phi$ ($z$)  \cite{Aad:2008zzm}.
+
+
+The TRT uses 4 mm diameter straw tubes that allow tracking up to eta = 2.0. The TRT provides only R-phi information, and has a resoltuion of 130 mu m per straw. Straws are parallel to the beam axis in the barrel region, and are 144 cm long, wiht the wires in two halves at eta = 0. The end cap region has 37 cm long straws in a radial configuration. The TRT has about 350,000 readout channels. 
+The TRT contains 73 (160) layers of straws and fibers in the barrel (end-cap), and provides a large number of hits per track, allowing track-following for $|\eta| <  2.0$. T. It has a resolution of $\sim$ 130$\mu$m in $r-\phi$, with no information in the $z$ direction \cite{Aad:2008zzm}.
+
+
+The precise trackers at small radii with the TRT at large radii allows for a robust and prcise measuremnet in r-phi and z. The straw tube measurments at large radii also contribute to the momentum measurement becuase of the larger number of measuremnets and longer measured track length. 
+
+
+\subsection{Calorimeter}
+The calorimeter covers the eta range of < 4.9 for using a variety of differnet techniques. The paramters are summarized in the table below. Over the eta < 2.5, where there is overlap with the inner detector, the highly granular EM Calorimeter is used for precision measuremnets of electrons and photons. The calorimeter contains teh electromagentic and hadronic showers, and limits the punch through to the muon sustem. The EM Call has a radiation depth of > 22 radiation lengths in the barrel, and > 24 X0 in the end caps. The approximately 10 interaction lengths in the barrel and end cap provide good resoltion for high energy jets. The total thickness is 11 interaction legngths (lambda) at eta = 0, and is suffienct to reduce muon punch through. Teh clorimeter is divided in susbsystems including the LAr EM Cal and the Hadronic calorimeter.
+
+The EM cal covers the region eta < 1.475 and has two end caps (1.375 < eta < 3.1, and also contains teh central solenoid. The barrel calorimeter is divided into two half barrels, separated by 4mm at z = 0. Each end cap is divided into two coaxial weels, with the inner one covering 2.5 eta 3.2 and th outer one covering  1.375 < eta < 2.5. The EM Cal uses accordian shaped kapton electrodes and lead absorber plates that provide full phi symmetry. the eta < 1.8 region also uses a presampler detector that uses an active LAr layer to correct for energy lost upstream of the calorimeter. A main source of this loss is the central solenoid.
+
+The Hadronic calorimeter consists of the tile, LAr Hadronic end cap, and the LAr forward caliroimeter. The tile covers the region eta < 1.0 , with its two barrels covering the range eta 0.8 < eta < 1.7. It uses steel as the absorber and scintillating tiles for the active material. The tile claorimeter extends raidally from an inner radius of 2.28 m to 4.25 m. 
+
+The LAr hadronic end cap calorimeter (HEC) consists of two independent wheels per end cap, and is begind the EMCal end cap. It extends out from 1.5 < eta < 3.2, and overlaps wiht the foward calorimeter and the tile caorimeter. The hec covers the raidal region of 0.475 to 2.03 m. 
+
+The LAr Foward calorimeter is approximately 10 interaction elngths deep,and has three modules, one of which is optimized for em measuremnets, while the other two for hadronic measuremnets. Each module is made of concentric rods and tubes parallel to the beam axis. 
+
+
+\subsection{Muon Spectrometer}
+The muon spectrometer is based on the magnetic deflection of muon tracks in the toroid magnets. The barrel toroid provides bending over the eta < 1.4 range, and hte end cap magnets provide bending in the 1.6 < eta < 2.7 range. In the transition region, the magnetic deflection .  is form a combination of the barrel and end-cap fields. The barrel region has tracks that are measured in chambers in a cylindracal configuration around the beam axis. The trnasition and end cap has chambers perpendiuclar to the beam axis. 
+
+\subsection{ZDC}
+The zero degree calorimeter plays a key role in tdetermining the centrality of heavy ion collisions. It consists of quartz rods an dtungsten plates, mand measures neutral particles at eta >= 8.2. It is made of four modules, one electromagnetic, and three hadronic. The Modules are made of 11 tungsten plates that are perpendicular to the beam direction. Photomultiplier tubes are used to detect the cherenkov radiation from particle showers.
+\subsection{Trigger System}
+
+\subsection{Magnetic System}
+
+
+
+ \begin{figure}[htbp!]
+    \centering
+      \begin{subfigure}{0.44\textwidth}
+        \includegraphics[width=\textwidth]{inner_det.png}
+          \caption{ATLAS Inner Detector System}
+          \label{fig:inner_det}
+      \end{subfigure}
+      \hfill
+      \begin{subfigure}{0.49\textwidth}
+        \includegraphics[width=\textwidth]{calorimeters.png}
+          \caption{A cut-away view of the ATLAS calorimeter system. Taken from \cite{Aad:2008zzm}}
+          \label{fig:cal}
+      \end{subfigure}
+\caption{
+\label{fig:atlas_systems}%
+ATLAS Inner detector and calorimeter systems}
+\end{figure}
+
+
+
+detector include trackers, calorimetry, muon system, forward detectors, triggers, 
 The ATLAS detector has a magnet configuration that consists of a thin superconducting solenoid surrounding the inner detector cavity, and three large superconducting toroids arranged symmetrically around the calorimeters. The inner detector is immersed in a 2 T magnetic field, and achieves pattern recognition, momentum and vertex measurements, and electron identification by a combination of high resolution semiconductor pixel and strip detectors in the inner tracking volume, and a straw tube detector for transition radiation in the outer volume. 
 
 High granularity liquid-argon (LAr) electromagnetic sampling calorimeters cover the pseudorapidity range $|\eta| < 3.2$. The hadronic calorimeter ( $|\eta| < 1.7$ is provided by the scintillator-tile calorimeter that has a barrel and two end cap sections. Forward calorimeters using LAr technology extend the electromagnetic and hadronic energy measurements out to $|\eta| = 4.9$.
