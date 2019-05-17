@@ -7,19 +7,24 @@
 %% uiucthesis2009.dtx  (with options: `example')
 %% 
 \documentclass[fullpage]{uiucthesis2009}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
+%\usepackage[caption=false]{subfig}
 \usepackage{placeins}
 \usepackage[
-    backend=biber,
+    backend=bibtex,
 	citestyle=numeric-comp,
 	refsegment=section,
 	sorting=none
 ]{biblatex}
 \usepackage{hyperref}
+\usepackage{booktabs}
 \usepackage{subcaption}
 \captionsetup{compatibility=false}
 \input{macros}
 
+\graphicspath{{logos/}{figures/}}
 \addbibresource{thesis-ex.bib}
 %\addbibresource{bibtex/bib/ATLAS.bib}
 %\addbibresource{bibtex/bib/CMS.bib}
@@ -53,13 +58,12 @@
 \setcounter{page}{2}
 \begin{abstract}
 
-Studies of the fragmentation of jets into charged particles in heavy-ion collisions can help in understanding the mechanism of jet quenching by the hot and dense matter created in such collisions, the quark-gluon plasma. This thesis presents a measurement of the angular distribution of charged particles around the jet axis as measured in \pbpb\ and \pp\ collisions collided at a center of mass energy of $\sqrt{s_{\mathrm{NN}}}=$~5.02~\TeV. The measurement is done using the ATLAS detector at the Large Hadron Collider, and utilizes 0.49 \pb\ of \PbPb\ and 25 \pb\ of \pp\ data collected in 2015. The measurement is performed inside jets reconstructed with the \antikt\ algorithm with radius parameter $R = $~0.4, and is extended to regions outside the jet cone. Results are presented as a function of \pbpb\ collision centrality, and both jet and charged-particle transverse momenta. It was observed that in \pbpb\ collisions there is a broadening of the jet for charged particles with \mbox{$\pt < 4$ \GeV}, along with a narrowing for  charged particles with $\pt > 4$ \GeV. Ratios between the angular distributions in \pbpb\ and \pp\ showed an enhancement for particles with $\pt < 4$ \GeV\ in \pbpb\ collisions, with the enhancement increasing up to 2 for \mbox{$\rvar < 0.3$}, and remaining constant for \mbox{$0.3 < \rvar < 0.6$}. Charged particles with $\pt\ > 4$ \GeV show a growing suppression of up to 0.5 for \mbox{$\rvar < 0.3$} in \pbpb\ collisions, with the depletion remaining constant for \mbox{$0.3 < \rvar < 0.6$}.
-
-%This dissertation presents a measurement of forward--forward and forward--central dijet azimuthal angular correlations and conditional yields in proton--proton ($pp$) and proton--lead ($p$+Pb) collisions as a probe for possible gluon-density saturation in regions where the momentum fraction of a parton compared to a nucleon in the lead nucleus is low. In these regions, gluon saturation can modify the rapidly increasing parton distribution function of the gluon. The analysis utilizes 25 pb$^{-1}$ of $pp$ data and 360 $\mu \mathrm{b}^{-1}$ of $p$+Pb data, both at $\sqrt{s_{_{\mathrm{NN}}}}$ = 5.02 TeV, collected in 2015 and 2016, respectively, with the ATLAS detector at the LHC. The measurement is performed in the center-of-mass frame of the nucleon--nucleon system in the center-of-mass rapidity range between -4.0 and 4.0 using the two highest transverse momentum jets in each event. The highest transverse momentum jet is restricted to the forward rapidity range where it is possible to probe the region where the momentum fraction of a parton compared to a nucleon in the lead nucleus is low. No significant broadening of azimuthal angular correlations is observed for forward--forward or forward--central dijets in $p$+Pb compared to $pp$ collisions within the uncertainties. The ratio of conditional yields of  forward--forward jet pairs in the proton-going direction in $p$+Pb collisions compared to $pp$ collisions is suppressed by approximately 20\%, with no significant dependence on the transverse momentum of the dijets system. No modification of conditional yields is observed for forward--central dijets. 
+Studies of the fragmentation of jets into charged particles in heavy-ion collisions can help in understanding the mechanism of jet quenching by the hot and dense matter created in such collisions, the quark-gluon plasma. This thesis presents a measurement of the angular distribution of charged particles around the jet axis as measured in \pbpb\ and \pp\ collisions collided at a center of mass energy of $\sqrt{s_{\mathrm{NN}}}=$~5.02~\TeV. The measurement is done using the ATLAS detector at the Large Hadron Collider, and utilizes 0.49 \pb\ of \pbpb\ and 25 \pb\ of \pp\ data collected in 2015. The measurement is performed for jets reconstructed with the \antikt\ algorithm with radius parameter $R = $~0.4, and is extended to regions outside the jet cone. Results are presented as a function of \pbpb\ collision centrality, and both jet and charged-particle transverse momenta. It was observed that in \pbpb\ collisions there is a broadening of the jet for charged particles with \mbox{$\pt < 4$ \GeV}, along with a narrowing for  charged particles with $\pt > 4$ \GeV. Ratios between the angular distributions in \pbpb\ and \pp\ showed an enhancement for particles with $\pt < 4$ \GeV\ in \pbpb\ collisions, with the enhancement increasing up to 2 for \mbox{$\rvar < 0.3$}, and remaining constant for \mbox{$0.3 < \rvar < 0.6$}. Charged particles with $\pt\ > 4$ \GeV\ show a small enhancement in the jet core for $\rvar < 0.05$, with a growing suppression of up to 0.5 for \mbox{$\rvar < 0.3$} in \pbpb\ collisions. The depletion remains constant for \mbox{$0.3 < \rvar < 0.6$}.
 \end{abstract}
 
 % Create a dedication in italics with no heading, centered vertically
 % on the page.
+
 \begin{dedication}
 For my Mother, Father, and Brother
 \end{dedication}
@@ -87,7 +91,7 @@ For my Mother, Father, and Brother
 %To Anna Glazatova
 %\end{dedication}
 %
-%\tableofcontents
+\tableofcontents
 %% \listoftables
 %% \listoffigures
 %
@@ -105,30 +109,38 @@ For my Mother, Father, and Brother
 %-------------------------------------------------------------------------------
 
 \chapter{Introduction}
+\label{sec:intro}
 \input{thesisintro.tex}
+
 \chapter{Experimental Setup}
 \label{sec:setup}
 \input{setup.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %\chapter{Theoretical Introduction}
-%\label{sec:intro}
-%\input{intro.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{ATLAS Required Qualification Work}
-%\label{sec:qualification}
-%\input{qualification.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Measurement of Dijet Azimuthal Correlations}
-%\label{sec:mainanalysis}
+%\label{sec:theory}
+%\input{theory.tex}
+
+\chapter{ATLAS Qualification Task}
+\label{sec:qualification}
+\input{qualification.tex}
+
+%\chapter{Important Jet Measurements}
+%\label{sec:jetMeasurements}
+%\input{jetMeasurements.tex}
+
+
+\chapter{Measurement of Angular Correlations Between Tracks And Jets}
+\label{sec:mainanalysis}
+\input{mainAnalysis.tex}
+
 %\section{Overview}
+
 %\input{overview.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\section{Data Sets}
 %\label{sec:data}
 %\input{data.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\section{Trigger and Event Selection}
 %\label{sec:event}
 %\input{event.tex}
@@ -154,7 +166,11 @@ For my Mother, Father, and Brother
 %\input{summary.tex}
 %\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\appendix
+\appendix
+\chapter{HI JER Uncertainty}
+\label{sec:appendix_hijerDerivation}
+\input{appendixHIJERDerivation.tex}
+\clearpage
 %\chapter{Data Sets}
 %\label{sec:appendixdata}
 %\input{appendixZ.tex}
