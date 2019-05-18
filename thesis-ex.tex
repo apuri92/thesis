@@ -1,3 +1,4 @@
+% !TEX encoding = UTF-8 Unicode
 %%
 %% This is file `thesis-ex.tex',
 %% generated with the docstrip utility.
@@ -6,21 +7,29 @@
 %%
 %% uiucthesis2009.dtx  (with options: `example')
 %% 
-\documentclass[fullpage]{uiucthesis2009}
+\newcommand*{\ATLASLATEXPATH}{latex/}
+%\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish, coverpage, PAPER]{\ATLASLATEXPATH atlasdoc}
+\documentclass[fullpage, UKenglish]{uiucthesis2009}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
 %\usepackage[caption=false]{subfig}
 \usepackage{placeins}
-\usepackage[
-    backend=bibtex,
-	citestyle=numeric-comp,
-	refsegment=section,
-	sorting=none
-]{biblatex}
+\usepackage[utf8]{inputenc}
+
+\usepackage[backend=bibtex]{\ATLASLATEXPATH atlaspackage}
+\usepackage{\ATLASLATEXPATH atlasbiblatex}
+
+%\usepackage[
+%    backend=bibtex,
+%	citestyle=numeric-comp,
+%	refsegment=section,
+%	sorting=none
+%]{biblatex}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{subcaption}
+%\usepackage[applemac]{inputenc}
 %\captionsetup{compatibility=false}
 \input{macros}
 
@@ -226,6 +235,7 @@ For my Mother, Father, and Brother
 %%\input{appendixG.tex}
 \clearpage%---------------
 
-\printbibliography[heading=bibintoc,title={References}]
+\printbibliography
+%[heading=bibintoc,title={References}]
 
 \end{document}

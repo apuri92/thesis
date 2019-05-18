@@ -1,3 +1,4 @@
+% !TEX encoding = UTF-8 Unicode
 % !TEX root = thesis-ex.tex
 
 
@@ -47,13 +48,13 @@ Events in data were selected based on the trigger $\eta-\phi$ map given in  Fig.
 %\centering
 %\begin{subfigure}[b]{\textwidth}
 %    \centering
-%    \includegraphics[page=1, width=\textwidth]{figures/main/figures_systematics/Summary_ChPS_dR_sys_PbPb_error}
+%    \includegraphics[page=1, width=\textwidth]{figures/main/systematics/Summary_ChPS_dR_sys_PbPb_error}
 %    \caption{}
 %    \label{fig:rdptr_sys_uncert1a}
 %\end{subfigure} \\
 %\begin{subfigure}[b]{\textwidth}
 %    \centering
-%    \includegraphics[page=3, width=\textwidth]{figures/main/figures_systematics/Summary_ChPS_dR_sys_PbPb_error}
+%    \includegraphics[page=3, width=\textwidth]{figures/main/systematics/Summary_ChPS_dR_sys_PbPb_error}
 %    \caption{}
 %    \label{fig:rdptr_sys_uncert1b}
 %\end{subfigure}\hfill
@@ -76,20 +77,20 @@ Events in data were selected based on the trigger $\eta-\phi$ map given in  Fig.
 \centering
 \begin{subfigure}[b]{\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/qualification/TrigMap.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qualification/TrigMap.pdf}
     \caption{}
-    \label{a}
+    \label{fig:trigmap_a}
 \end{subfigure} \\
 \begin{subfigure}[b]{\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/qualification/PhotonEx.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qualification/PhotonEx.pdf}
     \caption{}
-    \label{selection_2}
+    \label{fig:trigmap_b}
 \end{subfigure}\hfill
-   \caption{The jet selection criteria in data based on different triggers. \protect\subref{a} $\pT-\eta$ phase space for different trigger regions used in the ZeroBias and express streams \protect\subref{b}The effect of the GSC calibration, as a function of the electromagnetic fraction (emf) of the jet. The peak at high emf is indicative of photons }
+   \caption{The jet selection criteria in data based on different triggers. \protect\subref{fig:trigmap_a} $\pT-\eta$ phase space for different trigger regions used in the ZeroBias and express streams \protect\subref{fig:trigmap_b}The effect of the GSC calibration, as a function of the electromagnetic fraction (emf) of the jet. The peak at high emf is indicative of photons }
 \label{fig:TrigMap}
 \end{figure}
-
+
 Furthermore, events firing the HLT\_j360 trigger were vetoed if they also fired the HLT\_noalg\_L1J400, HLT\_g120\_loose, or the HLT\_g140\_loose. This was done to ensure that the jets entering the study were not in the wide turn on region of the aforementioned triggers. This also helped exclude photons (as can be seen in ~\ref{selection_2}.
 
 
@@ -146,7 +147,7 @@ AntiKt4(EMTopo+HI) & 0.4\\
 
 The results presented here were performed using the ATLAS detector and calorimeter systems ~\cite{Aad:2008zzm}. Jets with a radius of $R=0.4$ were reconstructed using the \\antikt \ algorithm.  The specifics of this procedure as applied to reconstruct the standard EMTopo jets and the HI jets are described in detail in \cite{Aad:2011he} and \cite{Aad:hi_jets} respectively. A brief summary is given below.
 
-The EMTopo jets reconstruction involves using topological clusters of energy deposits in the calorimeter (calorimeter description in ~\cite{Aad:2008zzm}). The \\antikt \ algorithm \cite{antikt_algo}, as implemented in the FastJet sofware package \cite{fastjet_algo} is applied to these clusters, to reconstruct EMTopo jets with a $R = 0.4$.  The background in these jets, coming from the pile-up, is reduced by applying a $\pT$ and jet area dependent subtraction \cite{pp_pileup_subtr}. The jets are then calibrated using a energy and $\eta$ dependent calibration factor, derived from MC studies. The EMTopo jets for this study were calibrated up to MC based EtaJES, as described in \cite{CalibReco}.
+The EMTopo jets reconstruction involves using topological clusters of energy deposits in the calorimeter (calorimeter description in ~\cite{Aad:2008zzm}). The \\antikt \ algorithm \cite{Cacciari:2008gp}, as implemented in the FastJet sofware package \cite{fastjet_algo} is applied to these clusters, to reconstruct EMTopo jets with a $R = 0.4$.  The background in these jets, coming from the pile-up, is reduced by applying a $\pT$ and jet area dependent subtraction \cite{pp_pileup_subtr}. The jets are then calibrated using a energy and $\eta$ dependent calibration factor, derived from MC studies. The EMTopo jets for this study were calibrated up to MC based EtaJES, as described in \cite{CalibReco}.
 
 The HI jet reconstruction also uses the anti-$k_{T}$ algorithm, but the inputs are $\Deta \times \Dphi = 0.1 \times \frac{\pi}{32}$ logical towers, deriving from the energy deposited in calorimeter cells. A fundamental difference between the reconstruction algorithms is how the underlying event (UE) is dealt with. The UE subtraction procedure involves the UE average tranvserse energy density ($\rho$), and the magnitude ($\nu_{2}$) and phase ($\Psi_{2}$) of the elliptic modulation from to flow. The subtraction applied to each cell within the jet is given as: 
 \begin{align}
@@ -182,7 +183,7 @@ Subtraction & Median $\pT$ density & Average local energy density \\ \hline
 
 The heavy ion jets were calibrated (upto {\it EtaJES}) using the procedure given in \cite{HICalib}, and the EMTopo jets were calibrated upto GSC (i.e. {\it JetArea\_Residual\_Origin\_EtaJES\_GSC}) using the ICHEP recommendations \cite{CalibReco}. This was done so that the cross calibration factors could be applied as a correction on top of the insitu correction. This allowed changing the insitu correction, without re-deriving the cross-calibration factors. 
 
-A ratio of the EMTopo and HI jets, selected as described in Section~\ref{sec:datasets} was taken in both data and MC. The relative response and resolution in data and MC is shown in Fig.~\ref{fig:data_rel_resp} and \ref{fig:mc_rel_resp}. The distributions were calculated in the following $|\eta|$ bins: 0 - 0.3, 0.3 - 0.8, 0.8 - 1.2, 1.2 - 2.1, 2.1 - 2.8, 2.8 - 3.6, 3.6 - 4.4.
+A ratio of the EMTopo and HI jets, selected as described in Section~\ref{sec:qual_datasets} was taken in both data and MC. The relative response and resolution in data and MC is shown in Fig.~\ref{fig:data_rel_resp} and \ref{fig:mc_rel_resp}. The distributions were calculated in the following $|\eta|$ bins: 0 - 0.3, 0.3 - 0.8, 0.8 - 1.2, 1.2 - 2.1, 2.1 - 2.8, 2.8 - 3.6, 3.6 - 4.4.
 
 \begin{figure}[h]
 \centerline{

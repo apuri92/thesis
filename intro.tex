@@ -1,3 +1,4 @@
+% !TEX encoding = UTF-8 Unicode
 % !TEX root = thesis-ex.tex
 
 \section{Quantum Chromo-Dynamics}
@@ -175,7 +176,7 @@ A particle collision with sufficiently high energy transfer can result in a quar
 
 
 \subsection{\mbox{Anti-\kt} Jets} 
-Before a jet's energy and position can be correctly described, a prescription of what a jet is must be agreed upon. A jet can have many constituents, which are final state particles produced in the hadronization process. These particles can be physically detected and used as input into clustering algorithms that aim to describe jets consistent with theory predictions~\cite{Ellis:1993tq,Dokshitzer:1997in,Wobisch:1998wt,Blazey:2000qt}. While different algorithms have their advantages and disadvantages, the \antikt\ algorithm~\cite{Cacciari:2008qp} has grown in popularity since its introduction almost a decade ago. Besides its fast computation speed, the main advantage of the \antikt\ algorithm is its infrared and collinear safety (IRC) from effects of soft radiation.
+Before a jet's energy and position can be correctly described, a prescription of what a jet is must be agreed upon. A jet can have many constituents, which are final state particles produced in the hadronization process. These particles can be physically detected and used as input into clustering algorithms that aim to describe jets consistent with theory predictions~\cite{Ellis:1993tq,Dokshitzer:1997in,Wobisch:1998wt,Blazey:2000qt}. While different algorithms have their advantages and disadvantages, the \antikt\ algorithm~\cite{Cacciari:2008gp} has grown in popularity since its introduction almost a decade ago. Besides its fast computation speed, the main advantage of the \antikt\ algorithm is its infrared and collinear safety (IRC) from effects of soft radiation.
 
 Any jet clustering algorithm needs to accept a set of homogeneous input data (objects) such as the four-momenta of particles, calorimeter tower energies, topological calorimeter cells, etc. The treatment of these input objects by the algorithm is identical. The \antikt\ algorithm comes from a broader family of \kt\ clustering algorithms that appear the same in their formalism but yield different results based on an important parameter that will be discussed shortly. The general form of any \kt\ algorithm involves a collection of input objects with indexes $i$ having energy and spatial coordinates $(\eta_{i}, \phi_{i}, p_{\mathrm{T}_{i}})$ where $\eta_{i}$, $\phi_{i}$, and $\pt_{i}$ are the objects pseudorapitidy, azimuthal angle, and transverse momentum, respectively. Between any two objects $i$ and $j$, two distances are defined in terms of energy and position:
 
@@ -203,7 +204,7 @@ The behavior of all the \kt\ algorithms with respect to soft radiation is the sa
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/jetalgo.pdf} 
-	\caption{ Results of jet reconstruction by the \kt\ (top left), Cambridge Aachen (top right), SISCone (bottom left), and \antikt\ (bottom right) algorithms on identical input sets with a jet radius requirement of \ROne. Figure taken from Ref.~\cite{Cacciari:2008qp}.}
+	\caption{ Results of jet reconstruction by the \kt\ (top left), Cambridge Aachen (top right), SISCone (bottom left), and \antikt\ (bottom right) algorithms on identical input sets with a jet radius requirement of \ROne. Figure taken from Ref.~\cite{Cacciari:2008gp}.}
 	\label{fig:jetalgos}
 \end{figure}
 
