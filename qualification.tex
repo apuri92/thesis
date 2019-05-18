@@ -1,16 +1,16 @@
 % !TEX root = thesis-ex.tex
 
 
-To gain authorship in the ATLAS collaboration, one has to contribute towards ATLAS technical work. My qualification task was to derive the cross calibration heavy ion jets and the related uncertainties. The aim of the cross calibration procedure, first described in \cite{xcalib_run1} is to use jets constructed by the \pp\ jet reconstruction algorithm (EMTopo jets) \cite{Aad:pp_jes, Aad:pp_algo, Aaboud:2017jcu} to calibrate jets reconstructed using the heavy ion reconstruction algorithm (HI jets) discussed in \cite{Aad:hi_jets}.
+To gain authorship in the ATLAS collaboration, one has to contribute towards ATLAS technical work. My qualification task was to derive the cross calibration heavy ion jets and the related uncertainties. The aim of the cross calibration procedure, first described in \cite{xcalib_run1} is to use jets constructed by the \pp\ jet reconstruction algorithm (EMTopo jets) \cite{Aad:2014bia, Aad:2011he, Aaboud:2017jcu} to calibrate jets reconstructed using the heavy ion reconstruction algorithm (HI jets) discussed in \cite{Aad:hi_jets}.
 
-Deriving and applying this calibration was vital to all Run 2 heavy ion jet analyses from ATLAS \cite{ATLAS-CONF-2017-005, ATLAS-CONF-2017-004, ATLAS-CONF-2017-012, ATLAS-CONF-2017-009, ATLAS-CONF-2016-110}.
+Deriving and applying this calibration was vital to all Run 2 heavy ion jet analyses from ATLAS \cite{PhysRevC.98.024908, 201865, 2019108, 2019108, 2019167}.
 
 
 \section{Introduction}
 \label{sec:qual_intro}
 %-------------------------------------------------------------------------------
 
-The performance of the EMTopo jets is well understood in\ \pp \ collisions \cite{Aad:pp_jes} \cite{Aad:pp_algo}. The goal of the cross calibration procedure, first described in \cite{xcalib_run1} is to use these jets to calibrate the HI jets, that are reconstructed using the HI reconstruction algorithm discussed in \cite{Aad:hi_jets}. On average, the\ \pt \ of the HI jets is expected to differ from the EMTopo jets due to the differences in the reconstruction algorithm, and the insitu corrections that are applied to to the latter. The insitu corrections cannot directly be derived for heavy ions because of the high multiplicity, but comparing the HI and EMTopo jets in data and MC and scaling the HI jets with the ratio of $\langle \pt ^\hi / \pt^\emt \rangle$ in data and MC allows the application of EMTopo insitu corrections to HI jets \cite{xcalib_run1}
+The performance of the EMTopo jets is well understood in\ \pp \ collisions \cite{Aad:2014bia} \cite{Aad:2011he}. The goal of the cross calibration procedure, first described in \cite{xcalib_run1} is to use these jets to calibrate the HI jets, that are reconstructed using the HI reconstruction algorithm discussed in \cite{Aad:hi_jets}. On average, the\ \pt \ of the HI jets is expected to differ from the EMTopo jets due to the differences in the reconstruction algorithm, and the insitu corrections that are applied to to the latter. The insitu corrections cannot directly be derived for heavy ions because of the high multiplicity, but comparing the HI and EMTopo jets in data and MC and scaling the HI jets with the ratio of $\langle \pt ^\hi / \pt^\emt \rangle$ in data and MC allows the application of EMTopo insitu corrections to HI jets \cite{xcalib_run1}
 
 %-------------------------------------------------------------------------------
 \section{Datasets and Event Selection}
@@ -144,7 +144,7 @@ AntiKt4(EMTopo+HI) & 0.4\\
 \label{sec:qual_procedure}
 %-------------------------------------------------------------------------------
 
-The results presented here were performed using the ATLAS detector and calorimeter systems ~\cite{Aad:2008zzm}. Jets with a radius of $R=0.4$ were reconstructed using the \\antikt \ algorithm.  The specifics of this procedure as applied to reconstruct the standard EMTopo jets and the HI jets are described in detail in \cite{Aad:pp_algo} and \cite{Aad:hi_jets} respectively. A brief summary is given below.
+The results presented here were performed using the ATLAS detector and calorimeter systems ~\cite{Aad:2008zzm}. Jets with a radius of $R=0.4$ were reconstructed using the \\antikt \ algorithm.  The specifics of this procedure as applied to reconstruct the standard EMTopo jets and the HI jets are described in detail in \cite{Aad:2011he} and \cite{Aad:hi_jets} respectively. A brief summary is given below.
 
 The EMTopo jets reconstruction involves using topological clusters of energy deposits in the calorimeter (calorimeter description in ~\cite{Aad:2008zzm}). The \\antikt \ algorithm \cite{antikt_algo}, as implemented in the FastJet sofware package \cite{fastjet_algo} is applied to these clusters, to reconstruct EMTopo jets with a $R = 0.4$.  The background in these jets, coming from the pile-up, is reduced by applying a $\pT$ and jet area dependent subtraction \cite{pp_pileup_subtr}. The jets are then calibrated using a energy and $\eta$ dependent calibration factor, derived from MC studies. The EMTopo jets for this study were calibrated up to MC based EtaJES, as described in \cite{CalibReco}.
 
@@ -253,14 +253,14 @@ Truth  			& 0.6 & 20.0 & 0.6 & 16.0 & 1.0 & 18.0 & 0.6 & 25.0 & 30.0\\
 
 \begin{figure}
 	\centering
-	\subfloat{{\includegraphics[width=1.0\textwidth]{figures/qualification/systematic_range} }}%
+	\includegraphics[width=1.0\textwidth]{figures/qualification/systematic_range}
 	\caption{The fits to the cross calibration factors, with different isolation/matching cuts, as specified in Table~\ref{table:systematics_param}.  }
 	\label{fig:systematics}%
 \end{figure}
 
 \begin{figure}
 	\centering
-	\subfloat{{\includegraphics[width=1.0\textwidth]{figures/qualification/sys_uncert} }}%
+	\includegraphics[width=1.0\textwidth]{figures/qualification/sys_uncert}
 	\caption{The systematic uncertainty, equal to maximum difference between the nominal fit and the fits from varying the parameters (as summarized in Table~\ref{table:systematics_param}).  }
 	\label{fig:sys_uncert}%
 \end{figure}
@@ -296,58 +296,74 @@ These are shown in Fig.~\ref{fig:fitted_jer}. The $\Delta\pT^\emt$ vs. $\Delta\p
 This factorization (plotted in Fit.~\ref{fig:meth2_ratios}) showed that the large differences between $\delta\sigma_\emt$ and $\delta\sigma_\hi$ were coming from the differences in the uncertainties, as opposed to differences in the actual resolutions themselves. The same quantity, $\delta\sigma_\emt / \delta\sigma_\hi$, as calculated in Run I is shown in Fig.~\ref{fig:run1_jer_uncert} \cite{xcalib_run1}.
 
 
-\begin{figure}
-	\centering
-	\subfloat{{\includegraphics[height=0.5\textwidth]{figures/qualification/emtopo_jer} }}%
-	\caption{A comparison of the JER of EMTopo and HI jets from the datasets, as well as from the JER Tool. }
-	\label{fig:emtopo_jer}%
 
-	\centering
-	\subfloat{{\includegraphics[height=0.5\textwidth]{figures/qualification/fitted_jer} }}%
-	\caption{The JER for $\hi$ and $\emt$ jets fit to Eq.~\ref{fit:jer_fit}}
-	\label{fig:fitted_jer}%
-\end{figure}
-
-\begin{figure}
-	\centering
-	\subfloat{{\includegraphics[height=0.5\textwidth]{figures/qualification/deltapT_w_gsc} }}%
-	\caption{The $\Delta\pT^\emt$ vs. $\Delta\pT^\hi$ distribution in all $\eta$ bins, for $ 170 < \pT^\tru < 400$ GeV, with the GSC calibration applied to the $\emt$ jets. }
-	\label{fig:deltapT_w_gsc}%
-	
-	\centering
-	\subfloat{{\includegraphics[height=0.5\textwidth]{figures/qualification/deltapT_no_gsc} }}%
-	\caption{The $\Delta\pT^\emt$ vs. $\Delta\pT^\hi$ distribution in all $\eta$ for $ 170 < \pT^\tru < 400$ GeV, with no GSC calibration applied to the $\emt$ jets. }
-	\label{fig:deltapT_no_gsc}%
-\end{figure}
 
 
 \begin{figure}
-	\centering
-	\subfloat{{\includegraphics[width=0.8\textwidth]{figures/qualification/lambda} }}%
-	\caption{The distribution of $\lambda$ as calculated in Eq.~\ref{eq:lambda} in various bins of $\pt$ and $\eta$.}
-	\label{fig:lambda}%
-\end{figure}
+    \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/emtopo_jer}
+		\caption{A comparison of the JER of EMTopo and HI jets from the datasets, as well as from the JER Tool. }
+		\label{fig:emtopo_jer}
+    \end{figure}%
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/fitted_jer}
+		\caption{The JER for $\hi$ and $\emt$ jets fit to Eq.~\ref{fit:jer_fit}}
+		\label{fig:fitted_jer}
+	\end{figure}
+
+
+
+
 
 \begin{figure}
-	\centering
-	\subfloat{{\includegraphics[width=0.8\textwidth]{figures/qualification/meth2_jer_uncert} }}%
-	\caption{A comparison between $\delta\sigma_\emt$ and $\delta\sigma_\hi$ in various $\eta$ bins}
-	\label{fig:meth2_jer_uncert}%
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/deltapT_w_gsc}
+		\caption{The $\Delta\pT^\emt$ vs. $\Delta\pT^\hi$ distribution in all $\eta$ bins, for $ 170 < \pT^\tru < 400$ GeV, with the GSC calibration applied to the $\emt$ jets. }
+		\label{fig:deltapT_w_gsc}
+    \end{figure}%
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/deltapT_no_gsc}
+		\caption{The $\Delta\pT^\emt$ vs. $\Delta\pT^\hi$ distribution in all $\eta$ for $ 170 < \pT^\tru < 400$ GeV, with no GSC calibration applied to the $\emt$ jets. }
+		\label{fig:deltapT_no_gsc}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\subfloat{{\includegraphics[width=0.8\textwidth]{figures/qualification/meth2_ratios} }}%
-	\caption{Factorizing the ratio $\delta\sigma_\emt / \delta\sigma_\hi$ shows that the dominant effect is from the uncertainties themselves (as opposed to a difference in the resolutions)}
-	\label{fig:meth2_ratios}%
-\end{figure}
+
+
 
 \begin{figure}
-	\centering
-	\subfloat{{\includegraphics[width=0.8\textwidth]{figures/qualification/run1_jer_uncert} }}%
-	\caption{The ratio $\delta\sigma_\emt / \delta\sigma_\hi$ as evaluated in Run I \cite{xcalib_run1}}
-	\label{fig:run1_jer_uncert}%
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/lambda}
+		\caption{The distribution of $\lambda$ as calculated in Eq.~\ref{eq:lambda} in various bins of $\pt$ and $\eta$.}
+		\label{fig:lambda}
+    \end{figure}%
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/meth2_jer_uncert}
+		\caption{A comparison between $\delta\sigma_\emt$ and $\delta\sigma_\hi$ in various $\eta$ bins}
+		\label{fig:meth2_jer_uncert}
 \end{figure}
+
+
+
+\begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/meth2_ratios}
+		\caption{Factorizing the ratio $\delta\sigma_\emt / \delta\sigma_\hi$ shows that the dominant effect is from the uncertainties themselves (as opposed to a difference in the resolutions)}
+		\label{fig:meth2_ratios}
+    \end{figure}%
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{figures/qualification/run1_jer_uncert}
+		\caption{The ratio $\delta\sigma_\emt / \delta\sigma_\hi$ as evaluated in Run I \cite{xcalib_run1}}
+		\label{fig:run1_jer_uncert}
+\end{figure}
+
 
 
 %-------------------------------------------------------------------------------
@@ -356,9 +372,11 @@ This factorization (plotted in Fit.~\ref{fig:meth2_ratios}) showed that the larg
 %-------------------------------------------------------------------------------
 The cross calibration factors, along with its systematic and statistical uncertainties were derived in different $\eta$ regions, as a function of $\pT^{\hi}$, and are shown in Fig.~\ref{fig:factors_w_uncertainties}. The factors themselves are the level of ~1\%, and do not show much variation with $\pT$.  Furthermore, the uncertainties are primarily statistical in nature. 
 
+
+
 \begin{figure}
 	\centering
-	\subfloat{{\includegraphics[width=1.0\textwidth]{figures/qualification/factors_w_uncertainties} }}%
+	\includegraphics[width=1.0\textwidth]{figures/qualification/factors_w_uncertainties}
 	\caption{The cross calibration factors in different $\eta$ regions, as a function of $\pT^{\hi}$, along with their uncertainties.}
 	\label{fig:factors_w_uncertainties}%
 \end{figure}
@@ -366,85 +384,3 @@ The cross calibration factors, along with its systematic and statistical uncerta
  A $\pT$ dependent uncertainty on the HI JER was also derived, and can be seen in Fig.~\ref{fig:meth2_jer_uncert}.
 
 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{Cross Calibration and its uncertainties}
-%The hadronic shower (jet) has both electromagnetic and non-electromagnetic components that interact with the calorimeter material differently. Thus the energy response of the calorimeter for these components is different (this is called a non-compensating calorimeter \cite{calorimetry_book}), and hence, calibrations are required to correct the reconstructed jet kinematics. These take into account features of the detector, the reconstruction algorithm, and jet fragmentation. The final corrections come from data driven (\insitu) methods like \pt\ balance studies (comparing the \pt\ of a jet and any other object like another jet, Z, or $\gamma$). Heavy ion collisions however, have the limitation that simple \pt\ balance studies are non-trivial because of jet quenching effects. Another limitation is the lack of high statistics for reference objects like $Z$'s and photons. The way to get around this is to derive a \textit{cross}-calibration, based on comparing jets in \pp\ collisions, as reconstructed by the heavy ion and \pp\ jet reconstruction algorithms. The HI jets can then be scaled with factors given by the ratio of $\langle \pt ^\hi / \pt^\emt \rangle$ in data and MC.
-%
-%The statistical uncertainties on the cross calibration factors come from the fits to the ratio of the relative response in data and MC, whereas the systematics come from changing the parameters of the study (these were evaluated as the maximum absolute difference between the nominal fit and any other iteration). The cross calibration factors for $0.8 < |\eta| < 1.2$, along with their uncertainties are shown on Fig.~\ref{fig:factors_w_uncertainties}. These are at the level of about 1\% and do not show strong variation with \pt. 
-%\begin{figure}[htbp!]
-%	\centering
-%	\includegraphics[width=0.5\textwidth]{figures/qualification/factors_w_uncertainties_2}
-%	\caption{The cross calibration factors for $0.8 < |\eta| < 1.2$, as a function of $\textit{p}_{\text{T}}^{\text{HI}}$, along with their uncertainties.}
-%	\label{fig:factors_w_uncertainties}%
-%\end{figure}
-%
-%
-%The cross-calibration procedure further allows applying the baseline jet energy scale/resolution uncertainties from the EMTopo jets, to the HI jets (along with the uncertainties of the cross-calibration procedure itself) \cite{xcalib_run1}. 
-%
-%
-%\subsection{Heavy Ion Jet Energy Resolution Uncertainties}
-%The uncertainty on the heavy ion jet energy resolution can be shown to be given by:
-%
-%\begin{equation}
-%\delta \sigma_{\text{HI}} = \delta \sigma_{\text{EMTopo}} \sqrt{\left(1 + \frac{A}{\sigma_{\text{HI}}^2}\right)\left(1 + \left[\frac{\delta A}{2 \sigma_{\text{EMTopo}} \delta \sigma_{\text{EMTopo}}}\right)\right]^2} 
-%\end{equation}
-%where $\delta A ^2 = (2 s _{\text{HI}} \delta s _{\text{HI}})^2  + (2 s _{\text{EMTopo}} \delta s _{\text{EMTopo}})^2$ and $s^2_{\text{EMTopo/HI}}$ is the uncorrelated component between the errors in the jet \pt\, as reconstructed by two different algorithms applied to the same data \cite{xcalib_run1}. This result however, neglects that the uncertainty in the EMTopo jet energy resolution can be correlated with the systematic uncertainty on $A$. Accounting for this correlation, it can be shown that the uncertainty on the heavy ion jet energy resolution can be given by:
-%\begin{equation}
-%\dsigma_{{\text{HI}}} = \frac{\delta R_{{\text{HI}}}}{2 \sigma_{{\text{HI}}}}
-%\end{equation}
-%where
-%\begin{align}
-%R_{\text{HI}} &= \sigma_{\text{HI}}^2 \\
-%\delta^2 R_{\text{HI}} &= \lambda^4 \delta^2 R_\emt + \delta^2 B \\
-%\delta R_\emt  &= 2 \sigma_\emt \dsigma_\emt
-%\end{align}
-%Here, $\lambda$ accounts for the correlation between the HI and EMTopo jets, and $B$ is a estimate of the difference in the relative resolution between HI and EMTopo jets, as measured in data and MC.
-%
-%A comparison between $\delta\sigma_\emt$ and $\delta\sigma_{\text{HI}}$ can be seen in Fig.~\ref{fig:hi_jer_uncert}.
-%
-%
-%\begin{figure}[htbp!]
-%	\centering
-%	\includegraphics[width=0.7\textwidth]{figures/qualification/uncert_2} %
-%	\caption{The comparison between $\delta\sigma_\emt$ and $\delta\sigma_{\text{HI}}$ for $0.8 < |\eta| < 1.2$.}	
-%	\label{fig:hi_jer_uncert}%
-%\end{figure}
-%
-%\section{Fragmentation functions}
-%I am currently working on deriving the fragmentation functions for jets in \PbPb\ collisions at \sqrtsnn\ = 5.02 TeV, and comparing them to \pp\ fragmentation functions at the same collision energy \cite{ATLAS-CONF-2017-005}. These measurements provide information about the momentum fraction distribution of charged particles inside jets.
-%
-%The fragmentation functions can be defined in terms of the longitudinal momentum fraction ($z$) of the particle relative to a jet as follows
-%
-%\begin{align}
-%D(z) \equiv \frac{1}{N_{\text{jet}}} \frac{dN_{\text{ch}}}{dz}, \quad \quad
-%z \equiv \frac{\pttrk}{\pTjet} \cos\Delta R
-%\end{align}
-%where $N_{\text{ch}}$ is the number of charged particles, and $N_{\text{jet}}$ is the number of jets being studied. The comparison of $D(z)$ between \PbPb\ and \pp\ collisions helps in understanding the strength and mechanism of medium induced jet quenching, and can be quantified by $R_{D(z)} \equiv {D(z)_{\text{PbPb}}}/{D(z)_{\text{pp}}}$
-%
-%Our results, shown in Fig.~\ref{fig:ff_502}, indicate that jets in \PbPb\ collisions have an enhancement of particles for $z > 0.2$, and a depletion for lower $z$ values, with the modification decreasing with decreasing centrality. This is qualitatively consistent with previous measurements done by ATLAS and CMS at 2.76 TeV \cite{Aaboud:2017bzv, Aad2014320, Chatrchyan:2014ava}. 
-%
-%
-%\begin{figure}[htbp!]
-%	\centering
-%	\includegraphics[width=1.0\textwidth]{figures/qualification/ff_502} %
-%	\caption{$R_{D(z)}$ as measured by ATLAS at \sqrtsnn\ = 5.02 TeV. The fragmentation function modification monotonically decreases for less central collisions. Taken from \cite{ATLAS-CONF-2017-005}}	
-%	\label{fig:ff_502}%
-%\end{figure}
-%
-%There are theory calculations (shown in Fig.~\ref{fig:ff_theory}) that can be compared to data \cite{Casalderrey-Solana:2016jvj}, which while qualitatively have roughly the same shape, but do not describe the data well. Furthermore, calculations of jet energy loss (shown in Fig.~\ref{fig:ff_motivation}), show that a a significant amount of energy is both redistributed, as well as lost outside the jet cone. Combining the fragmentation functions dependence on the longitudinal momentum fraction, with the radial dependence will help constrain theoretical models and give a better understanding of how energy is redistributed around the jet cone, as the jet goes through the quark gluon plasma.
-%
-%\begin{figure}[!tbp]
-%  \centering
-%  \begin{minipage}[b]{0.45\textwidth}
-%	\includegraphics[width=\textwidth]{figures/qualification/ff_theory} %
-%	\caption{Theoretical calculations of fragmentation functions as calculated in \cite{Casalderrey-Solana:2016jvj}. They are compared to data from CMS. Note that the x-axis is in $\ln(1/z)$, as opposed to $z$. Taken from \cite{Casalderrey-Solana:2016jvj}}	
-%	\label{fig:ff_theory}%
-%  \end{minipage}
-%  \hfill
-%  \begin{minipage}[b]{0.45\textwidth}
-%	\includegraphics[width=\textwidth]{figures/qualification/ff_motivation} %
-%	\caption{$R_{D(z)}$ as measured by ATLAS at \sqrtsnn\ = 5.02 TeV. The fragmentation function modification monotonically decreases for less central collisions. Taken from \cite{ATLAS-CONF-2017-005}}	
-%	\label{fig:ff_motivation}%
-%  \end{minipage}
-%\end{figure}

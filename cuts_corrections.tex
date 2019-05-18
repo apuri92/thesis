@@ -18,7 +18,7 @@ A description of the analysis procedure to reconstruct the $\Dptr$ distribution,
 \label{Sec:JetSelection}
 Since the Inner Detector (ID) covers the $|\eta| < 2.5$, the analysis can 
 only be performed for jets within the pseudorapidity interval of $|\eta| < 1.7$ to have the entire $ r = $ 0.8 cone under investigation fully covered by the tracking detector. In both collision systems, jets are 
-measured with \ptjet\ between 126~GeV and 316~GeV in following four successive intervals: 126--158, 158--200, 200--251, and 251--316~GeV. This binning was motivated by the large fake rate below 100 \GeV. An underflow bin was also needed for the unfolding procedure, and hence, the measurement starts at 126 \GeV. This binning is also used in previous heavy ion jet measurements (\cite{ATLAS502FFConf}). Truth jets were associated with the nearest reconstructed jet using the matching of $\dR<0.2$ for the performance study and to build response matrices for the unfolding procedure. The same \dR\ matching criteria were employed in previous ATLAS HI jet analyses and are justified by a detailed performance study~\cite{Aad:12081967v1}. To prevent nearby jets from distorting the measurement of \Dptr\ distributions, 
+measured with \ptjet\ between 126~GeV and 316~GeV in following four successive intervals: 126--158, 158--200, 200--251, and 251--316~GeV. This binning was motivated by the large fake rate below 100 \GeV. An underflow bin was also needed for the unfolding procedure, and hence, the measurement starts at 126 \GeV. This binning is also used in previous heavy ion jet measurements (\cite{PhysRevC.98.024908}). Truth jets were associated with the nearest reconstructed jet using the matching of $\dR<0.2$ for the performance study and to build response matrices for the unfolding procedure. The same \dR\ matching criteria were employed in previous ATLAS HI jet analyses and are justified by a detailed performance study~\cite{Aad:12081967v1}. To prevent nearby jets from distorting the measurement of \Dptr\ distributions, 
 jets are rejected if there is another jet with a higher \ptjet\ than the considered jet anywhere
 within a distance of $\Delta R < 1.0$. The isolation cut removes approximately 0.01\% of jets (see Figure \ref{fig:ISO}), and has almost no impact on the final measurement.
 
@@ -36,7 +36,7 @@ within a distance of $\Delta R < 1.0$. The isolation cut removes approximately 0
 
 A final calibration, referred to as a cross-calibration€~\cite{cc2015}, 
 was applied to the data to account for observed differences in the calorimetric response between data and MC. The cross-calibration factors were estimated using in-situ calibration studies~\cite{HIjesnote} where jets are measured in events while recoiling against objects for which the energy scale is well known. 
-No correction for the jet reconstruction efficiency is necessary, as the analysis is performed in the jet \pT\ region where the jet reconstruction is fully efficient~\cite{ATLAS-COM-PHYS-2013-1369}. 
+No correction for the jet reconstruction efficiency is necessary, as the analysis is performed in the jet \pT\ region where the jet reconstruction is fully efficient~\cite{2015392}. 
 
 The jet energy measured in the calorimeter can be affected by the presence 
 of dead cells or cells with a bad response, by noise spikes in the hadronic end-cap, by a noise in EM calorimeter and by out-of-time energy deposits from cosmic rays and beam backgrounds. In the \pp\ analysis, the set of recommended cuts of ``LooseBad'' is used to remove bad jets. The rate of these jets in the kinematic region of interest (100--316 \GeV) is less than 0.5\%. This cleaning procedure is not applied in \PbPb\ collisions because it is incompatible with the heavy ion jet reconstruction procedue, and also because the low luminosity ensures noise bursts are negligible. This is standard procedure for all heavy ion jet analyses.
@@ -78,7 +78,7 @@ of dead cells or cells with a bad response, by noise spikes in the hadronic end-
 \subsection{Track selection}
 \label{sec:trackselection}
 
-The track selection cuts used here follow the cuts used in~\cite{ATLAS502FFConf}. These provide a low level of fake tracks and 
+The track selection cuts used here follow the cuts used in~\cite{PhysRevC.98.024908}. These provide a low level of fake tracks and 
 a track reconstruction efficiency that is independent of the \pt\ of the jet the track is associated with.  
 The cuts used here are the ``tight" cuts as described in Ref.~\cite{ref:tracktwiki} and were utilized in previous HI jet fragmentation measurements. The default tracking cuts used both in \pp\ and \PbPb\ analysis are:
 \begin{itemize}
@@ -98,7 +98,7 @@ The cuts used here are the ``tight" cuts as described in Ref.~\cite{ref:tracktwi
 \begin{equation}
 \pTtrk >  \ptjet + \sqrt{ (3 \times \sigma_{\mathrm{JER}}(\ptjet))^2 + (3 \times \sigma_{\mathrm{TMR}}(\pTtrk))^2} 
 \end{equation}
-are rejected from the analysis. Where the TMR stands for track momentum resolution. The purpose of this cut is to be consistent with previous fragmentation measurements ~\cite{ATLAS502FFConf}. It has minimal impact on this analysis because it is restricted to tracks below 63 GeV and jets above 100 GeV. }
+are rejected from the analysis. Where the TMR stands for track momentum resolution. The purpose of this cut is to be consistent with previous fragmentation measurements ~\cite{PhysRevC.98.024908}. It has minimal impact on this analysis because it is restricted to tracks below 63 GeV and jets above 100 GeV. }
 \end{itemize}
 
  
@@ -222,7 +222,7 @@ mc_{\mathrm{prob}} = \frac{10N^{\mathrm{common}}_{\mathrm{pix}} + 5N^{\mathrm{co
 \end{equation}
  where $N^{\mathrm{common}}_X$  are the number of hits in detector $X$ in common between the truth and reconstructed track.  $N^{\mathrm{track}}_X$ is the number
 of total hits in the reconstructed track.  
-Tracks with a $mc_{prob}$ greater than 0.3 are associated with the truth track and those with a lower value are not and are classified as fake tracks. The choice of the $mc_{prob}$ cut of 0.3 is based on the recommendation from the tracking group and was used in~\cite{ATL-COM-PHYS-2016-1707}. The sensitivity of the measurement on the value of the $mc_{prob}$ cut is included in the systematic uncertainties.
+Tracks with a $mc_{prob}$ greater than 0.3 are associated with the truth track and those with a lower value are not and are classified as fake tracks. The choice of the $mc_{prob}$ cut of 0.3 is based on the recommendation from the tracking group and was used in~\cite{201865}. The sensitivity of the measurement on the value of the $mc_{prob}$ cut is included in the systematic uncertainties.
 
 In MC samples, the ``track barcode'' classifies reconstructed tracks to different classes based on the origin (primary, secondary, pileup, beam halo, fake...).  We require $0 < \mathrm{barcode} < 200000$ in evaluation of the tracking efficiency to remove pileup, beam halo, secondary particles, and fake particles.  Reconstructed tracks which do not have a matched truth track with given $mc_{\mathrm{prob}}$ are labeled all together as fake tracks. The tracking cuts need to provide both good efficiency for generator level tracks and to adequately reject fakes.
 
@@ -242,7 +242,7 @@ In MC samples, the ``track barcode'' classifies reconstructed tracks to differen
    \label{fig:ppeffdefault_final}
 \end{figure}
 
-The final efficiency corrections applied were determined and applied as a function track \pt\ and track $\eta$, and can be seen in Figures~\ref{fig:pbpbeffdefault_final}-\ref{fig:ppeffdefault_final} for \pp\ and \PbPb\ collisions. No significant dependence on the collision centrality is observed. The efficiency exhibits a small, but monotonic increase with the track \pt. Only a small variation with the track $\eta$ is observed in the region $|\eta|<1.1$ The efficiency correction is applied on a track-by-track basis, assuming $\pttrk = \pTtrue$. While that assumption is not strictly valid, the efficiency varies sufficiently slowly with $\pTtrue$ that the error introduced by this assumption is negligible, up to 1\%. The tracking efficiency determined in Ref.~\cite{ATLAS502FFConf} was not seen to be dependent on \ptjet\ for $\pttrk \lesssim 40$ GeV as can be seen in Fig.~\ref{fig:pbpbeffdefaultjetpt_y0}-\ref{fig:ppeffdefaultjetpt}. The small depletion of the efficiency for tracks with $\pt \sim 10-40$~GeV was attributed to the convolution of how jet fragments and with the performance of the track reconstruction in the dense core of the jet~\cite{ATLAS502FFConf}. 
+The final efficiency corrections applied were determined and applied as a function track \pt\ and track $\eta$, and can be seen in Figures~\ref{fig:pbpbeffdefault_final}-\ref{fig:ppeffdefault_final} for \pp\ and \PbPb\ collisions. No significant dependence on the collision centrality is observed. The efficiency exhibits a small, but monotonic increase with the track \pt. Only a small variation with the track $\eta$ is observed in the region $|\eta|<1.1$ The efficiency correction is applied on a track-by-track basis, assuming $\pttrk = \pTtrue$. While that assumption is not strictly valid, the efficiency varies sufficiently slowly with $\pTtrue$ that the error introduced by this assumption is negligible, up to 1\%. The tracking efficiency determined in Ref.~\cite{PhysRevC.98.024908} was not seen to be dependent on \ptjet\ for $\pttrk \lesssim 40$ GeV as can be seen in Fig.~\ref{fig:pbpbeffdefaultjetpt_y0}-\ref{fig:ppeffdefaultjetpt}. The small depletion of the efficiency for tracks with $\pt \sim 10-40$~GeV was attributed to the convolution of how jet fragments and with the performance of the track reconstruction in the dense core of the jet~\cite{PhysRevC.98.024908}. 
 
 
 \begin{figure}[ht]
@@ -274,10 +274,10 @@ The final efficiency corrections applied were determined and applied as a functi
 
 \subsection{Fake rates}
 \label{sec:fakerates}
-Reconstructed tracks that cannot be matched to a primary particle in the MC samples or are matched to a secondary particle are considered to be ``fake'' tracks. The rate of these tracks was evaluated and extensively studied in Ref.~\cite{ATLAS502FFConf} in the \pp, \pbpb\ HIJING MC, and in \pbpb\ MC+overlay samples. The MC overlay sample is used to crosscheck the fake rate at higher \pt, but is not used for any corrections. It was shown that as the \pttrk\ approaches the  \ptjet\ the fraction of fake tracks increases due to the steeply falling spectra of generator level tracks. Figures~\ref{fig:fakeratepp} and~\ref{fig:fakeratepbpb} show the fraction of tracks that are identified as fakes, secondaries, or part of UE in case of \PbPb\ collisions as a function of \pttrk\ for selections in \ptjet in
+Reconstructed tracks that cannot be matched to a primary particle in the MC samples or are matched to a secondary particle are considered to be ``fake'' tracks. The rate of these tracks was evaluated and extensively studied in Ref.~\cite{PhysRevC.98.024908} in the \pp, \pbpb\ HIJING MC, and in \pbpb\ MC+overlay samples. The MC overlay sample is used to crosscheck the fake rate at higher \pt, but is not used for any corrections. It was shown that as the \pttrk\ approaches the  \ptjet\ the fraction of fake tracks increases due to the steeply falling spectra of generator level tracks. Figures~\ref{fig:fakeratepp} and~\ref{fig:fakeratepbpb} show the fraction of tracks that are identified as fakes, secondaries, or part of UE in case of \PbPb\ collisions as a function of \pttrk\ for selections in \ptjet in
 \pp\ and \pbpb\ collisions, respectively.  The rate 
 decreases with \pttrk\ up to approximately 10~GeV and then remains constant until \pttrk\ approaches \ptjet\
-where the rate increases again.  In \pbpb\ collisions, the ``fake'' rate also includes tracks which are from the underlying event from the real collisions into which the jet is overlaid.  The rate of these underlying event tracks increases with decreasing \pttrk\ and increasing collision centrality. The contribution from UE is negligible for tracks with \pT\ above 10 GeV as no centrality dependence is seen. The Fig.~\ref{fig:fakeratepbpb} excludes the very low \pT\ region where the distribution would be completely dominated by the UE. The size of the UE is then presented further in Fig.~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}. To separate the contribution of UE tracks (see section~\ref{sec:cuts_UE}) from the fake tracks in \PbPb\ collisions and cross-check the centrality dependence of the fake rate, 0.2M MB \PbPb\ fully reconstructed HIJING MC~\cite{Wang:1991hta} events was used. The HIJING MC generator is capable of simulating global properties of HI collisions. The estimated fake rate of tracks associated with jets with $\pT>40$ GeV is at the level of 1\% and it exhibits similar behavior as observed in Fig.~\ref{fig:fakeratepbpb}. No significant dependence of the fake rate on the collision centrality was found~\cite{ATLAS502FFConf}.
+where the rate increases again.  In \pbpb\ collisions, the ``fake'' rate also includes tracks which are from the underlying event from the real collisions into which the jet is overlaid.  The rate of these underlying event tracks increases with decreasing \pttrk\ and increasing collision centrality. The contribution from UE is negligible for tracks with \pT\ above 10 GeV as no centrality dependence is seen. The Fig.~\ref{fig:fakeratepbpb} excludes the very low \pT\ region where the distribution would be completely dominated by the UE. The size of the UE is then presented further in Fig.~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}. To separate the contribution of UE tracks (see section~\ref{sec:cuts_UE}) from the fake tracks in \PbPb\ collisions and cross-check the centrality dependence of the fake rate, 0.2M MB \PbPb\ fully reconstructed HIJING MC~\cite{Wang:1991hta} events was used. The HIJING MC generator is capable of simulating global properties of HI collisions. The estimated fake rate of tracks associated with jets with $\pT>40$ GeV is at the level of 1\% and it exhibits similar behavior as observed in Fig.~\ref{fig:fakeratepbpb}. No significant dependence of the fake rate on the collision centrality was found~\cite{PhysRevC.98.024908}.
   
   \begin{figure}[ht]
   \centerline{
@@ -323,7 +323,7 @@ To correct for the contribution from fake and secondary particles, charged parti
 \subsection{Underlying event subtraction of tracks}
 \label{sec:cuts_UE}
 
-The underlying event subtraction performed on the calorimetric jet energy is described in Sec.~\ref{sec:reconstruction}. Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions. This background strongly depends on the collisions centrality and on the charged particle \pt. In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PbPb5TeVIntNote}. This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Fig.~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV. 
+The underlying event subtraction performed on the calorimetric jet energy is described in Sec.~\ref{sec:reconstruction}. Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions. This background strongly depends on the collisions centrality and on the charged particle \pt. In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PhysRevC.98.024908}. This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Fig.~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV. 
 
 In \pp\ collisions, the UE is not subtracted. The pileup contribution is negligible and subtracting the intrinsic UE from the hard scattering processes would also necessitate a similar subtraction in the particle level fragmentation functions in \pbpb\ that would be generator dependent and make comparisons between \pp\ and \pbpb\ non-trivial.
 
@@ -384,7 +384,6 @@ The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the fu
 The resulting UE charged particle yields $\fd \nchUE^{\mathrm{Cone}}/ \fd \pTch$ are evaluated over the 1 -- 10 GeV range as a function of \pt\, \ptjet\, centrality, and \rvar, and then averaged over all cones according to.
 
  \begin{eqnarray}
- \label{eq:Dptsub}
 \frac{\fd n_{\mathrm{ch}}^{\mathrm{UE Cone}}}{\fd \pTch}  = \frac{1}{N_{\mathrm{cones}}} \frac{1}{\varepsilon} \frac{\Delta N^{\mathrm{cone}}_{\mathrm{ch}} (\pTch, \ptjet, \etajet)}{\Delta \pTch}
  \end{eqnarray}
 
@@ -400,7 +399,7 @@ Here $N_{\mathrm{cones}}$ is the number of background cones associated with a gi
 \end{figure}
 
 
- \subparagraph{Correction for flow: }  Elliptic flow is the characteristic sinusoidal modulation of the yields of particles along the azimuth in heavy ion collisions. The maximum amplitude of the modulation determines the reaction plane, with more momenta being measured in plane than out of plane. Ref \cite{ATLAS-CONF-2016-105} provides a basic measurement of the magnitude of the elliptic flow, and its \pt\ dependence. The correction for this effect was based on a parametrization of the \pTch and centrality dependence of previously measured elliptic flow coefficients, $v_{2}$ \cite{ATLAS-CONF-2016-105}. The reaction plane angle $\Psi$ is estimated on an event-by-event basis by using the $\phi$ variation of transverse energy in the forward calorimeter. The correction factor is evaluated as a function of the distance of the jet from the reaction plane $\cos2(\phijet - \Psi)$. The correction is less (greater) than unity for jets in a direction perpendicular (parallel) to the reaction plane. Jets perpendicular (parallel) to the plane typically have a lower (higher) UE, and a cone at a random position in the ID is corrected down (up). The size of the correction is at the level of a few percent, and decreases with increasing track \pt, as is shown in Fig.\ref{fig:flow_corr}
+ \subparagraph{Correction for flow: }  Elliptic flow is the characteristic sinusoidal modulation of the yields of particles along the azimuth in heavy ion collisions. The maximum amplitude of the modulation determines the reaction plane, with more momenta being measured in plane than out of plane. Ref \cite{Aaboud2018} provides a basic measurement of the magnitude of the elliptic flow, and its \pt\ dependence. The correction for this effect was based on a parametrization of the \pTch and centrality dependence of previously measured elliptic flow coefficients, $v_{2}$ \cite{ATLAS-CONF-2016-105}. The reaction plane angle $\Psi$ is estimated on an event-by-event basis by using the $\phi$ variation of transverse energy in the forward calorimeter. The correction factor is evaluated as a function of the distance of the jet from the reaction plane $\cos2(\phijet - \Psi)$. The correction is less (greater) than unity for jets in a direction perpendicular (parallel) to the reaction plane. Jets perpendicular (parallel) to the plane typically have a lower (higher) UE, and a cone at a random position in the ID is corrected down (up). The size of the correction is at the level of a few percent, and decreases with increasing track \pt, as is shown in Fig.\ref{fig:flow_corr}
  
  \begin{figure}[ht]
 \centerline{ \includegraphics[width=0.45 \textwidth]{figures/main/figures_UE/flow_correction.pdf} }
@@ -422,7 +421,7 @@ That difference was found to result from intrinsic correlations between the UE c
   \begin{eqnarray}
   w_{\mathrm{UE}} (\pT) = \frac{\fd \nchUE^{\mathrm{Map}}/ \fd \pTch}{\fd \nchUE^{\mathrm{Cone}}/ \fd \pTch}\bigg|_{\mathrm{MC}}
   \end{eqnarray}   
-Examples of these factors are shown in Fig~\ref{fig:UEweights_r2}-\ref{fig:UEweights_r6}. The correction by construction corrects also for fakes and secondary contribution in the track \pT\ region 1-10~GeV in \PbPb\ collisions. These factors are also shown in Figure~\ref{fig:UEweights_r_jet0}, as a function of \rvar\ for different track \pt\ bins, for $126 < \ptjet\ < 158 \GeV$.  The size of these corrections integrated over $\rvar = 0.4$ is comparable to the UE-JER correction done in \cite{ATLAS502FFConf}.
+Examples of these factors are shown in Fig~\ref{fig:UEweights_r2}-\ref{fig:UEweights_r6}. The correction by construction corrects also for fakes and secondary contribution in the track \pT\ region 1-10~GeV in \PbPb\ collisions. These factors are also shown in Figure~\ref{fig:UEweights_r_jet0}, as a function of \rvar\ for different track \pt\ bins, for $126 < \ptjet\ < 158 \GeV$.  The size of these corrections integrated over $\rvar = 0.4$ is comparable to the UE-JER correction done in \cite{PhysRevC.98.024908}.
 
 A comparison between the cone method and the map method is shown in Fig.\ref{fig:conemethod_mapmethod}. The difference between the methods varies slowly with \ptjet\ and track \pT, with a small centrality dependence coming from fact that the underlying event strongly depends on the centrality.
 
@@ -466,7 +465,6 @@ The multiplicative correction factors that correct for the correlation between t
 Outside that region and in \pp\ system fake contribution is corrected as described at the beginning of Section~\ref{sec:trackreco}.  The corrected UE distributions, $\fd \cnchUE / \fd \pTch$ are then subtracted from measured distributions as follows
  %
  \begin{eqnarray}
- \label{eq:Dptsub}
 \frac{\fd n_{\mathrm{ch}}^{\mathrm{sub}}}{\fd \pTch}  = \frac{\fd n_{\mathrm{ch}}^{\mathrm{meas}}}{\fd \pTch} - {w_{\mathrm{UE}} (\pT)} \left( \frac{\fd \nchUE^{\mathrm{Cone}}}{\fd \pTch} \bigg|_{\mathrm{Data}} \right)  = \frac{\fd n_{\mathrm{ch}}^{\mathrm{meas}}}{\fd \pTch} - \frac{\fd \cnchUE}{\fd \pTch}
  \end{eqnarray}
 
@@ -570,7 +568,7 @@ The unfolding is done via a one dimensional Bayesian unfolding procedure with 4 
 \label{sec:2dunfolding}
 
 
-Observed correlation between the jet response in the detector and the jet fragmentation necessitates a two dimensional unfolding~\cite{ATLAS502FFConf}. 
+Observed correlation between the jet response in the detector and the jet fragmentation necessitates a two dimensional unfolding~\cite{PhysRevC.98.024908}. 
 %The dependence of the jet response on the fragmentation pattern of a particular jet has been studied extensively in ATLAS.
 For example, gluon jets, which have in general a softer fragmentation function, are observed to have a lower energy response than quark jets~\cite{Aad:2014bia}.  The Global Sequential Calibration to the \pp\ jet collections~\cite{ATLAS:2015oia}, reduces the fragmentation dependence to the JES, but these calibrations are not available for the HI jet collections used in this analysis.
 
