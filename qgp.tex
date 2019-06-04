@@ -1,15 +1,22 @@
 % !TEX root = thesis-ex.tex
 
 %The quark gluon plasma is a strongly coupled medium \cite{} that is produced in a heavy ion collision. This section will briefly describe the heavy ion environment it is formed in and subsequently the medium itself. 
+Heavy ion collisions were suggested in Reference \cite{SHURYAK198071} as a tool to study the Quark Gluon Plasma. They provide access to the otherwise confined partons, and give insight into the QCD phase diagram and the transition between the QGP and hadronic matter. This section will briefly discuss a heavy ion collision and the properties of the medium that is formed in such a collision.  
 
-In a heavy ion collision, each incident nucleus is a lorentz contracted disc. In the case of a \pbpb\ collision, the nuclei have been accelerated to energies where the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. 
-%The partons within each nucleons are sources of transverse color fields
+\subsection{Heavy Ion Collisions}
+In a heavy ion collision, the colliding nuclei are Lorentz contracted discs. In the case of a \pbpb\ collision, the nuclei have been accelerated to energies where the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. Each nucleus contains many colored quarks and antiquarks, with three more quarks than anti-quarks per nucleon, with the $q\bar{q}$ popping in and out of the vacuum due to quantum fluctuations. These $q\bar{q}$ pairs are sources of transverse color fields and the corresponding force carriers, the gluons.
 
-When these pancake like discs collide, most of the partons are participate in soft interactions that do not involve large transverse momentum transfer, and are hence scattered only at small angles. A small fraction of the colliding partons however do undergo hard perturbative interactions and lead to particles with large transverse momenta.
+When these pancake like discs collide, their color fields interact and there is a color charge exchange, producing longitudinal color fields that fill the space between the receding discs. While the maximum energy density in the process occurs just at the collision, the energy density 1 fm/c after the collision is 12 $\mathrm{GeV} / \mathrm{fm}^3$, much higher than the 500 $\mathrm{MeV} / \mathrm{fm}^3$ in a typical hadron. Lattice QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons. In fact, these partons are strongly coupled to each other and form a medium called the Quark Gluon Plasma (QGP) \cite{???}. 
 
-While the maximum energy density in the process occurs just at the collision, the energy density 1 fm/c after the collision is 12 $\mathrm{GeV} / \mathrm{fm}^3$, much higher than the 500 $\mathrm{MeV} / \mathrm{fm}^3$ in a typical hadron. Lattice QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons. In fact, these partons are strongly coupled to each other \cite{???} , forming a medium that can be described by relativistic hydrodynamics. This medium, called the quark gluon plasma (QGP) has a viscosity to entropy ratio that is almost at the theoretical minimum of of $\eta / S = 1/4\pi$ \cite{5,6, check126}. 
+%In a heavy ion collision, the experimenter can only tune the size of the colliding nuclei, and the energy that they are being collided at. There is no experimental control over the impact parameter or the structure functions that dictate the momentum distribution of nucleons within the nucleus. These have to be determined event by
 
-After the collision and as the nuclei are receding from each other, the energy density between them starts to decrease as the QGP cools and expands. This process can be seen in Figure~\ref{fig:qgp_form}. Once formed, the QGP hydrodynamically flows, with the initial pressure driving the expansion and the subsequent cooling. This continues till the energy density drops to below that within a hadron and the fluid hadronizes. These individual hadrons briefly scatter off of each other before they freely fly towards the detector (freezeout).
+% most of the partons are participate in soft interactions that do not involve large transverse momentum transfer, and are hence scattered only at small angles. A small fraction of the colliding partons however do undergo hard perturbative interactions and lead to particles with large transverse momenta.
+%These subsequently decaying to $q\bar{q}$ pairs. 
+%The QGP can be described by relativistic hydrodynamics, and has a viscosity to entropy ratio that is almost at the theoretical minimum of of $\eta / S = 1/4\pi$ \cite{5,6, check126}. 
+
+After the collision the energy density between the receding nuclei starts to decrease as the QGP cools and expands. This process, seen in Figure~\ref{fig:qgp_form}, continues till the energy density drops to below that within a hadron and the fluid ``hadronizes''. These individual hadrons briefly scatter off of each other before they freely fly towards the detector (freeze-out).
+
+%Once formed, the QGP flows hydrodynamically, with the initial pressure driving the expansion and the subsequent cooling. 
 % It is to be noted that there is QGP continuously formed in the wake of the nuclei since the partons produced at large rapidities are highly relativistic and 
 
 \begin{figure}[htbp]
@@ -20,22 +27,66 @@ After the collision and as the nuclei are receding from each other, the energy d
 \end{center}
 \end{figure}
 
-While Figure~\ref{fig:qgp_form} shows snapshots of a head on (central) collision between two large nuclei, it is possible to have collisions where the impact parameter is larger and hence the overlap region is smaller. These collisions, called peripheral collisions, qualitatively undergo the same process described above, with the size and shape of the QGP being different. In these collisions, the QGP formed is more lenticular in the transverse direction. Variations in the shape of the QGP due to the collision centrality result in pressure gradients that further cause azimuthal anisotropies in the momentum distribution of the produced particles. 
+While Figure~\ref{fig:qgp_form} shows snapshots of a head on (central) collision between two large nuclei, it is possible to have collisions where the impact parameter is larger and hence the overlap region is smaller. These collisions, called peripheral collisions, qualitatively undergo the same process described above, with the size and shape of the QGP being different.
+
+Basic parameters of a heavy ion collision such as the number of participants \Npart and number of binary collisions \Ncoll can be determined using the Glauber Monte Carlo simulations \cite{doi:10.1146/annurev.nucl.57.090506.123020}. This technique  considers multiple scatterings of nucleons in nuclear targets by modeling the nucleus as a set of uncorrelated nucleons sampled from measured density distributions. Two nuclei are arranged with a random impact parameter and projected onto the $x-y$ plane as shown in Figure~\ref{fig:glauber}, with interaction probabilities being applied by using the relative distance between nucleon centroids as a proxy for the measured inelastic nucleon-nucleon cross section. 
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/theory/glauberMC}
+\caption{A Glauber Monte Carlo event for $Au+Au$ at \sqrtsnn = 200 geV with impact parameter of 6 fm viewed in the (left) transverse plane and (right) along the beam axis. Darker circles represent the participating nucleons. Taken from \cite{doi:10.1146/annurev.nucl.57.090506.123020}. }
+\label{fig:qgp_form}
+\end{center}
+\end{figure}
+
+
+%In these collisions, the QGP formed is more lenticular in the transverse direction.
+% Of course, the colliding nuclei are not perfectly smooth objects and are made of individual nucleons giving them a non-uniform structure. This results in the energy density in the overlap region being non-uniform with any variations giving rise to pressure gradients that cause azimuthal anisotropies in the momentum distribution of the produced particles. 
+
+%The heavy ion collision system is an extraordinarily useful laboratory to study QCD because it gives access to the otherwise confined partons and provides for a way to study the phase transition between the QGP and ordinary hadronic matter. It is also able to replicate the conditions in the early universe, just after the Big Bang \cite{23, 24}, when it was too hot for hadrons to exist in the form that they do now. 
 
 %We can differentiate different nucleons in the collision as per the following:
 %\subparagraph{$\mathrm{N}_{\mathrm{part}}$: } This is the number nucleons that have collided with at least one other nucleon, and can be said to have participated in the heavy ion collision.
 %\subparagraph{$\mathrm{N}_{\mathrm{coll}}$: } This is the number of binary collisions that take place between the nucleons of the colliding nuclei. It is typically much larger than \Npart.
 %\subparagraph{$\mathrm{N}_{\mathrm{spec}}$: } This is the number nucleons that do not encounter any nucleon from the other nucleus and are just spectators to the collision. 
 
-
 %The properties of the QGP can be determined by azimuthal correlation measurements \cite{5, 6, 90}, while how it interacts with a high energy parton can be determined by jet studies \cite{91, 92, 69, etc}. 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{The Quark Gluon Plasma}
-At the peak energy density of the collision, the system cannot be described at the level of hadrons, and has to be described in terms of quarks and gluons. The initial anisotropic energy density being reflected in the azimuthal variation of particle production implies a strongly coupled medium that expands hydrodynamically, with a faster expansion in the direction of larger gradients and hence resulting a momentum anisotropy. See \cite{116, 117, 118, 63}.
+\label{sec:qgp}
+Quarks and gluons are deconfined at extremely high energy and density conditions and form a state called the Quark Gluon Plasma \cite{SHURYAK198071}. These conditions are met in high energy heavy ion collisions. 
+The Quark Gluon Plasma has to be described in terms of its constituent quarks and gluons as opposed to the hadrons. This transition between confinement within hadrons and being free within the QGP occurs at very high temperatures and pressures. This can be seen in the QCD phase diagram shown in Figure~\ref{fig:qcd_phase}. 
 
-Azimuthal correlation measurements \cite{5?, 6?, 90?, 110?, 111?} indicated the momentum anisotropy in the collision is  remains, implying that the medium is strongly coupled. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/theory/qcd_phase}
+\caption{The QCD phase diagram of nuclear matter. Figure from from Reference~\cite{PhysRevD.72.034004}. }
+\label{fig:qgp_form}
+\end{center}
+\end{figure}
 
-A Fourier Transform of the angular distribution of charged hadrons in the collision debris can quantify these measurements and give the anisotropic flow coefficients $v_n$, defined as \cite{115}:
+This state of matter exists above $\lambda_{\mathrm{QCD}} = 200$ MeV, the fundamental energy scale in QCD, and is believed to have filled the early universe a few microseconds after the Big Bang \cite{23, 24} and might be present in the cores of extremely compact objects like neutron stars. 
+
+The MIT Bag Model can be used to describe the QGP as a simple ideal gas with a bag constant $B$ that parameterizes the vacuum pressure \cite{Muller1993, Yagi:2005yb}.
+
+The QGP was initially thought to be a weakly coupled parton gas. This was based on asymptotic freedom from QCD; the highly energetic collisions such as those at the LHC would imply a weak interaction between the quarks and gluons that make up the plasma. This would result in rare scatterings between the constituents of the gas and wash out any spatial anisotropies based on the collision geometry. On the other hand, if the QGP is assumed to be strongly coupled, the pressure gradients in the medium would be driven by hydrodynamics and transform spatial anisotropies to momentum anisotropies in the particles produced as shown in Figure~\ref{fig:overlap}. In this picture, the non-uniform structure of the colliding nuclei would cause a momentum anisotropy that would be further enhanced when looking at collisions that are less central and do not have perfect overlap between the colliding nuclei \cite{116, 117, 118, 63}. Azimuthal correlation measurements \cite{Aad2014, PhysRevLett.87.182301, PhysRevLett.91.182301, PhysRevLett.98.242302,PhysRevC.89.044906,PhysRevLett.116.132302} indicate momentum anisotropy in the collision, implying that the medium is strongly coupled. 
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/theory/overlap}
+\caption{Schematic diagrams of the initial overlap region (left) and the final spatial anisotropy generated (right). Taken from \cite{RevModPhys.90.025005}.}
+\label{fig:overlap}
+\end{center}
+\end{figure}
+
+%At the peak energy density of the collision, the system cannot be described at the level of hadrons, and has to be described in terms of quarks and gluons. The initial anisotropic energy density being reflected in the azimuthal variation of particle production implies a strongly coupled medium that expands hydrodynamically, with a faster expansion in the direction of larger gradients and hence resulting a momentum anisotropy. 
+
+A Fourier Transform of the angular distribution of charged hadrons in the collision debris can quantify these momentum anisotropies and give the anisotropic flow coefficients $v_n$, defined as \cite{115}:
 
 \begin{align}
 \frac{d\bar{N}}{d\phi} = \frac{\bar{N}}{2\pi} \left( 1 + 2 \sum_{n=1}^{\inf} v_{n} \cos(n(\phi-\bar{\Psi}_n)) \right)
@@ -53,4 +104,5 @@ where $\phi$ is the angle in the transverse plane, $\bar{\Psi}_n$ are the event 
 \end{figure}
 
 
+Thermal photons from the QGP reveal that it reaches temperatures of 300--600 MeV in central collisions at 200 GeV \cite{PhysRevLett.104.132301} and 2.76 TeV \cite{2016235}, showing very little collision energy dependence. Further, the chemical freeze-out temperature was found to be 160 MeV via  measurements of ratios of final state hadrons \cite{Fodor_2004,ADAMS2005102, PhysRevC.93.024917} with the thermal freeze-out being 100--150 MeV \cite{PhysRevC.69.024904, PhysRevC.72.014908, PhysRevC.75.024910, PhysRevC.88.044910}.
 
