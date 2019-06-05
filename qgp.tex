@@ -1,10 +1,10 @@
 % !TEX root = thesis-ex.tex
 
 %The quark gluon plasma is a strongly coupled medium \cite{} that is produced in a heavy ion collision. This section will briefly describe the heavy ion environment it is formed in and subsequently the medium itself. 
-Heavy ion collisions were suggested in Reference \cite{SHURYAK198071} as a tool to study the Quark Gluon Plasma. They provide access to the otherwise confined partons, and give insight into the QCD phase diagram and the transition between the QGP and hadronic matter. This section will briefly discuss a heavy ion collision and the properties of the medium that is formed in such a collision.  
+Heavy ion collisions can be used as a tool to study the Quark Gluon Plasma \cite{SHURYAK198071} . They provide access to the otherwise confined partons, and give insight into the QCD phase diagram and the transition between the QGP and hadronic matter. This section will briefly discuss a heavy ion collision and the properties of the medium that is formed in such a collision.  
 
 \subsection{Heavy Ion Collisions}
-In a heavy ion collision, the colliding nuclei are Lorentz contracted discs. In the case of a \pbpb\ collision, the nuclei have been accelerated to energies where the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. Each nucleus contains many colored quarks and antiquarks, with three more quarks than anti-quarks per nucleon, with the $q\bar{q}$ popping in and out of the vacuum due to quantum fluctuations. These $q\bar{q}$ pairs are sources of transverse color fields and the corresponding force carriers, the gluons.
+In a heavy ion collision, the colliding nuclei are accelerated to relativistic energies and are Lorentz contracted discs. In the case of a \pbpb\ collision the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. Each nucleus contains many colored quarks and antiquarks, with three more quarks than anti-quarks per nucleon, with the $q\bar{q}$ popping in and out of the vacuum due to quantum fluctuations. These $q\bar{q}$ pairs are sources of transverse color fields and the corresponding force carriers, the gluons. 
 
 When these pancake like discs collide, their color fields interact and there is a color charge exchange, producing longitudinal color fields that fill the space between the receding discs. While the maximum energy density in the process occurs just at the collision, the energy density 1 fm/c after the collision is 12 $\mathrm{GeV} / \mathrm{fm}^3$, much higher than the 500 $\mathrm{MeV} / \mathrm{fm}^3$ in a typical hadron. Lattice QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons. In fact, these partons are strongly coupled to each other and form a medium called the Quark Gluon Plasma (QGP) \cite{???}. 
 
@@ -29,17 +29,87 @@ After the collision the energy density between the receding nuclei starts to dec
 
 While Figure~\ref{fig:qgp_form} shows snapshots of a head on (central) collision between two large nuclei, it is possible to have collisions where the impact parameter is larger and hence the overlap region is smaller. These collisions, called peripheral collisions, qualitatively undergo the same process described above, with the size and shape of the QGP being different.
 
-Basic parameters of a heavy ion collision such as the number of participants \Npart and number of binary collisions \Ncoll can be determined using the Glauber Monte Carlo simulations \cite{doi:10.1146/annurev.nucl.57.090506.123020}. This technique  considers multiple scatterings of nucleons in nuclear targets by modeling the nucleus as a set of uncorrelated nucleons sampled from measured density distributions. Two nuclei are arranged with a random impact parameter and projected onto the $x-y$ plane as shown in Figure~\ref{fig:glauber}, with interaction probabilities being applied by using the relative distance between nucleon centroids as a proxy for the measured inelastic nucleon-nucleon cross section. 
+The basic parameters of a heavy ion collision such as the number of participants \Npart\ and number of binary collisions \Ncoll\ can be determined using the Glauber Monte Carlo simulations \cite{glauberArticle, glauberMisc}. This technique considers a nucleus-nucleus collision as a collection of independent binary nucleon-nucleon collisions; the colliding nuclei are modeled as a set of uncorrelated nucleons being positioned within the nucleus based on a the nuclear density function uniform in azimuthal and in polar angles. The nuclear density function shown in Figure~\ref{fig:nuclearDensity} for Au and Cu, is given by:
 
+\begin{align}
+\rho(r) = \rho_0 \frac{1 + w (r/R)^2}{1+e^{\frac{r-R}{a}}}
+\end{align}
+where $\rho_0$ is the nucleon density, $R$ is the nuclear radius, $a$ is the skin depth, $w$ corresponds to deviations from a circular shape and is typically zero for larger nuclei like Cu, W, Au, Pb, and U. For the Pb nuclei used at the LHC, $w = 0$, $R = 6.62$ fm and $a =0.55$ fm \cite{DEVRIES1987495}. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.55\textwidth]{figures/theory/nuclearDensity}
+\caption{ The nuclear density distributions for nuclei used at RHIC: Cu ($w = 0$, $R = 4.2$ fm and $a =0.48$ fm)  and Au ($w = 0$, $R = 6.38$ fm and $a =0.535$ fm) \cite{doi:10.1146/annurev.nucl.57.090506.123020, DEVRIES1987495}.}
+\label{fig:nuclearDensity}
+\end{center}
+\end{figure}
+
+They are then arranged with a random impact parameter $b$ based on the distribution $d\sigma/d b = 2\pi b$ and projected onto the $x-y$ plane as shown in Figure~\ref{fig:glauberMC}. They are then made to travel on straight trajectories, colliding if $d \leq \sqrt{\sigma_{\mathrm{inel}}^{\mathrm{NN}}/ \pi}$, where $d$ is the distance between the nucleons in a plane transverse to the beam axis and $\sigma_{\mathrm{inel}}^{\mathrm{NN}}$ is the inelastic scattering cross section. \cite{doi:10.1146/annurev.nucl.57.090506.123020, Alver:2008aq}
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.85\textwidth]{figures/theory/glauberMC}
 \caption{A Glauber Monte Carlo event for $Au+Au$ at \sqrtsnn = 200 geV with impact parameter of 6 fm viewed in the (left) transverse plane and (right) along the beam axis. Darker circles represent the participating nucleons. Taken from \cite{doi:10.1146/annurev.nucl.57.090506.123020}. }
-\label{fig:qgp_form}
+\label{fig:glauberMC}
 \end{center}
 \end{figure}
 
+
+
+An important parameter for colliding nuclei A and B with $A$ and $B$ nucleons is the thickness function $T_{AB}$. It describes the effective overlap area in which specific nucleons in the two colliding nuclei can interact. It can be defined in terms of the probability per unit area of a given nucleon being located at a particular distance $s$ within the nucleus. For the colliding nuclei $A$ and $B$, this is given by $T_{A}({\bf{s}}) = \int \rho_A ({\bf{s}}, z_A) dz_{A}$ and $T_{B}({\bf{s}}) = \int \rho_B ({\bf{s}}, z_B) dz_{B}$. Then, $T_{AB}$ is given by
+
+\begin{align}
+T_{AB}({\bf b}) = \int T_{A} ({\bf s}) T_{B} ({\bf s-\bf b}) d^2 s
+\end{align}
+
+The probability of then having $n$ interactions between nuclei $A$ and $B$ is given by the binomial distribution:
+
+\begin{align}
+P(n, { \bf b}) = {{AB} \choose {n}} \Big[T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^n \Big[ 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^{AB-n}
+\end{align}
+
+where the first term is the number of combinations for finding $n$ collisions from $AB$ possibilities, the second term is the probability for having exactly $n$ collisions, and the last term the probability of $AB-n$ misses. Then the total probability of an interaction between A and B is 
+
+%\frac{d^2  s\sigma_{\mathrm{inel}}^{\mathrm{AB}} } {d b^2}  \def % p p_{\mathrm{inel}^{AB} (b) = \sum_{n=1}^{AB} P(n, {\bf b}) = %1- \Big[ 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^{AB-n}
+
+\begin{align}
+\frac{d^2  \sigma_{\mathrm{inel}}^{\mathrm{AB}} }{db^2} \equiv p_{\mathrm{inel}}^{\mathrm{AB}} (b) = \sum_{n=1}^{AB} P(n, {\bf b}) = 1- \Big[ 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^{AB}
+\end{align}
+
+Then the total cross section is given by
+
+\begin{align}
+\sigma_{\mathrm{inel}}^{\mathrm{AB}} = \int_0^\infty 2\pi b db \Bigg[ 1- \Big( 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}}  \Big)^{AB} \Bigg]
+\end{align}
+
+and \Ncoll\ and \Npart are given by \cite{Kharzeev:2000ph, Bialas:1976ed}
+
+\begin{align}
+\Ncoll (b) = & \sum_{n=1}^{AB} n P(n, b) =  AB \times T_{AB}(b) \sigmainel \\
+\Npart (b) = & A \int T_A ({\bf s}) \Big[ 1 - \big(1-T_B ({\bf s - b}) \sigmainel \big)^B \Big] d^2 s \\
++ & B \int T_B ({\bf s-b}) \Big[ 1 - \big(1-T_A ({\bf s}) \sigmainel \big)^A \Big] d^2 s \nonumber
+\end{align}
+
+The correlation between \Ncoll\ and \Npart\ can be seen in Figure~\ref{fig:NcollNpart}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.55\textwidth]{figures/theory/NcollNpart}
+\caption{The $\Ncoll-\Npart$ correlation for \pbpb\ collisions at \sqrtsnn\ = 5.02 TeV. Taken from \cite{Perepelitsa:2212936}. }
+\label{fig:NcollNpart}
+\end{center}
+\end{figure}
+
+The charged particle multiplicity $N_{\mathrm{ch}}$ along with the combination of \Npart\ and impact parameter $b$ can be used to determine the centrality of a heavy ion event. An example of this is shown in Figure~\ref{fig:cent_estimate}.
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/theory/cent_estimate}
+\caption{The correlation between the observable \Nch\ and \Npart\ to determine the centrality distribution. Taken from \cite{doi:10.1146/annurev.nucl.57.090506.123020}. }
+\label{fig:cent_estimate}
+\end{center}
+\end{figure}
 
 %In these collisions, the QGP formed is more lenticular in the transverse direction.
 % Of course, the colliding nuclei are not perfectly smooth objects and are made of individual nucleons giving them a non-uniform structure. This results in the energy density in the overlap region being non-uniform with any variations giving rise to pressure gradients that cause azimuthal anisotropies in the momentum distribution of the produced particles. 
@@ -65,7 +135,7 @@ The Quark Gluon Plasma has to be described in terms of its constituent quarks an
 \begin{center}
 \includegraphics[width=0.85\textwidth]{figures/theory/qcd_phase}
 \caption{The QCD phase diagram of nuclear matter. Figure from from Reference~\cite{PhysRevD.72.034004}. }
-\label{fig:qgp_form}
+\label{fig:qcd_phase}
 \end{center}
 \end{figure}
 
