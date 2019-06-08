@@ -1,8 +1,7 @@
 % !TEX root = thesis-ex.tex
-
+%TODO: add JES/JER plots
 
 Hard scatterings in particle collisions result in the production of highly energetic partons that form conical sprays of hadrons called jets. A schematic of this process is shown in Figure~\ref{fig:feynman_jet}. Jet production in a vacuum is well described in context of perturbative QCD \cite{Sjostrand:2007gs} where processes involving large momentum transfers like high \pt\ hadron production can be described in terms of the parton distribution functions, scattering cross sections, and final state fragmentation functions as shown below \cite{Qin:2015srf}:
-
 
 \begin{figure}[htbp]
 \begin{center}
@@ -11,8 +10,6 @@ Hard scatterings in particle collisions result in the production of highly energ
 \label{fig:feynman_jet}
 \end{center}
 \end{figure}
-
-
 
 \begin{align}
 \label{eq:hadronCS}
@@ -69,8 +66,6 @@ The second source of modification is the formation of the hot and dense quark gl
 \item Radiative energy loss: This is the larger source of parton energy loss and jet quenching. These are modified by the presence of the plasma due to scatterings off of the plasma constituents. A variety of radiative energy loss frameworks that have been developed include: Baier-Dokshitzer-Mueller-Peigne-Schiff-Zakharov (BDMPS-Z) \cite{BAIER1997291}, Gyulassy, Levai and Vitev (GLV) \cite{Gyulassy:1999zd}, Amesto-Salgado-Wiedemann (ASW) \cite{Wiedemann:2000za},  Arnold-Moore-Yaffe (AMY) \cite{Arnold:2001ba} and higher twist (HT) \cite{Guo:2000nz}.
 \end{itemize}
 
-\subparagraph{Collisional energy loss} This is a combination of elastic and inelastic collisions of the hard parton with the constituents of the quark gluon plasma. The 
-
 Both hot and cold nuclear matter effects can be described by modifying Equation~\ref{eq:hadronCS} as:
 \begin{align}
 d \sigma_{AB \rightarrow hX}  \approx & \sum_{abjj'd} f_{a/A} (x_a) \otimes f_{b/B} (x_b) \\ 
@@ -85,7 +80,7 @@ where the additional $P_{j\rightarrow j'}$ describes the interaction of the hard
 \widetilde{D}_{h \rightarrow j'} (z_j, \mu_f) \approx \sum_{j'} P_{j\rightarrow j'} (p_{j'} | p_j) \otimes D_{h\rightarrow j'} (_{j'})
 \end{align}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jet Reconstruction}
 Jets can reconstructed by clustering algorithms that take in a variety of inputs. The algorithm used in ATLAS is the \antikt\ clustering algorithm \cite{Cacciari:2008gp}. This algorithm clusters soft particles around hard ones in the following manner:
 
@@ -107,9 +102,9 @@ where $k_{Ti}$ is the transverse momentum of particle $i$ and $\Delta_{ij} = \sq
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=.3\textwidth]{jetMeasurements/jetReco_kt}\hfill
-\includegraphics[width=.3\textwidth]{jetMeasurements/jetReco_CA}\hfill
-\includegraphics[width=.3\textwidth]{jetMeasurements/jetReco_antikt}\hfill
+\includegraphics[width=.3\textwidth]{theory/jetReco_kt}\hfill
+\includegraphics[width=.3\textwidth]{theory/jetReco_CA}\hfill
+\includegraphics[width=.3\textwidth]{theory/jetReco_antikt}\hfill
 \caption{Different clustering algorithms applied to the sample parton-level event. Figure taken from \cite{Cacciari:2008gp}.}
 \label{fig:JetClustering}
 \end{figure}
@@ -120,17 +115,17 @@ Figure~\ref{fig:collinearSafe} describes the collinear safety problem. In a coll
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=.75\textwidth]{jetMeasurements/collinearSafe}
+\includegraphics[width=.75\textwidth]{theory/collinearSafe}
 \caption{An illustration of collinear unsafe behavior. The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity. Taken from \cite{Salam:2009jx}. }
 \label{fig:collinearSafe}
 \end{figure}
 
 
-A schematic describing infrared un-safety is shown in Figure~\ref{fig:infraredSafe}. Here an infrared safe algorithm would use the three particles as seeds iteratively find two stable cones. An unsafe algorithm however would find three overlapping cones based on the addition of a soft seed.
+A schematic describing infrared safety problem is shown in Figure~\ref{fig:infraredSafe}. Here an infrared safe algorithm would use the three particles as seeds iteratively find two stable cones. An unsafe algorithm however would find three overlapping cones based on the addition of a soft seed.
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=.65\textwidth]{jetMeasurements/infraredSafe}
+\includegraphics[width=.65\textwidth]{theory/infraredSafe}
 \caption{An illustration of infrared unsafe behavior. The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity. Taken from \cite{Salam_2007} }
 \label{fig:infraredSafe}
 \end{figure}
@@ -140,9 +135,9 @@ A schematic describing infrared un-safety is shown in Figure~\ref{fig:infraredSa
 For heavy ion collisions in ATLAS, the inputs to the algorithm are the $\eta \times \phi = 0.1 \times 0.1$ calorimeter towers. The tower energies are determined by summing up the energies of the individual calorimeter cells. The \antikt\ algorithm is first run with the distance parameter $R=0.2$, following which an underlying event subtraction procedure is performed. A first estimate of the average underlying event energy density $\rho_i (\eta)$ is done in 0.1 slices of $\eta$ in each calorimeter layer $i$ after excluding the regions that overlap with the seed jets. A modulation of $2v_{2} \cos[2(\phi-\Psi_2)] $ is applied to account for the flow from the QGP and the underlying event is subtracted to give $E_{Tj}^{\mathrm{sub}}$:
 
 \begin{align}
-E_{Tj}^{\mathrm{sub}} = E_{Tj} - A_j \rho_i (\eta_j) 1+2v_{2i} \big(\cos[2(\phi-\Psi_2)] \big)
+E_{Tj}^{\mathrm{sub}} = E_{Tj} - A_j \rho_i (\eta_j) \Big(1+2 \sum_{n=2}^{4} {v_{n}}_i \big(\cos[2(\phi-\Psi_n)] \big) \Big)
 \end{align}
-where $ E_{Tj} , \eta_j, \phi_j$ and $A_j$ are the cell $E_T, \eta, \phi$ and area for cell $j$ in layer $i$. This process is done iteratively done one more time after getting new seeds with the distance parameter $R = 0.2$ and excluding areas that are within $\Delta R = 0.4$ of the seeds. Updated values of $\rho{'}_i$ and $v{'}_2$ are recalculated and used to estimate the background that is subtracted from the original cell energies. More details on this procedure can be found in \cite{2013220}.
+where $E_{Tj} , \eta_j, \phi_j$ and $A_j$ are the cell $E_T, \eta, \phi$ and area for cell $j$ in layer $i$. This process is done iteratively done one more time after getting new seeds with the distance parameter $R = 0.2$ and excluding areas that are within $\Delta R = 0.4$ of the seeds. Updated values of $\rho{'}_i$ and $v{'}_2$ are recalculated and used to estimate the background that is subtracted from the original cell energies. More details on this procedure can be found in \cite{2013220}.
 
 
 
