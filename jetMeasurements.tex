@@ -1,6 +1,6 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root = thesis-ex.tex
-This chapter shall discuss some important experimental jet measurements that motivate the study of the main analysis in this thesis. These include the study of the jet yields, dijet asymmetry, and jet fragmentation. 
+This chapter shall discuss some important experimental jet measurements that motivate the study of the main analysis in this thesis. These include the study of the jet yields, dijet asymmetry, and jet fragmentation. It shall then go on to discuss a few models that have been used to explain the data, looking in particular at the following: Effective Quenching (EQ), Soft Collinear Effective Theory (SCET), Hybrid Model, and Jet Fluid Model.
 
 
 \section{Dijet Balance: $\mathrm{x}_{J}$}
@@ -33,8 +33,10 @@ Further measurements of $R = 0.3$ jets are shown in Figure~\ref{fig:xJ_R03}. The
 \end{center}
 \end{figure}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modification of jet yields: $\mathrm{R}_{AA}$}
+\label{sec:jet_raa}
+
 This section discusses the measurement of the inclusive jet \RAA\ as measured by the ATLAS detector for $R=0.4$ jets in $\sqrtsnn=5.02$ TeV \pbpb\ collisions \cite{2019108}.
 
 While a measurement that compares the jets in a dijet system to each other as discussed in Section~\ref{sec:xj} can provide valuable information about how jets lose energy, it has the following limitation: If both jets lose equal amounts of energy, the dijet yield will still be peaked at unity and no new information will be obtained. Thus, it is useful to compare the jet yields directly between the \pp\ and \pbpb\ systems and construct the jet \RAA\ observable. This is defined as:
@@ -43,10 +45,9 @@ While a measurement that compares the jets in a dijet system to each other as di
 \RAA  = \dfrac{\dfrac{1}{N_{\rm evt}} \left. \dfrac{d^2 N_{\rm jet}}{d\pt dy} \right|_{\rm cent}}{ \langle T_{\rm AA} \rangle \left. \dfrac{d^2\sigma_{\rm jet}}{d\pt dy} \right|_{\rm pp}}
 \end{align}
 
-where \TAA is the nuclear thickness function and accounts for the geometric enhancement between \pp\ and \pbpb\ as discussed in Section~\ref{sec:HICollisions} and \cite{doi:10.1146/annurev.nucl.57.090506.123020}. 
+where \TAA\ is the nuclear thickness function and accounts for the geometric enhancement between \pp\ and \pbpb\ as discussed in Section~\ref{sec:HICollisions} and \cite{doi:10.1146/annurev.nucl.57.090506.123020}. 
 
-This measurement was conducted for jets in the 40--1000 GeV range in different rapidity and centrality intervals. The jet yields in \pp\ and \pbpb\ collisions are shown in Figure~\ref{fig:jet_yields} . The \pbpb\ jet yields are scaled by the thickness function and are shown for 8 centrality intervals. Figure~\ref{fig:raa} shows the measured inclusive jet \RAA\ as a function of jet \pt\ for different centrality bins and jet rapidity $|y| < 2.8$. It can be seen that the most central collisions show a clear suppression with an $\RAA \approx 0.45$ at jet $\pt\ 100$ GeV. The \RAA\ value slowly evolves with jet \pt\ and rises to 0.6 at jet $\pt = 800$ GeV. This modification becomes smaller for more peripheral collisions. The smooth centrality dependence can be more clearly seen in Figure~\ref{fig:raa_centDep}, where \RAA\ is shown as a function of \ANpart\ for jets the 100--126 GeV and 200--251 GeV ranges. The magnitude of the suppression is also seen to depend on jet \pt\ for $\ANpart \geq 50$. 
-
+This measurement was conducted for jets in the 40--1000 GeV range in different rapidity and centrality intervals. The jet yields in \pp\ and \pbpb\ collisions are shown in Figure~\ref{fig:jet_yields} . The \pbpb\ jet yields are scaled by the thickness function and are shown for 8 centrality intervals. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -57,6 +58,8 @@ This measurement was conducted for jets in the 40--1000 GeV range in different r
 \end{figure}
 
 
+Figure~\ref{fig:raa} shows the measured inclusive jet \RAA\ as a function of jet \pt\ for different centrality bins and jet rapidity $|y| < 2.8$. It can be seen that the most central collisions show a clear suppression with an $\RAA \approx 0.45$ at jet $\pt\ 100$ GeV. The \RAA\ value slowly evolves with jet \pt\ and rises to 0.6 at jet $\pt = 800$ GeV. This modification becomes smaller for more peripheral collisions. 
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.55\textwidth]{figures/jetMeasurements/raa}
@@ -64,6 +67,8 @@ This measurement was conducted for jets in the 40--1000 GeV range in different r
 \label{fig:raa}
 \end{center}
 \end{figure}
+
+The smooth centrality dependence can be more clearly seen in Figure~\ref{fig:raa_centDep}, where \RAA\ is shown as a function of \ANpart\ for jets the 100--126 GeV and 200--251 GeV ranges. The magnitude of the suppression is also seen to significantly depend on jet \pt\ for $\ANpart \geq 50$. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -73,6 +78,7 @@ This measurement was conducted for jets in the 40--1000 GeV range in different r
 \end{center}
 \end{figure}
 
+%The measurement further looked at the $y$ dependence of \RAA\ as described by $\RAA (|y|) / \RAA (|y| < 0.3)$. This is useful because it is sensitive to the different quark to gluon fractions at different rapidities.  the uncertainties largely cancel, an
 
 
 
@@ -81,7 +87,104 @@ This measurement was conducted for jets in the 40--1000 GeV range in different r
 
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Jet Fragmentation}
+\label{sec:jet_ff}
+\cite{PhysRevC.98.024908}
+
+
+
+
+
+
+
+
+
+\section{Effective Quenching}
+This discussion is based on the model introduced in \cite{Spousta:2015fca}. This phenomenological model emphasizes the jet \pt\ dependence of the quark to gluon fraction and the difference between quark-jet and gluon-jet quenching. It uses a non-linear \pt\ dependent fractional energy loss and assumes that gluon jets lose energy at a rate 9/4 times higher than quark jets. This is based on the different color charges carried by quarks and gluons, and their different splitting functions. 
+The key assumption of the model are:
+\begin{itemize}
+\item The energy lost by a jet is radiated at large angles and does not appear within the jet cone. This is backed by \cite{Chatrchyan:2011sx}.
+\item The fragmentation pattern of the jet is unaffected by the presence of the QGP i.e. they fragment as they would in a vacuum. This is motivated by the idea that the QGP is unable to resolve the internal jet structure and is supported by \cite{Blaizot:2013hx, CasalderreySolana:2012ef}.
+\end{itemize} 
+
+The model uses the following parameterization to describe the high-\pt\ jet spectra:
+
+\begin{align}
+\frac{dn}{d\ptjet} = A \left( \frac{\pt_0}{\ptjet} \right) ^{n+\beta \log(\ptjet / \pt_0)}
+\end{align}
+
+where $\pt_0$ is a reference transverse momentum at which $A= dn/d\ptjet$, $\beta$ is the logarithmic derivative of $dn/d\ptjet$ at $\ptjet = \pt_0$. Then considering the different quark and gluon fractions as $f_{q0}$ and $f_{g0} = 1-f_{q0}$ respectively, the combined spectrum for quarks and gluons can be written as:
+
+\begin{align}
+ \frac{dN}{d\ptjet} &= A \left[ f_{q0} \left( \frac{\pt_0}{\ptjet} \right)^{n_q+ \beta_q \log(\ptjet / \pt_0)} + (1-f_{q0}) \left( \frac{\pt_0}{\ptjet} \right)^{n_g + \beta_g \log(\ptjet / \pt_0)} \right] \\
+\nonumber \\ 
+\label{eq_q_frac} f_q (\ptjet) &= \dfrac{1}{1 + \left(\dfrac{1-f_{q0}}{f_{q0}}\right) \left( \dfrac{\pt_0}{\ptjet}\right)^{\Delta n + \Delta \beta \log(\ptjet/\pt_0)} }
+\end{align}
+where $\Delta n = n_g - n_q$ and $\Delta \beta = \beta_g - \beta_q$.
+The fits \pt\ dependence of the quark fraction is shown in Figure~\ref{fig:raa_centDep}, and parameters of the fits are shown in Table~\ref{tab:quark_param}.
+
+\begin{table}[]
+\begin{tabularx}{\textwidth}{XXXXX}
+\hline
+\multicolumn{1}{l}{Parameter} & $y < 2.1$ & $|y| < 0.3$ & $0.3 < |y| < 0.8$ & $1.2 < |y| < 2.1$ \\
+\hline
+ $n_q$                         & 4.19      & 4.34        & 4.27              & 3.75              \\
+$\beta_q$                     & 0.71      & 0.49        & 0.54              & 1.2               \\
+$n_g$                         & 4.69      & 4.55        & 4.57              & 4.60              \\
+$\beta_g$                     & 0.80      & 0.71        & 0.76              & 1.2              \\
+\hline
+\end{tabularx}
+\caption{Parameters obtained from fits of the \pythia8 jet spectra to the extended power-law functions}
+\label{tab:quark_param}
+\end{table}
+
+The gluon fragmentation can also be parameterized with the functional form $D(z) = a \times 1+dz)^b/(1+ez)^c \times e^{-fz}$, with fits for the quark and gluon fragmentation shown in Figure~\ref{fig:gluon_fragmentation}.
+
+\begin{align}
+D(z) = a \times \frac{(1+dz)^b}{(1+ez)^c} \times e^{-fz}
+\end{align}
+
+
+\begin{figure}
+\begin{subfigure}{.45\textwidth}
+  \centering
+\includegraphics[width=0.8\textwidth]{figures/jetMeasurements/jetQuarkFraction}
+\caption{The jet quark fracvtion as a function of \ptjet\ in different rapidity bins. The points are from \pythia8 simulations and the lines are fits to Equation~\ref{eq_q_frac}. The parameters for the fits are given in Table~\ref{tab:quark_param}. Figure taken from \cite{Spousta:2015fca}}
+\label{fig:raa_centDep}
+\end{subfigure} \qquad
+\begin{subfigure}{.45\textwidth}
+  \centering
+\includegraphics[width=0.8\textwidth]{figures/jetMeasurements/gluon_fragmentation}
+\caption{The jet quark fracvtion as a function of \ptjet\ in different rapidity bins. The points are from \pythia8 simulations and the lines are fits to Equation~\ref{eq_q_frac}. The parameters for the fits are given in Table~\ref{tab:quark_param}. Figure taken from \cite{Spousta:2015fca}}
+\label{fig:gluon_fragmentation}
+\end{subfigure}
+\caption{Fits to quark fractions and fragmentation functions from \pythia8}
+\label{fig:fig}
+\end{figure}
+
+
+
+% jet fr measurement \cite{2019108}. It is further able to describe certain features in measurements of jet fragmentation \cite{PhysRevC.98.024908}.
+
+%This model uses a non-linear \pt\ dependent fractional energy loss, and is able to describe features of the jet \RAA\ and jet fragmentation measurements discussed in Section~\ref{sec:jet_raa} and Section \ref{sec:jet_FF}. 
+
+\subsection{Hybrid Model}
+\subsection{Jet Fluid model}
+
+
+
+
+
+
+
+
+
 
 
 
