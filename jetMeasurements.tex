@@ -107,7 +107,7 @@ The smooth centrality dependence can be more clearly seen in Figure~\ref{fig:raa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Effective Quenching}
-This discussion is based on the model introduced in \cite{Spousta:2015fca}. This phenomenological model emphasizes the jet \pt\ dependence of the quark to gluon fraction and the difference between quark-jet and gluon-jet quenching. It uses an ``extended'' power law parameterization of the high-\pt\ hadron spectra coupled with a quenching that is based on a non-constant fractional energy loss. This model considers the different color charges carried by quarks and gluons and their different splitting functions, and assumes that gluon jets lose energy at a rate 9/4 times higher than quark jets. The key assumption of the model are:
+This discussion is based on the model introduced in Ref. \cite{Spousta:2015fca}. This phenomenological model emphasizes the jet \pt\ dependence of the quark to gluon fraction and the difference between quark-jet and gluon-jet quenching. It uses an ``extended'' power law parameterization of the high-\pt\ hadron spectra coupled with a quenching that is based on a non-constant fractional energy loss. This model considers the different color charges carried by quarks and gluons and their different splitting functions, and assumes that gluon jets lose energy at a rate 9/4 times higher than quark jets. The key assumption of the model are:
 \begin{itemize}
 \item The energy lost by a jet is radiated at large angles and does not appear within the jet cone. This is backed by \cite{Chatrchyan:2011sx}.
 \item The fragmentation pattern of the jet is unaffected by the presence of the QGP i.e. they fragment as they would in a vacuum. This is motivated by the idea that the QGP is unable to resolve the internal jet structure and is supported by \cite{Blaizot:2013hx, CasalderreySolana:2012ef}.
@@ -205,7 +205,7 @@ It can be seen that the analytic fits and the MC are in good agreement. While th
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Jet Fluid model}
-This discussion is based on the model introduced in \cite{Tachibana:2017syd}. This model is based on the evolution of the jet and QGP in a coupled manner, considering the energy and transverse momentum exchange between them. In this picture, both the jet and medium are allowed to modify each other; the jet is modified via collisional and radiative processes while the medium evolves hydrodynamically and is modified because it picks up the energy lost by the jet. 
+This discussion is based on the model introduced in Ref. \cite{Tachibana:2017syd}. This model considers the evolution of the jet and QGP in a coupled manner, considering the energy and transverse momentum exchange between them. In this picture, both the jet and medium are allowed to modify each other; the jet is modified via collisional and radiative processes while the medium evolves hydrodynamically and is modified because it picks up the energy lost by the jet. 
 
 The time evolution of the jet is given 
 
@@ -232,7 +232,7 @@ where $P_{i \rightarrow j} $ is the vacuum splitting function for $i \rightarrow
 \end{align}
 which characterizes the energy-momentum transfer between the jet and the QGP. 
 
-An. important component of this model is the flow induced by jets. A snapshot of this is shown in Figure~\ref{fig:jf_snapshot}, where the evolution of the energy density of the medium can be seen in a sample event. A single jet travels through the QGP, and can be clearly seen in the lower panels after the energy of the medium has been subtracted out. The V shaped feature seen is the mach cone that is induced by the parton as it moves faster than the medium sound velocity. 
+An important component of this model is the flow induced by jets. A snapshot of this is shown in Figure~\ref{fig:jf_snapshot}, where the evolution of the energy density of the medium can be seen in a sample event. A single jet travels through the QGP, and can be clearly seen in the lower panels after the energy of the medium has been subtracted out. The V shaped feature seen is the mach cone that is induced by the parton as it moves faster than the medium sound velocity. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -304,7 +304,76 @@ The $R_{\rm AA}^\rho$ distribution in Figure~\ref{fig:jf_jetshapemod}, shows tha
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hybrid Model}
+This discussion is based on the work in Refs. \cite{Casalderrey-Solana:2014bpa, Hulcher2018, Casalderrey-Solana:2016jvj} and describes jet quenching using a hybrid strong/weak model. It uses perturbative QCD to describe the weakly coupled hard process of jet production and holographic calculations of the energy loss of energetic probes to model the strong coupling between the probe and the plasma \cite{Chesler:2015nqz, Chesler:2014jva}. This is a combination of approaches that focus on the following extreme limits: a weakly coupled system at unrealistically high temperatures that can be treated perturbatively \cite{Jacobs:2004qv, Majumder:2010qh} and a system where the coupling constant is large at all energy scales and Gauge/string duality is applicable \cite{CasalderreySolana:2011us}.
 
+In this model, the jet evolves in space time with the lifetime of the parton in the shower being given by \cite{CasalderreySolana:2011gx}.  
+
+\begin{align}
+\tau = 2 \frac{E}{Q^2}
+\end{align}
+where $Q$ is its virtuality and $E$ its energy. This evolution is unaffected before the proper time at which the plasma hydrodynamizes, $\tau_{\text{hydro}} = 0.6$ fm. After this time, the jet-plasma interaction comes into play and the fragments evolve with the energy loss as:
+
+\begin{align}
+\frac{1}{E_{\mathrm{in}}} \frac{dE}{dx} = -\frac{4}{\pi} \frac{x^2}{x_{\mathrm{stop}}^2} \frac{1}{\sqrt{x_{\mathrm{stop}}^2 - x^2}}
+\end{align}
+where $E_{\mathrm{in}}$ is the initial energy of the parton prior to any quenching and $x_{\mathrm{stop}}$ is its stopping distance (jet thermalization distance). The stopping distance can be written as:
+
+\begin{align}
+x_\mathrm{stop} = \frac{1}{2\kappa_\mathrm{sc}} \frac{E_\mathrm{in}^{1/3}}{T^{4/3}}
+\end{align}
+where $\kappa_\mathrm{sc}$ is a dimensionless free parameter associated to the strong coupling and is used to fit to the data. The energy loss is characterized by the strong  $x^2$ dependence for $x \ll x_\mathrm{stop}$. Furthermore, when $x$ is comparable to $x_\mathrm{stop}$, $dE/dx$ depends nontrivially on $E_\mathrm{in}$ and $x$, diverging for $x\rightarrow x_\mathrm{stop}$ and $E\rightarrow0$. The shower is then embedded into a hydrodynamic description of the QGP from Ref. \cite{Hirano:2010je}, and the energy loss expressions are integrated for each parton, from the time it is produced to the time that it splits. The splitting probabilities are taken to be independent of the medium, depending only on the initial energy of the daughter partons. These further lose energy as they propagate through the QGP and split. Then the total energy lost by a parton is dependent on the history of splitting and propagation of its parents, grandparents and so on and so forth. 
+
+The partons further experience kicks transverse to their direction of motion, a phenomena called transverse momentum broadening. This effect is mainly experienced by softer partons that are much more affected by the angular narrowing effects of energy loss, making most measured observables insensitive to the size of this kick. This is directly related to wider jets losing more energy than narrower ones. The wake left in the medium from the partons depositing momentum in the QGP as they propagate through it lends a non-trivial impact to the model predictions. This wake moves in the direction of the jet and is impossible to separate out in experiments, making its inclusion to any model vital. This wake results in a perturbation to the hydrodynamic background, resulting in corrections to the final state hadron spectra. This effect is particularly important for jet substructure observables like jet fragmentation and jet shapes \cite{Casalderrey-Solana:2016jvj}.
+
+A screening effect recently included in the hybrid model is based on the resolving power of the QGP \cite{Hulcher:2017cpt}. As seen in Figure~\ref{fig:hm_lres}, the QGP will only resolve daughter partons of a splitting after they are separated by a certain distance $L_\mathrm{res}$. It is only when the partons are resolved that they will be allowed them to lose energy independent of each other. This delayed quenching results in an enhancement of softer partons at larger angles from the jet axis compared to the case where the daughter partons are resolved immediately after they split from the parent parton. This \Lres\ has the constraint $ 1/(\pi T) < \Lres < 2 /(\pt T$ based on the Debye screening length for the plasma, i.e. the length at which the QGP is able to resolve and screen color charges.
+
+%The effects of including the \Lres parameter in the context of jet observables are discussed below.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.55\textwidth]{figures/jetMeasurements/HM_lres}
+\caption{A schematic illustrating the resolving power of the QGP. The daughter partons $2$ and $3$ that come from $1$ need to be separated by \Lres\ before they are treated individually by the plasma. Prior to that separation, they are treated as one effective parton. Figure taken from \cite{Hulcher:2017cpt}.}
+\label{fig:hm_lres}
+\end{center}
+\end{figure}
+
+
+The free parameter $\kappa_\mathrm{sc}$ is determined by fitting to jet \RAA\ data from CMS \cite{Khachatryan:2016jfl} as shown in Figure~\ref{fig:hm_fitting}. It can be seen that including the \Lres\ parameter does not really affect the jet \RAA\ prediction. It is more interesting to note the \RAA\ dependence on the size of the jet radius, with wider jets losing more energy as expected. 
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/jetMeasurements/HM_raa}
+\caption{The hybrid model without (left) and with (right) the \Lres\ parameter, compared to the jet \RAA\ as a function of jet \pt\ in two centrality intervals as measured in Ref. \cite{Khachatryan:2016jfl}. The different colors correspond to different jet radii. The Hybrid Model is fit to the 100--110 GeV point from the data, giving rise to the colored bands. Figure taken from \cite{Hulcher:2017cpt}. }
+\label{fig:hm_fitting}
+\end{center}
+\end{figure}
+
+Fixing the $\kappa_\mathrm{sc}$ parameter allows for predictions of jet fragmentation. A comparison of the measured and modeled values of the ratio between jet fragmentation functions in the \pp\ and \pbpb\ systems are shown in Figure~\ref{fig:hm_ff}. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/jetMeasurements/HM_FF}
+\caption{The modification to the jet fragmentation from \pp\ to \pbpb\ as a function of $\ln(1/z)$ as measured in Ref. \cite{Khachatryan:2016jfl} compared to the predictions of the hybrid model. The predictions are shown without (left) and with (right) the wake from the QGP responding to the jet. The different colors correspond to different \Lres\ parameters. Figure taken from \cite{Hulcher:2017cpt}. }
+\label{fig:hm_ff}
+\end{center}
+\end{figure}
+
+Here it can be seen that adding a medium response and a non-zero \Lres\ parameter has a non-trivial effect on the prediction. The 
+
+Then the model can be used to predict the \RAA\ dependence on the collision energy, jet \pt,  and centrality and is compared to measurements done by ATLAS, ALICE, and STAR \cite{2013220, Abelev:2013kqa, RUSNAK:2014xfa}.
+
+
+
+
+While the perturbative evolution of vacuum jet showering is dictated by the Dokshitzer-Gribov-Lipatov-Altarelli-Parisi (DGLAP) equation, the presence of a medium adds soft non-perturbative behavior. 
+
+
+
+%Refs. \cite{Qin:2015srf, Ghiglieri:2015zma, Mehtar-Tani:2013pia, Majumder:2010qh, Jacobs:2004qv} review approaches in which the entire process is described using re-summed weakly coupled analyses and Refs. \cite{Chesler:2015nqz, Chesler:2014jva, Chesler:2013urd, DEramo:2010wup, Hatta:2008tx, Gubser:2008as, Chesler:2007an, CasalderreySolana:2006rq, Liu:2006ug, Herzog:2006gh} discuss different aspects of the strong interaction between jets and other energetic probes and the QGP. 
+
+
+.  and processes are  and considers strong-weakthat the QGP is only able to resolve the products of a parton splitting after they are separated by a distance $L_{\mathrm{res}}$. This is done in the context of a hybrid string/weak coupling model of jet quenching, with the resolution parameter resulting in a delayed quenching for partons with intermediate \pt, causing an excess of final state hadrons carrying transverse momenta in the several GeV range. This effect is seen in the modifications oft he jet shapes and jet fragmentation functions, 
 
 
 
