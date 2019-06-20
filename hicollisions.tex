@@ -1,9 +1,19 @@
 % !TEX root = thesis-ex.tex
-Heavy ion collisions can be used as a tool to study the Quark Gluon Plasma \cite{SHURYAK198071} . They provide access to the otherwise confined partons, and give insight into the QCD phase diagram and the transition between the QGP and hadronic matter. 
+Heavy ion collisions can be used as a tool to study the quark-gluon plasma (QGP) \cite{SHURYAK198071}. This section shall focus on the 
 
-In a heavy ion collision, the colliding nuclei are accelerated to relativistic energies and are Lorentz contracted discs. In the case of a \pbpb\ collision the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. Each nucleus contains many colored quarks and antiquarks, with three more quarks than anti-quarks per nucleon, with the $q\bar{q}$ popping in and out of the vacuum due to quantum fluctuations. These $q\bar{q}$ pairs are sources of transverse color fields and the corresponding force carriers, the gluons. 
+% a phase of matter that provides access to the otherwise confined partons. This is the state of matter as it existed in the early universe and having a thermodynamic description of the QGP can provide insight into its transition to hadronic matter, and help explain the QCD phase diagram shown in Figure~\ref{}. 
 
-When these pancake like discs collide, their color fields interact and there is a color charge exchange, producing longitudinal color fields that fill the space between the receding discs. While the maximum energy density in the process occurs just at the collision, the energy density 1 fm/c after the collision is 12 $\mathrm{GeV} / \mathrm{fm}^3$, much higher than the 500 $\mathrm{MeV} / \mathrm{fm}^3$ in a typical hadron. Lattice QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons. 
+In a heavy ion collision, the colliding nuclei are accelerated to relativistic energies and are Lorentz contracted discs. In the case of a \pbpb\ collision
+the relativistic $\gamma$ factor is between 100 and 2500 for beam rapidities of $y = 5.3$ and 8.5. Each nucleus contains many colored quarks and
+antiquarks, with three more quarks than anti-quarks per nucleon, with the $q\bar{q}$ popping in and out of the vacuum due to quantum fluctuations.
+These $q\bar{q}$ pairs are sources of transverse color fields and the corresponding force carriers, the gluons. 
+
+When these pancake like discs collide, their color fields interact and there is a color charge exchange, producing longitudinal color fields that fill 
+the space between the receding discs. While the maximum energy density in the process occurs just at the collision, the energy density 1 fm/c 
+after the collision is 12 $\mathrm{GeV} / \mathrm{fm}^3$, much higher than the 500 $\mathrm{MeV} / \mathrm{fm}^3$ in a typical hadron. Lattice
+QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons. 
+
+
 %In fact, these partons are strongly coupled to each other and form a medium called the Quark Gluon Plasma (QGP) \cite{???}. 
 
 %In a heavy ion collision, the experimenter can only tune the size of the colliding nuclei, and the energy that they are being collided at. There is no experimental control over the impact parameter or the structure functions that dictate the momentum distribution of nucleons within the nucleus. These have to be determined event by
@@ -12,7 +22,9 @@ When these pancake like discs collide, their color fields interact and there is 
 %These subsequently decaying to $q\bar{q}$ pairs. 
 %The QGP can be described by relativistic hydrodynamics, and has a viscosity to entropy ratio that is almost at the theoretical minimum of of $\eta / S = 1/4\pi$ \cite{5,6, check126}. 
 
-After the collision the energy density between the receding nuclei starts to decrease as the QGP cools and expands. This process, seen in Figure~\ref{fig:qgp_form}, continues till the energy density drops to below that within a hadron and the fluid ``hadronizes''. These individual hadrons briefly scatter off of each other before they freely fly towards the detector (freeze-out).
+After the collision the energy density between the receding nuclei starts to decrease as the QGP cools and expands. This process, seen
+in Figure~\ref{fig:qgp_form}, continues till the energy density drops to below that within a hadron and the fluid ``hadronizes''. These 
+individual hadrons briefly scatter off of each other before they freely fly towards the detector (freeze-out).
 
 %Once formed, the QGP flows hydrodynamically, with the initial pressure driving the expansion and the subsequent cooling. 
 % It is to be noted that there is QGP continuously formed in the wake of the nuclei since the partons produced at large rapidities are highly relativistic and 
@@ -25,16 +37,23 @@ After the collision the energy density between the receding nuclei starts to dec
 \end{center}
 \end{figure}
 
-While Figure~\ref{fig:qgp_form} shows snapshots of a head on (central) collision between two large nuclei, it is possible to have collisions where the impact parameter is larger and hence the overlap region is smaller. These collisions, called peripheral collisions, qualitatively undergo the same process described above, with the size and shape of the QGP being different.
+While Figure~\ref{fig:qgp_form} shows snapshots of a head on (central) collision between two large nuclei, it is possible to have collisions
+where the impact parameter is larger and hence the overlap region is smaller. These collisions, called peripheral collisions, qualitatively
+undergo the same process described above, with the size and shape of the QGP being different.
 
 % In fact, peripheral collisions are very similar to proton-proton collisions, with differences coming mainly from nuclear PDFs.
 
-The basic parameters of a heavy ion collision such as the number of participants \Npart\ and number of binary collisions \Ncoll\ can be determined using the Glauber Monte Carlo simulations \cite{glauberArticle, glauberMisc}. This technique considers a nucleus-nucleus collision as a collection of independent binary nucleon-nucleon collisions; the colliding nuclei are modeled as a set of uncorrelated nucleons being positioned within the nucleus based on a the nuclear density function uniform in azimuthal and in polar angles. The nuclear density function shown in Figure~\ref{fig:nuclearDensity} for Au and Cu, is given by:
+The basic parameters of a heavy ion collision such as the number of participants \Npart\ and number of binary collisions \Ncoll\ can be
+determined using the Glauber Monte Carlo simulations \cite{glauberArticle, glauberMisc}. This technique considers a nucleus-nucleus
+collision as a collection of independent binary nucleon-nucleon collisions; the colliding nuclei are modeled as a set of uncorrelated
+nucleons being positioned within the nucleus based on a the nuclear density function uniform in azimuthal and in polar angles. The
+nuclear density function shown in Figure~\ref{fig:nuclearDensity} for Au and Cu, is given by:
 
 \begin{align}
 \rho(r) = \rho_0 \frac{1 + w (r/R)^2}{1+e^{\frac{r-R}{a}}}
 \end{align}
-where $\rho_0$ is the nucleon density, $R$ is the nuclear radius, $a$ is the skin depth, $w$ corresponds to deviations from a circular shape and is typically zero for larger nuclei like Cu, W, Au, Pb, and U. For the Pb nuclei used at the LHC, $w = 0$, $R = 6.62$ fm and $a =0.55$ fm \cite{DEVRIES1987495}. 
+where $\rho_0$ is the nucleon density, $R$ is the nuclear radius, $a$ is the skin depth, $w$ corresponds to deviations from a circular shape
+and is typically zero for larger nuclei like Cu, W, Au, Pb, and U. For the Pb nuclei used at the LHC, $w = 0$, $R = 6.62$ fm and $a =0.55$ fm \cite{DEVRIES1987495}. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -44,7 +63,10 @@ where $\rho_0$ is the nucleon density, $R$ is the nuclear radius, $a$ is the ski
 \end{center}
 \end{figure}
 
-They are then arranged with a random impact parameter $b$ based on the distribution $d\sigma/d b = 2\pi b$ and projected onto the $x-y$ plane as shown in Figure~\ref{fig:glauberMC}. They are then made to travel on straight trajectories, colliding if $d \leq \sqrt{\sigma_{\mathrm{inel}}^{\mathrm{NN}}/ \pi}$, where $d$ is the distance between the nucleons in a plane transverse to the beam axis and $\sigma_{\mathrm{inel}}^{\mathrm{NN}}$ is the inelastic scattering cross section. \cite{doi:10.1146/annurev.nucl.57.090506.123020, Alver:2008aq}
+They are then arranged with a random impact parameter $b$ based on the distribution $d\sigma/d b = 2\pi b$ and projected onto the $x-y$ plane
+as shown in Figure~\ref{fig:glauberMC}. They are then made to travel on straight trajectories, colliding if $d \leq \sqrt{\sigma_{\mathrm{inel}}^{\mathrm{NN}}/ \pi}$,
+where $d$ is the distance between the nucleons in a plane transverse to the beam axis and $\sigma_{\mathrm{inel}}^{\mathrm{NN}}$ is the inelastic
+scattering cross section. \cite{doi:10.1146/annurev.nucl.57.090506.123020, Alver:2008aq}
 
 \begin{figure}[htbp]
 \begin{center}
@@ -56,7 +78,9 @@ They are then arranged with a random impact parameter $b$ based on the distribut
 
 
 
-An important parameter for colliding nuclei A and B with $A$ and $B$ nucleons is the thickness function $T_{AB}$. It describes the effective overlap area in which specific nucleons in the two colliding nuclei can interact. It can be defined in terms of the probability per unit area of a given nucleon being located at a particular distance $s$ within the nucleus. For the colliding nuclei $A$ and $B$, this is given by $T_{A}({\bf{s}}) = \int \rho_A ({\bf{s}}, z_A) dz_{A}$ and $T_{B}({\bf{s}}) = \int \rho_B ({\bf{s}}, z_B) dz_{B}$. Then, $T_{AB}$ is given by
+An important parameter for colliding nuclei A and B with $A$ and $B$ nucleons is the thickness function $T_{AB}$. It describes the effective overlap
+area in which specific nucleons in the two colliding nuclei can interact. It can be defined in terms of the probability per unit area of a given nucleon
+being located at a particular distance $s$ within the nucleus. For the colliding nuclei $A$ and $B$, this is given by $T_{A}({\bf{s}}) = \int \rho_A ({\bf{s}}, z_A) dz_{A}$ and $T_{B}({\bf{s}}) = \int \rho_B ({\bf{s}}, z_B) dz_{B}$. Then, $T_{AB}$ is given by
 
 \begin{align}
 T_{AB}({\bf b}) = \int T_{A} ({\bf s}) T_{B} ({\bf s-\bf b}) d^2 s
@@ -68,7 +92,8 @@ The probability of then having $n$ interactions between nuclei $A$ and $B$ is gi
 P(n, { \bf b}) = {{AB} \choose {n}} \Big[T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^n \Big[ 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^{AB-n}
 \end{align}
 
-where the first term is the number of combinations for finding $n$ collisions from $AB$ possibilities, the second term is the probability for having exactly $n$ collisions, and the last term the probability of $AB-n$ misses. Then the total probability of an interaction between A and B is 
+where the first term is the number of combinations for finding $n$ collisions from $AB$ possibilities, the second term is the probability for
+having exactly $n$ collisions, and the last term the probability of $AB-n$ misses. Then the total probability of an interaction between A and B is 
 
 %\frac{d^2  s\sigma_{\mathrm{inel}}^{\mathrm{AB}} } {d b^2}  \def % p p_{\mathrm{inel}^{AB} (b) = \sum_{n=1}^{AB} P(n, {\bf b}) = %1- \Big[ 1 - T_{AB}( {\bf b} ) \sigma_{\mathrm{inel}}^{\mathrm{NN}} \Big]^{AB-n}
 
