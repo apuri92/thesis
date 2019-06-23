@@ -1,8 +1,7 @@
 % !TEX root = thesis-ex.tex
-%TODO: add JES/JER plots
 
 As colored objects start to fly apart in a particle collision, the energy required to separate them increases as a natural consequence of color confinement.
-If the energy with which they are flying apart is greater than the energy required to separate them, it becomes more favorable to produce a quark-antiquark ($q\bar{q}$) pair between the original two quarks.
+If the energy with which they are flying apart is greater than the energy required to separate them, it becomes more favorable to produce a quark-antiquark ($q\bar{q}$) pair.
 This process of $q \bar{q}$ production continues recursively until it is not energetically favorable to do so, with the end result being conical sprays of hadrons called jets.
 This picture is qualitatively supported by Lattice QCD \cite{PhysRevD.71.114513}. 
 A schematic of this process is shown in Figure~\ref{fig:qqbar_to_jet}.
@@ -21,7 +20,7 @@ Because of their color charge, gluon led jets have a softer fragmentation and re
 \subsection{Jets in $e^+ e^-$ collisions}
 The simplest process that can be used to study jets is the process $e^+ e^- \rightarrow q \bar{q} \rightarrow 2 \text{ jets}$.
 The electron and positron annihilates to produce a photon that can decay into a $q \bar{q}$ pair, that hadronize and form jets.
-In fact, this was the process that provided experiment evidence of jets at SPEAR (Stanford Positron Electron Accelerating Ring) at SLAC in 1975, where it was observed that the distribution of final state hadrons was not isotropic \cite{PhysRevLett.35.1609, PhysRevD.26.991} 
+In fact, this was the process that provided experiment evidence of jets at SPEAR (Stanford Positron Electron Accelerating Ring) at SLAC in 1975, where it was observed that the distribution of final state hadrons was not isotropic \cite{PhysRevLett.35.1609, PhysRevD.26.991}.
 Analyses of these distributions showed that they were associated with spin $1/2$ quarks.
 Jets in $e^+ e^-$ collisions further provided the first indirect evidence of gluons when three jet events were observed in the $\Upsilon \rightarrow ggg$ decay \cite{Berger:1978rr, Berger:1979cj}. 
 At the Large Electron-Positron Collider (LEP), higher collision energies allowed the $e^+ e^- \rightarrow Z^0 \rightarrow q \bar{q}$ process.
@@ -33,7 +32,9 @@ Jet production in \epm\ collisions is also one of the best ways to test the vali
 %%%%%%%%%%%%%%%%%%%
 \subsection{Jets in $pp$ collisions}
 Jet production in a vacuum is well described in context of perturbative QCD \cite{Sjostrand:2007gs}.
-Processes involving large momentum transfers like high \pt\ hadron production as shown in Figure~\ref{fig:feynman_jet}.
+Processes involving large momentum transfers like high \pt\ hadron production are shown in Figure~\ref{fig:feynman_jet}
+\footnote{In the context of a particle collision, the \pt\ of a particle is the momentum it carries in a direction perpendicular to the beam axis.
+It is given by $\pt = |p| \sin\theta$ where $\theta$ is the angle of the particle with respect to the beam axis.}.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -43,7 +44,7 @@ Processes involving large momentum transfers like high \pt\ hadron production as
 \end{center}
 \end{figure}
 
-These processes can be described in terms of the parton distribution functions, scattering cross sections, and final state fragmentation functions as shown below \cite{Qin:2015srf}:
+These processes can be described to leading order by perturbative QCD in terms of the parton distribution functions, scattering cross sections, and final state fragmentation functions as \cite{Qin:2015srf}:
 
 \begin{align}
 \label{eq:hadronCS}
@@ -53,13 +54,13 @@ d \sigma_{pp \rightarrow hX} \approx & \sum_{abjd} \int dx_a \int dx_b \int dz_j
 \end{align}
 where $x_a = p_a/P_A, x_b = p_b / P_b$ are the initial momentum fractions carried by the interacting partons, $z_j = p_h / p_j$ is the momentum fraction carried by the final observed hadron.
 $f_{a/p} (x_a, \mu_f)$ and $f_{b/p} (x_b, \mu_f)$ are the two parton distribution functions (PDFs), $d\sigma_{ab\rightarrow jd} (\mu_f, \mu_F, \mu_R)$ is the differential cross section for parton scattering and $D_{j\rightarrow }(z_j,\mu_F)$ is the fragmentation function (FFs) for parton $j$ to hadron $h$.
-$\mu_f$ and $\mu_F$ are the factorization scales and $\mu_R$ is the renormalization scale, and are typically taken to be the same hard scale $Q$.
+$\mu_f$ and $\mu_F$ are the factorization scales and $\mu_R$ is the renormalization scale.
+These are typically taken to be the same hard scale $Q$, given by the hadron \pt.
 The PDFs, measured via DIS experiments, characterize the initial state and represent the probability of finding a parton with longitudinal momentum fraction $x$ (shown in Figure~\ref{fig:bjorkenX}) in the initial hadron, while the FFs describe the probability of fragmenting to a hadron $h$ with given kinematic properties.
-Jet cross sections in \pp\ and $\p \bar{p}$ collisions measured by a variety of different experiments are shown in Figure~\ref{fig:jetcs_pp}. 
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.55\textwidth]{figures/theory/bjorkenX}
+\includegraphics[width=0.65\textwidth]{figures/theory/bjorkenX}
 \caption{The next to leading order (NLO) PDFs at (left) $Q^2 = 10 \mathrm{GeV}^2$ and (right) $Q^2 = 10^4 \mathrm{GeV}^2$.
 The band is the associated one-sigma (68\%) confidence level uncertainty.
 Taken from \cite{Martin2009}.}
@@ -67,18 +68,34 @@ Taken from \cite{Martin2009}.}
 \end{center}
 \end{figure}
  
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.75\textwidth]{figures/theory/jetcs_pp}
-\caption{Inclusive differential jet cross sections shown as a function of jet transverse momentum from different experiments.
-Figure taken from \cite{Olive_2016}.}
-\label{fig:jetcs_pp}
-\end{center}
+The factorization of the jet production process is crucial because it allows for independently measuring and calculating the different components of the cross sections \cite{Majumder:2010qh}.
+Jet cross sections in \pp\ and $p \bar{p}$ collisions measured by a variety of different experiments are shown in Figure~\ref{fig:jetcs_pp}.
+A comparison of the measured jet cross sections to theory calculations is shown in Figure~\ref{fig:jetcs_pp_theory_comparison}.
+This in particular enables direct comparisons of jet observables in \pp\ collisions to those in heavy ion collisions and determine their modifications.
+
+ \begin{figure}
+\centering
+\begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/theory/jetcs_pp}
+  \caption{Inclusive differential jet cross sections shown as a function of jet transverse momentum from different experiments.
+  Figure taken from Ref.~\cite{Olive_2016}.}
+  \label{fig:jetcs_pp}
+\end{subfigure}
+\qquad  \qquad  
+\begin{subfigure}{.45\textwidth}  
+  \centering
+  \includegraphics[width=\linewidth]{figures/theory/jetcs_pp_theory_comparison}
+  \caption{Ratios of data over theory for some jet cross sections measured by different experiments.
+  The next to leading order predictions are derived using the NNPDF3.0 PDF set.
+  Figure taken from Ref.~\cite{Britzger:2017maj}}
+  \label{fig:jetcs_pp_theory_comparison}
+\end{subfigure}
+\caption{(Left) Some inclusive jet cross sections in data (left) and their comparison to theory (right).}
+\label{fig:jetcs}
 \end{figure}
 
 
-This factorization of the jet production process is crucial because it allows for independently calculating the different components of the cross sections \cite{Majumder:2010qh}.
-This in particular enables direct comparisons of jet observables in \pp\ collisions to those in heavy ion collisions and determine their modifications.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jets in heavy ion collisions}
@@ -86,8 +103,7 @@ This in particular enables direct comparisons of jet observables in \pp\ collisi
 %These calculations can be compared to the inclusive charged particle distributions in \sqrts = 13 TeV \pp\ collisions and shown in Figure~\ref{fig:inclhadronCS}.
 %The energy lost by a jet serves as further confirmation that the medium produced in a heavy ion collision is strongly coupled.
 
-In the case of heavy ion collisions, the jet observables can be modified due to two sources: the nuclear PDF being distinct from a proton PDF, and the formation of the quark gluon plasma.
-
+In the case of heavy ion collisions, after accounting for geometric scaling effects by the nuclear thickness function as mentioned in Section~\ref{sec:HICollisions},  jet observables can be modified due to two sources: the nuclear PDF being distinct from a proton PDF, and the formation of the quark gluon plasma.
 The former is collectively referred to as cold nuclear matter (CNM) effect, and can be quantified by defining a nuclear modification factor for the PDF:
 
 \begin{align}
@@ -150,16 +166,55 @@ This is typically taken as part of the fragmentation modification as:
 \widetilde{D}_{h \rightarrow j'} (z_j, \mu_f) \approx \sum_{j'} P_{j\rightarrow j'} (p_{j'} | p_j) \otimes D_{h\rightarrow j'} (_{j'})
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Jet Reconstruction}
-Jets can reconstructed by clustering algorithms that take in a variety of inputs.
-The algorithm used in ATLAS is the \antikt\ clustering algorithm \cite{Cacciari:2008gp}.
-This algorithm clusters soft particles around hard ones in the following manner:
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Jet Algorithms}
+Jet algorithms map the momenta of final state particles into the momenta of jets, and form a core component of any jet measurement.
+They can be broadly categorized as sequential recombination and cone algorithms \cite{Atkin_2015}. 
+
+Cone algorithms cluster particles in the $\eta-\phi$ space \footnote{$\eta = -\ln [\tan(\theta/2)]$ is the pseudorapidity and is a spatial coordinate that describes the angle $\theta$ of a particle with respect to the beam axis. $\phi$ is the azimuthal angle around the beam axis. The coordinate system of detectors is typically based on the $\eta-\phi$ plane.} assuming that the particles of a jet will be located in a conical region of the detector.
+Some examples of cone algorithms are: iterative cone - progressive removal (IC-PR) \cite{ARNISON1983214}, iterative cone - split merge (IC-SM) \cite{Blazey:2000qt}, and SISCone \cite{Salam_2007}.
+
+Sequential recombination algorithms on the other hand work by grouping particles in momentum space, with the result that they have fluctuating areas in $\eta-\phi$ space.
+Some examples of these algorithms are: \kt\ \cite{Catani:1993hr}, \antikt\ \cite{Cacciari:2008gp}, and Cambridge/Aachen (C/A) \cite{Dokshitzer:1997in}.
+
+Recombination algorithms have an advantage over the cone algorithms in that they are infrared and collinear safe (IRC).
+This is related to instabilities in the cones that are found due to soft radiation.
+In a collinear safe jet algorithm, the presence of a virtual loop or a collinear splitting of a central particle would not change the number of jets being reconstructed.
+On the other hand, while a collinear unsafe jet algorithm would not change its output with the presence of a virtual loop, a splitting in the central particle would lead to the left and right most particles forming individual seeds, implying two reconstructed jets \cite{Salam:2009jx}.
+Figure~\ref{fig:collinearSafe} describes the collinear safety problem.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=.75\textwidth]{theory/collinearSafe}
+\caption{An illustration of collinear unsafe behavior.
+The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
+Taken from \cite{Salam:2009jx}.}
+\label{fig:collinearSafe}
+\end{figure}
+
+A schematic describing infrared safety problem is shown in Figure~\ref{fig:infraredSafe}.
+Here an infrared safe algorithm would use the three particles as seeds iteratively find two stable cones.
+An unsafe algorithm however would find three overlapping cones based on the addition of a soft seed.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=.65\textwidth]{theory/infraredSafe}
+\caption{An illustration of infrared unsafe behavior.
+The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
+Taken from \cite{Salam_2007}.}
+\label{fig:infraredSafe}
+\end{figure}
+
+Sequential recombination algorithms are more popular because they are IRC safe and are discussed in further detail below. 
+The general procedure for sequential recombination algorithms is as follows:
 \begin{itemize}
-\item Calculate all distances $d_{ij}$ between entities $i$ and $j$, and distance $d_{iB}$ between entity $i$ and beam $B$.
-\item Identify the smallest distances such that for the smallest distance $d_{ij}$, the entities $i$ and $j$ are combined and return to beginning.
-\item If the smallest distance is $d_{iB}$, then take $i$ as the jet and remove it from the list of entities and return to beginning.
+\item Calculate all distances $d_{ij}$ between entities $i$ and $j$, and distance $d_{iB}$ between entity $i$ and beam $B$
+\item Find the minimum of $d_{ij}$ and $d_{iB}$:
+\begin{itemize}
+\item If $d_{ij}$ is the minimum, combine $i$ and $j$ by summing their four-vectors, remove them from the list of particles and return to beginning.
+\item If the smallest distance is $d_{iB}$, then take $i$ as the jet and remove it from the list of particles and return to beginning.
+\end{itemize}
 \item Continue the procedure till the list of items is empty.
 \end{itemize}
 
@@ -169,13 +224,19 @@ In general the distance $d_{ij}$ between the objects is found the via the prescr
 d_{ij} &= \mathrm{min} (k_{Ti}^{2p} , k_{Tj}^{2p}) \frac{\Delta_{ij}^2}{R^2}  \\
 d_{iB} &= k_{Ti}^{2p}
 \end{align}
-
 where $k_{Ti}$ is the transverse momentum of particle $i$ and $\Delta_{ij} = \sqrt{\Delta\eta_{ij}^2 + \Delta\phi_{ij}^2}$ is the distance between particles $i$ and $j$ in $\eta-\phi$ space.
 $R$ the distance parameter and reflects the size of the jet being considered.
-In the case of the \antikt\ algorithm, $p = -1$.
-Other popular clustering algorithms like \kt\ \cite{Catani:1993hr} and Cambridge/Aachen \cite{Dokshitzer:1997in} use $p = 1$ and $p=0$ respectively.
-The behavior of the different clustering algorithms is shown in Figure~\ref{fig:JetClustering}.
 
+Different recombination algorithms use different values of $p$. 
+The \kt\ algorithm has $p = 2$.
+This results in clustering soft particles first, with the final jet having a fluctuating area.
+This algorithm is susceptible to processes that contribute particles that do not belong to a jet.
+The C/A algorithm uses $p = 0$.
+This results in the distances between particles being completely independent of momentum. 
+The \antikt\ algorithm uses $p = -1$.
+Hence, the algorithm clusters hard particles first, making it the least susceptible to background. 
+The behavior of the different clustering algorithms is shown in Figure~\ref{fig:JetClustering}.
+The \antikt\ algorithm is the default used in all LHC collaborations.
 
 \begin{figure}[htp]
 \centering
@@ -187,41 +248,11 @@ Figure taken from \cite{Cacciari:2008gp}.}
 \label{fig:JetClustering}
 \end{figure}
 
-The popularity of the \antikt\ algorithm comes from its overcoming of two common problems: collinear and infrared safety.
-These are related to instabilities in the cones that are found due to soft radiation.
 
 
-Figure~\ref{fig:collinearSafe} describes the collinear safety problem.
-In a collinear safe jet algorithm, the presence of a virtual loop or a collinear splitting of a central particle would not change the number of jets being reconstructed.
-On the other hand, while a collinear unsafe jet algorithm would not change its output with the presence of a virtual loop, a splitting in the central particle would lead to the left and right most particles forming individual seeds, implying two reconstructed jets \cite{Salam:2009jx}.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=.75\textwidth]{theory/collinearSafe}
-\caption{An illustration of collinear unsafe behavior.
-The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
-Taken from \cite{Salam:2009jx}.
-}
-\label{fig:collinearSafe}
-\end{figure}
-
-
-A schematic describing infrared safety problem is shown in Figure~\ref{fig:infraredSafe}.
-Here an infrared safe algorithm would use the three particles as seeds iteratively find two stable cones.
-An unsafe algorithm however would find three overlapping cones based on the addition of a soft seed.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=.65\textwidth]{theory/infraredSafe}
-\caption{An illustration of infrared unsafe behavior.
-The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
-Taken from \cite{Salam_2007}.
-}
-\label{fig:infraredSafe}
-\end{figure}
-
+%The popularity of the \antikt\ algorithm comes from its overcoming of two common problems: collinear and infrared safety.
 % the \antikt\ reconstruction algorithm is used with the distance parameter $R=0.4$
-
+\subsection{MOVE TO JET RECO IN ATLAS}
 For heavy ion collisions in ATLAS, the inputs to the algorithm are the $\eta \times \phi = 0.1 \times 0.1$ calorimeter towers.
 The tower energies are determined by summing up the energies of the individual calorimeter cells.
 The \antikt\ algorithm is first run with the distance parameter $R=0.2$, following which an underlying event subtraction procedure is performed.
@@ -240,11 +271,7 @@ More details on this procedure can be found in \cite{2013220}.
 
 %A few jet measurements and their modifications by the presence of the Quark Gluon Plasma are discussed in Section~\ref{sec:jetMeasurements}.
 %
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  jet cross section in  \sqrts = 13 TeV \pp\ collisions can be seen in Figure~\ref{fig:incljetCS}
-%
-%
 %
 %\begin{figure}[htbp]
 %\begin{center}
@@ -255,10 +282,6 @@ More details on this procedure can be found in \cite{2013220}.
 %\label{fig:incljetCS}
 %\end{center}
 %\end{figure}
-%
-%
-%
-%
 %
 %
 %
@@ -273,14 +296,8 @@ More details on this procedure can be found in \cite{2013220}.
 %\end{center}
 %\end{figure}
 %
-%
-%
 %Equation~\ref{eq:hadronCS} is written at leading order (LO) and includes contributions from $2\rightarrow2$ cross sections, LO re-summed PDFs and FFs, and single loop expression for the strong coupling \alphas.
 %At next to leading order (NLO), the contributions from real $2\rightarrow3$ and virtual $2\rightarrow3$ processes, as well as the double loop expression for \alphas are included.
 %These calculations describe the inclusive and pQCD, NLO calculations have next to leading order (NLO) calculations that include Figure~\ref{fig:incl_hadron_CS} hows the inclusive jet cross section as measured by ATLAS in \sqrts = 13 TeV \pp\ collisions.
-%
-%
-%
-%
 %
 %In a heavy ion collision where the QGP is formed, the hard scattering interactions between the partons strongly interact with the QGP due to their color charge and are modified and lose energy via collisions with the medium constituents, or gluon bremsstrahlung.
