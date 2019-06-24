@@ -252,23 +252,6 @@ Figure taken from \cite{Cacciari:2008gp}.}
 
 %The popularity of the \antikt\ algorithm comes from its overcoming of two common problems: collinear and infrared safety.
 % the \antikt\ reconstruction algorithm is used with the distance parameter $R=0.4$
-\subsection{MOVE TO JET RECO IN ATLAS}
-For heavy ion collisions in ATLAS, the inputs to the algorithm are the $\eta \times \phi = 0.1 \times 0.1$ calorimeter towers.
-The tower energies are determined by summing up the energies of the individual calorimeter cells.
-The \antikt\ algorithm is first run with the distance parameter $R=0.2$, following which an underlying event subtraction procedure is performed.
-A first estimate of the average underlying event energy density $\rho_i (\eta)$ is done in 0.1 slices of $\eta$ in each calorimeter layer $i$ after excluding the regions that overlap with the seed jets.
-A modulation of $2v_{2} \cos[2(\phi-\Psi_2)] $ is applied to account for the flow from the QGP and the underlying event is subtracted to give $E_{Tj}^{\mathrm{sub}}$:
-
-\begin{align}
-E_{Tj}^{\mathrm{sub}} = E_{Tj} - A_j \rho_i (\eta_j) \Big(1+2 \sum_{n=2}^{4} {v_{n}}_i \big(\cos[2(\phi-\Psi_n)] \big) \Big)
-\end{align}
-where $E_{Tj} , \eta_j, \phi_j$ and $A_j$ are the cell $E_T, \eta, \phi$ and area for cell $j$ in layer $i$.
-This process is done iteratively done one more time after getting new seeds with the distance parameter $R = 0.2$ and excluding areas that are within $\Delta R = 0.4$ of the seeds.
-Updated values of $\rho{'}_i$ and $v{'}_2$ are recalculated and used to estimate the background that is subtracted from the original cell energies.
-More details on this procedure can be found in \cite{2013220}.
-
-
-
 %A few jet measurements and their modifications by the presence of the Quark Gluon Plasma are discussed in Section~\ref{sec:jetMeasurements}.
 %
 %  jet cross section in  \sqrts = 13 TeV \pp\ collisions can be seen in Figure~\ref{fig:incljetCS}

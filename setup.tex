@@ -1,34 +1,58 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root = thesis-ex.tex
-This section will describe the large hadron collider complex and the ATLAS detector and its various subsytems.
 
 \section{The Large Hadron Collider}
+The Large Hadron Collider (LHC) is a part of the European Organization for Nuclear Research (CERN).
+It has a circumference of 27 kilometers, making it the world's largest particle accelerator, and is housed in a tunnel that is up to 175 meters below the surface of the earth.
+The LHC ring has eight arcs and eight straight sections, with each straight section being approximately 528 m long.
+Four of the straight sections are where the major detectors are located, while the other four are used for machine utilities, radio frequency, collimation and beam dumps.
+The arc sections are built using 1232 dipole superconducting magnets, providing a magnetic field of up to 8.33 T.
+Another 392 quadrupole magnets are used for focussing the particle beam.
+Sixteen radio frequency (RF) cavities that provide a voltage of 2 MV and operate at 400 MHz are used to accelerate the proton or ion beams that are kept in their circular path by the dipole magnets.
+The magnets are cooled down to 1.9 K via liquid Helium.
 
-The Large Hadron Collider (LHC) is a part of the European Organization for Nuclear Research (CERN). It has a circumference of 27 kilometers, making it the world's largest particle accelerator, and is housed in a tunnel that is up to 175 meters below the surface of the earth. The LHC ring has eight arcs and eight straight sections, with each straight section being approximately 528 m long. Four of the straight sections are where the major detectors are located, while the other four are used for machine utilities, radio frequency, collimation and beam dumps. The arc sections are built using 1232 dipole superconducting magnets, providing a magnetic field of up to 8.33 T. Another 392 quadrupole magnets are used for focussing the particle beam. Sixteen radio frequency (RF) cavities that provide a voltage of 2 MV and operate at 400 MHz are used to accelerate the proton or ion beams that are kept in their circular path by the dipole magnets. The magnets are cooled down to 1.9 K via liquid Helium. 
+The LHC beam pipe has two rings with the counter-rotating beams and uses a uses a twin-bore magnet design that optimizes for both cost, as well as space.
+The counterrotating beams require opposite magnetic dipole fields in both rings, with separate magnetic and vacuum chambers, with the common sections only at the insertion regions and where the major experimental detectors are located.
+These detectors are: A Toroidal LHC Apparatus (ATLAS), Compact Muon Solenoid (CMS), A Large Ion Collider Experiment (ALICE), and Large Hadron Collider - Beauty (LHCb) \cite{Evans:2008zzb}.
 
-The LHC beam pipe has two rings with the counter-rotating beams and uses a uses a twin-bore magnet design that optimizes for both cost, as well as space. The counterrotating beams require opposite magnetic dipole fields in both rings, with separate magnetic and vacuum chambers, with the common sections only at the insertion regions and where the major experimental detectors are located. These detectors are: A Toroidal LHC Apparatus (ATLAS), Compact Muon Solenoid (CMS), A Large Ion Collider Experiment (ALICE), and Large Hadron Collider - Beauty (LHCb) \cite{Evans:2008zzb}.
+Studying the rare events that the LHC was designed for requires high beam energies and intensities, and the LHC is capable of reaching up to center of mass energies, \sqrts\ = 14 TeV for protons and \sqrtsnn\ = 5.5 TeV for lead ions.
+The LHC delivers up to $10^{34} \mathrm{cm}^2\mathrm{s}^1$ of luminosity to the ATLAS and CMS detectors when colliding protons.
+The LHCb detector is a lower luminosity experiment, that receives up to $10^{32} \mathrm{cm}^2\mathrm{s}^1$, and ALICE, a dedicated ion experiment aims at a peak luminosity of $10^{27} \mathrm{cm}^2\mathrm{s}^1$ for nominal lead-lead operation.
+In 2015, the LHC delivered an integrated luminosity of 0.49 \pb\ of \pbpb\ and 25 \pb\ of \pp\ data.
 
-Studying the rare events that the LHC was designed for requires high beam energies and intensities, and the LHC is capable of reaching up to center of mass energies, \sqrts\ = 14 TeV for protons and \sqrtsnn\ = 5.5 TeV for lead ions. The LHC delivers up to $10^{34} \mathrm{cm}^2\mathrm{s}^1$ of luminosity to the ATLAS and CMS detectors when colliding protons. The LHCb detector is a lower luminosity experiment, that receives up to $10^{32} \mathrm{cm}^2\mathrm{s}^1$, and ALICE, a dedicated ion experiment aims at a peak luminosity of $10^{27} \mathrm{cm}^2\mathrm{s}^1$ for nominal lead-lead operation.
+A schematic of the entire accelerator complex and the path followed by protons and heavy ions is show in Fig.~\ref{fig:cern}.
+The protons in the LHC are obtained by stripping a hydrogen atom of its electrons with an electric field.
+They are then supplied to the LHC via the Linac2 - Proton Synchrotron Booster - Proton Synchrotron - Super Proton Synchrotron chain.
+The complete ionization of lead on the other hand is done in multiple stages, with the first stage in Linac3, which provides $\mathrm{Pb}^{+29}$ via an ion source.
+The $\mathrm{Pb}^{+29}$ lead ions are further stripped of electrons by passing them through a 0.3 $\mu$m foil.
+The $\mathrm{Pb}^{+54}$ ions are selected via mass spectrometer and sent to the Low Energy Ion Ring (LEIR), followed by the Proton Synchrotron and Super Proton Synchrotron, and then finally the LHC.
+The final stripping of lead ions takes place after the PS, on a 0.8 mm thin aluminum foil.
 
-A schematic of the entire accelerator complex and the path followed by protons and heavy ions is show in Fig.~\ref{fig:cern}. The protons in the LHC are obtained by stripping a hydrogen atom of its electrons with an electric field. They are then supplied to the LHC via the Linac2 - Proton Synchrotron Booster - Proton Synchrotron - Super Proton Synchrotron chain. The complete ionization of lead on the other hand is done in multiple stages, with the first stage in Linac3, which provides $\mathrm{Pb}^{+29}$ via an ion source. The $\mathrm{Pb}^{+29}$ lead ions are further stripped of electrons by passing them through a 0.3 $\mu$m foil. The $\mathrm{Pb}^{+54}$ ions are selected via mass spectrometer and sent to the Low Energy Ion Ring (LEIR), followed by the Proton Synchrotron and Super Proton Synchrotron, and then finally the LHC. The final stripping of lead ions takes place after the PS, on a 0.8 mm thin aluminum foil.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.\textwidth]{figures/setup/cern.jpg} %
-	\caption{The accelerator complex at CERN. ATLAS can be seen inside the SPS on the LHC ring. Figure taken from Ref.~\cite{Christiane:1260465}}
+	\caption{The accelerator complex at CERN.
+ATLAS can be seen inside the SPS on the LHC ring.
+Figure taken from Ref.~\cite{Christiane:1260465}.}
 	\label{fig:cern}%
 \end{figure}
 
-The LHC beams consist of bunches of protons or lead ions with a nominal bunch spacing of 25 ns that corresponds to 2808 bunches. 
-
-In 2015, the LHC delivered an integrated luminosity of 0.49 \pb\ of \pbpb\ and 25 \pb\ of \pp\ data.
-
+%The LHC beams have a nominal bunch spacing of 25 ns corresponding to 2808 bunches for \pp\ and a bunch spacing of 100 ns corresponding to 492 bunches for \pbpb.
 
 \section{The ATLAS Detector}
-The ATLAS detector (Fig.~\ref{fig:atlas}) is a general purpose detector at the LHC. It uses a right-handed coordinate system with its origin at the nominal interaction point (IP) in the
- centre of the detector and the $z$-axis along the beam pipe. The $x$-axis points from the IP to the centre of the LHC ring, and the $y$ axis points upward. Cylindrical coordinates 
- $(r,\phi)$ are used in the transverse plane, $\phi$ being the azimuthal angle around the beam pipe. The pseudorapidity is defined in terms of the polar angle $\theta$ as 
- $\eta=-\ln\tan(\theta/2)$. The detector is symmetric in the forward-backward direction, with the positive $z$ direction being the $A$ side, and the negative $z$ direction being the $C$ side. It has full $2\pi$ coverage in azimuth.  The transverse momentum \pt, the transverse energy \Et, and the missing transverse energy \Etmiss\ are defined in the $x-y$ plane unless stated otherwise. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{\Delta \eta^2 + \Delta \phi^2}$.
+The ATLAS detector (Fig.~\ref{fig:atlas}) is a general purpose detector at the LHC.
+It uses a right-handed coordinate system with its origin at the nominal interaction point (IP) in the
+ centre of the detector and the $z$-axis along the beam pipe.
+The $x$-axis points from the IP to the centre of the LHC ring, and the $y$ axis points upward.
+Cylindrical coordinates 
+ $(r,\phi)$ are used in the transverse plane, $\phi$ being the azimuthal angle around the beam pipe.
+The pseudorapidity is defined in terms of the polar angle $\theta$ as 
+ $\eta=-\ln\tan(\theta/2)$.
+The detector is symmetric in the forward-backward direction, with the positive $z$ direction being the $A$ side, and the negative $z$ direction being the $C$ side.
+It has full $2\pi$ coverage in azimuth.
+ The transverse momentum \pt, the transverse energy \Et, and the missing transverse energy \Etmiss\ are defined in the $x-y$ plane unless stated otherwise.
+The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{\Delta \eta^2 + \Delta \phi^2}$.
 
 The detector was designed keeping in mind the goals of the physics it aimed to explore, and as such has the following characteristics:
 \begin{itemize}
@@ -44,61 +68,114 @@ The detector was designed keeping in mind the goals of the physics it aimed to e
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/setup/atlas.pdf}
-	\caption{The ATLAS detector. Figure taken from Ref.~\cite{Aad:2008zzm}.}	
+	\caption{The ATLAS detector.
+Figure taken from Ref.~\cite{Aad:2008zzm}.}	
 	\label{fig:atlas}
 \end{figure}
 
 
-These design goals are achieved with the main subsystems: the inner detector, the calorimeter, the muon spectrometer, and the trigger system. The main analysis discussed in this thesis uses the inner detector, calorimeter, and the trigger system. The muon system is described for completeness.
+These design goals are achieved with the main subsystems: the inner detector, the calorimeter, the muon spectrometer, and the trigger system.
+The main analysis discussed in this thesis uses the inner detector, calorimeter, and the trigger system.
+The muon system is described for completeness.
 
 
 \subsection{Inner Detector}
-The inner detector (Fig.~\ref{fig:inner_det}) is designed to reconstruct the charged particle trajectories for particles with momenta down to 0.5 GeV in the interval $|\eta| < 2.5$. It is immersed in a 2T magnetic field from the central solenoid that covers a region of 5.3 m long and has a diameter of 2.5 m. The inner detector has capabilities for pattern recognition, momentum and vertex measurements, and electron identification. These measurements are made using the inner pixel detector, the semi-conductor tracker (SCT), and the transition radiation tracker (TRT). 
-
-\subparagraph{Pixel system: } This system is segmented in \rphi and comprises of four pixel layers : the innermost insertable B layer (IBL) and three identical silicon pixel detectors. The IBL was added to the ATLAS detector during the first long shutdown of the LHC in 2013-2014. It consists of 14 carbon fiber staves, 2 cm wide and 64 cm long, surrounding the beam pipe at a mean radius of 33 mm, and covering a pseudorapidity region of $\pm 3$. Each stave consists of 26880 pixels in a matrix of 80 columns (50 $\mu$m pitch), by 336 rows (250 $\mu$m pitch) \cite{LaRosa:2016nbd, Capeans:1291633}. 
-The other three layers layers have a pixel size in $\rphi \times z$ of $50 \times 400 \mu \mathrm{m}^2$. The accuracies in the barrel region are $10 \mu \mathrm{m}^2$ (\rphi) and $115 \mu \mathrm{m}^2 (z)$. The end cap regions have an accuracy of $10 \mu \mathrm{m}^2 (\rphi) $ and $115 \mu \mathrm{m}^2 (R)$. The hit resolution ranges from $\sim$ 8 (\rphi) and $\sim$ 40$\mu$m) ($z$) for the innermost layer, to $\sim$ 10 $\mu$m (\rphi) and $\sim$ 115$\mu$m ($z$) for the next three layers \cite{Aad:2008zzm}. The pixel detector has approximately 80.4 million readout channels. 
-
-\subparagraph{Semi Conductor Tracker:} This subsystem has a coverage that overlaps with the pixel layers, and is arranged in concentric cylinders around the beam axis, with the end caps being disks perpendicular to the beam axis. The SCT has eight strip (80 $\mu$m pitch) layers that are crossed by each track. Small angle stereo strips (40 mrad) are used to measure both coordinates, with one set of strips in each layer, parallel to the beam direction. The end cap region has nine layers of double sided modules with strips in the radial direction, with each also having a mean pitch of 80 $\mu$m. The intrinsic resolution is $\sim$ 17$\mu$m (\rphi) and $\sim$ 580$\mu$m ($z$). There are approximately 6.3 million readout channels from the SCT.  \cite{Aad:2008zzm}.
+The inner detector shown in Figure.~\ref{fig:inner_det} is designed to reconstruct the charged particle trajectories for particles with momenta down to 0.5 GeV in the interval $|\eta| < 2.5$.
+It is immersed in a 2T magnetic field from the central solenoid that covers a region of 5.3 m long and has a diameter of 2.5 m.
+The inner detector has capabilities for pattern recognition, momentum and vertex measurements, and electron identification.
+These measurements are made using the inner pixel detector, the semi-conductor tracker (SCT), and the transition radiation tracker (TRT).
 
 
-\subparagraph{Transition Radiation Tracker:} The TRT uses a combination of a xenon based gas and 4mm diameter straw tubes and provides for a large number of hits (up to 36) per track. It covers the region $|\eta| <  2.0$, and has a resolution of $\sim$ 130$\mu$m in $r-\phi$, with no information in the $z$ direction. The barrel region of the TRT has straws that are 144 cm long and are parallel to the beam axis, with the wires divided into two halves at $\eta = 0$. The end-caps have 37 cm long straws in a radial configuration. The TRT has approximately 315,000 channels. \cite{Aad:2008zzm}.
+\subparagraph{Pixel system: } This system is segmented in \rphi and comprises of four pixel layers : the innermost insertable B layer (IBL) and three identical silicon pixel detectors.
+The IBL was added to the ATLAS detector during the first long shutdown of the LHC in 2013-2014.
+It consists of 14 carbon fiber staves, 2 cm wide and 64 cm long, surrounding the beam pipe at a mean radius of 33 mm, and covering a pseudorapidity region of $\pm 3$.
+Each stave consists of 26880 pixels in a matrix of 80 columns (50 $\mu$m pitch), by 336 rows (250 $\mu$m pitch) \cite{LaRosa:2016nbd, Capeans:1291633}.
+The other three layers layers have a pixel size in $\rphi \times z$ of $50 \times 400 \mu \mathrm{m}^2$.
+The accuracies in the barrel region are $10 \mu \mathrm{m}^2$ (\rphi) and $115 \mu \mathrm{m}^2 (z)$.
+The end cap regions have an accuracy of $10 \mu \mathrm{m}^2 (\rphi) $ and $115 \mu \mathrm{m}^2 (R)$.
+The hit resolution ranges from $\sim$ 8 (\rphi) and $\sim$ 40$\mu$m) ($z$) for the innermost layer, to $\sim$ 10 $\mu$m (\rphi) and $\sim$ 115$\mu$m ($z$) for the next three layers \cite{Aad:2008zzm}.
+The pixel detector has approximately 80.4 million readout channels.
+
+
+\subparagraph{Semi Conductor Tracker:} This subsystem has a coverage that overlaps with the pixel layers, and is arranged in concentric cylinders around the beam axis, with the end caps being disks perpendicular to the beam axis.
+The SCT has eight strip (80 $\mu$m pitch) layers that are crossed by each track.
+Small angle stereo strips (40 mrad) are used to measure both coordinates, with one set of strips in each layer, parallel to the beam direction.
+The end cap region has nine layers of double sided modules with strips in the radial direction, with each also having a mean pitch of 80 $\mu$m.
+The intrinsic resolution is $\sim$ 17$\mu$m (\rphi) and $\sim$ 580$\mu$m ($z$).
+There are approximately 6.3 million readout channels from the SCT \cite{Aad:2008zzm}.
+
+
+\subparagraph{Transition Radiation Tracker:} The TRT uses a combination of a xenon based gas and 4mm diameter straw tubes and provides for a large number of hits (up to 36) per track.
+It covers the region $|\eta| <  2.0$, and has a resolution of $\sim$ 130$\mu$m in $r-\phi$, with no information in the $z$ direction.
+The barrel region of the TRT has straws that are 144 cm long and are parallel to the beam axis, with the wires divided into two halves at $\eta = 0$.
+The end-caps have 37 cm long straws in a radial configuration.
+The TRT has approximately 315,000 channels \cite{Aad:2008zzm}.
 
 
 \begin{figure}[ht]
 	\centering
         \includegraphics[width=0.7\textwidth]{figures/setup/inner_det.png}
-          \caption{ATLAS Inner Detector System}
+          \caption{ATLAS Inner Detector System.
+          Figure taken from Ref.~\cite{Potamianos:2209070}.}
           \label{fig:inner_det}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Calorimeter}
-The calorimeter covers the range of $|\eta| < 4.9$ for using a variety of different techniques. The parameters are summarized in the table below. Over  $|\eta| < 2.5$, where there is overlap with the inner detector, the highly granular electromagnetic calorimeter is used for precision measurements of electrons and photons. The rest of calorimeter has coarser granularity that is sufficient for jet reconstruction. The calorimeter contains the electromagnetic and hadronic showers, and limits the punch through to the muon system. The EMCal has a radiation depth greater than 22 radiation lengths in the barrel, and greater than 24 radiation lengths in the end caps. The approximately 10 interaction lengths in the barrel and end cap provide good resolution for high energy jets. The total thickness of the calorimeter is 11 interaction lengths at $\eta = 0$. The calorimeter is divided into different subsystems, including the Liquid Argon Electromagnetic Calorimeter (LAr EMCal) and the Hadronic calorimeter (HCal).
+The calorimeter covers the range of $|\eta| < 4.9$ for using a variety of different techniques.
+The parameters are summarized in the table below.
+Over  $|\eta| < 2.5$, where there is overlap with the inner detector, the highly granular electromagnetic calorimeter is used for precision measurements of electrons and photons.
+The rest of calorimeter has coarser granularity that is sufficient for jet reconstruction.
+The calorimeter contains the electromagnetic and hadronic showers, and limits the punch through to the muon system.
+The EMCal has a radiation depth greater than 22 radiation lengths in the barrel, and greater than 24 radiation lengths in the end caps.
+The approximately 10 interaction lengths in the barrel and end cap provide good resolution for high energy jets.
+The total thickness of the calorimeter is 11 interaction lengths at $\eta = 0$.
+The calorimeter is divided into different subsystems, including the Liquid Argon Electromagnetic Calorimeter (LAr EMCal) and the Hadronic calorimeter (HCal).
 
 \subparagraph{LAr EMCal: }
-The EMCal covers the region $|\eta| < 1.475$ and has two end caps ($1.375 < |\eta| < 3.2$). It also contains the central solenoid. The barrel calorimeter is divided into two half barrels, separated by 4mm at $z = 0$. Each end cap is divided into two coaxial wheels, with the inner one covering $2.5 < |\eta| < 3.2$ and the outer one covering  $1.375 < |\eta| < 2.5$. The EMCal uses accordion shaped kapton electrodes and lead absorber plates that provide full azimuthal symmetry. The EMCal is subdivided into three sections in its depth over $|\eta| < 2.5$, the region used for precision physics. The $|\eta| < 1.8$ region also uses a pre-sampler detector that uses an active LAr layer to correct for energy lost upstream of the calorimeter. A main source of this loss is the central solenoid.
+The EMCal covers the region $|\eta| < 1.475$ and has two end caps ($1.375 < |\eta| < 3.2$).
+It also contains the central solenoid.
+The barrel calorimeter is divided into two half barrels, separated by 4mm at $z = 0$.
+Each end cap is divided into two coaxial wheels, with the inner one covering $2.5 < |\eta| < 3.2$ and the outer one covering  $1.375 < |\eta| < 2.5$.
+The EMCal uses accordion shaped kapton electrodes and lead absorber plates that provide full azimuthal symmetry.
+The EMCal is subdivided into three sections in its depth over $|\eta| < 2.5$, the region used for precision physics.
+The $|\eta| < 1.8$ region also uses a pre-sampler detector that uses an active LAr layer to correct for energy lost upstream of the calorimeter.
+A main source of this loss is the central solenoid.
 
 \subparagraph{Hadronic Calorimeter: }
-The hadronic calorimeter consists of the tile, LAr Hadronic end cap, and the LAr forward calorimeter. The tile covers the region $|\eta| < 1.0$ , with its two barrels covering the range eta $0.8 < |\eta| < 1.7$. It uses steel as the absorber and scintillating tiles for the active material. The tile calorimeter extends radially from an inner radius of 2.28 m to 4.25 m. It has a three layer that are 1.5, 4.1, and 1.8 interaction lengths thick in the barrel region, and 1.5, 2.6, and 3.3 interaction lengths in the extended barrel region. The total detector thickness is 9.7 interaction lengths at $\eta = 0$. 
+The hadronic calorimeter consists of the tile, LAr Hadronic end cap, and the LAr forward calorimeter.
+The tile covers the region $|\eta| < 1.0$ , with its two barrels covering the range eta $0.8 < |\eta| < 1.7$.
+It uses steel as the absorber and scintillating tiles for the active material.
+The tile calorimeter extends radially from an inner radius of 2.28 m to 4.25 m.
+It has a three layer that are 1.5, 4.1, and 1.8 interaction lengths thick in the barrel region, and 1.5, 2.6, and 3.3 interaction lengths in the extended barrel region.
+The total detector thickness is 9.7 interaction lengths at $\eta = 0$.
 
-The LAr hadronic end cap calorimeter (HEC) consists of two independent wheels per end cap, and is behind the EMCal end cap. It extends out from $1.5 < |\eta| < 3.2$, and overlaps with the forward calorimeter and the tile calorimeter. The HEC covers the radial region of 0.475 to 2.03 m. 
+The LAr hadronic end cap calorimeter (HEC) consists of two independent wheels per end cap, and is behind the EMCal end cap.
+It extends out from $1.5 < |\eta| < 3.2$, and overlaps with the forward calorimeter and the tile calorimeter.
+The HEC covers the radial region of 0.475 to 2.03 m.
 
-The LAr Forward calorimeter provides coverage over the $3.1 < |\eta| < 4.9$. It is approximately 10 interaction lengths deep, and has three modules, one of which is optimized for electromagnetic measurements, while the other two for hadronic measurements. Each module is made of concentric rods and tubes parallel to the beam axis. 
-
+The LAr Forward calorimeter provides coverage over the $3.1 < |\eta| < 4.9$.
+It is approximately 10 interaction lengths deep, and has three modules, one of which is optimized for electromagnetic measurements, while the other two for hadronic measurements.
+Each module is made of concentric rods and tubes parallel to the beam axis.
 
 A summary of the depth of the calorimeter in terms of the interaction lengths, as a function of pseudorapidity is shown in Fig.~\ref{fig:interaction_lenghts}.
-
 
 \begin{figure}[ht]
 	\centering
         \includegraphics[width=0.7\textwidth]{figures/setup/interaction_lengths}
-          \caption{Cumulative material in the calorimeter system in units of interaction length as a function of $|\eta|$.}
+          \caption{Cumulative material in the calorimeter system in units of hadronic interaction length as a function of $|\eta|$.
+          Figure taken from Ref.~\cite{Aad:2008zzm}.}
           \label{fig:interaction_lenghts}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Muon Spectrometer}
-The muon spectrometer is based on the magnetic deflection of muon tracks in the toroid magnets. The barrel toroid provides bending over the $|\eta| < 1.4$ range, and the end cap magnets provide bending in the $1.6 < |\eta < 2.7$ range. In the transition region ($1.4 < |\eta| < 1.6$), the magnetic deflection is from a combination of the barrel and end-cap fields. The barrel region has tracks that are measured in chambers in a cylindrical configuration around the beam axis. The transition and end-cap have chambers perpendicular to the beam axis. 
+The muon spectrometer is based on the magnetic deflection of muon tracks in the toroid magnets.
+The barrel toroid provides bending over the $|\eta| < 1.4$ range, and the end cap magnets provide bending in the $1.6 < |\eta < 2.7$ range.
+In the transition region ($1.4 < |\eta| < 1.6$), the magnetic deflection is from a combination of the barrel and end-cap fields.
+The barrel region has tracks that are measured in chambers in a cylindrical configuration around the beam axis.
+The transition and end-cap have chambers perpendicular to the beam axis.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,28 +183,40 @@ The muon spectrometer is based on the magnetic deflection of muon tracks in the 
 Other major subsystems of the ATLAS detector include the Zero Degree Calorimeter (ZDC), the trigger system
 
 \subsubsection{ZDC}
-The zero degree calorimeter plays a key role in determining the centrality of heavy ion collisions. It consists of quartz rods and tungsten plates, and measures neutral particles at $|\eta| >= 8.2$. It is made of four modules, one electromagnetic, and three hadronic. The Modules are made of 11 tungsten plates that are perpendicular to the beam direction. Photomultiplier tubes are used to detect the Cherenkov radiation from particle showers.
+The zero degree calorimeter plays a key role in determining the centrality of heavy ion collisions.
+It consists of quartz rods and tungsten plates, and measures neutral particles at $|\eta| >= 8.2$.
+It is made of four modules, one electromagnetic, and three hadronic.
+The Modules are made of 11 tungsten plates that are perpendicular to the beam direction.
+Photomultiplier tubes are used to detect the Cherenkov radiation from particle showers.
 
 
 \subsubsection{Trigger System}
-The trigger and data acquisition system (TDAQ) have different subsystems that are associated with sub-detectors. There are three distinct levels: L1, L2, and the event filter. The latter two form the High Level Trigger (HLT) system. The L1 trigger, shown in Fig.\ref{fig:L1_trigger}, uses custom electronics, while the HLT, shown in Fig.\ref{fig:HLT_trigger}, is software based. Each level uses information from the previous level to select events. 
-
-The first level uses limited detector information and makes decisions based on muons, electron, photons, jets, and $\tau$-leptons carrying a high transverse momentum. It is also capable of identifying large missing and total transverse energy.  It has a maximum acceptance rate of 75kHz and makes a decision in less that 2.5$\mu$s. This event rate is further reduced to 200 Hz by the HLT that uses the full granularity and precision of the inner detector, calorimeter and muon systems to select events. 
-
-
-\begin{figure}[ht]
-	\centering
-        \includegraphics[width=0.7\textwidth]{figures/setup/L1_Trigger}
-          \caption{Block diagram of the L1 Trigger System.}
-          \label{fig:L1_trigger}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-        \includegraphics[width=0.7\textwidth]{figures/setup/HLT_Trigger}
-          \caption{Block diagram of the HLT Trigger system.}
-          \label{fig:HLT_trigger}
-\end{figure}
+The trigger and data acquisition system (TDAQ) have different subsystems that are associated with sub-detectors.
+There are three distinct levels: L1, L2, and the event filter.
+The latter two form the High Level Trigger (HLT) system.
+The L1 trigger uses custom electronics, while the HLT is software based.
+%The L1 trigger, shown in Fig.\ref{fig:L1_trigger}, uses custom electronics, while the HLT, shown in Fig.\ref{fig:HLT_trigger}, is software based.
+Each level uses information from the previous level to select events.
+%
+%\begin{figure}[ht]
+%	\centering
+%        \includegraphics[width=0.7\textwidth]{figures/setup/L1_Trigger}
+%          \caption{Block diagram of the L1 Trigger System.
+%          Figure taken from Ref.~\cite{Aad:2008zzm}.}}
+%          \label{fig:L1_trigger}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%	\centering
+%        \includegraphics[width=0.7\textwidth]{figures/setup/HLT_Trigger}
+%          \caption{Block diagram of the HLT Trigger system.
+%          Figure taken from Ref.~\cite{Aad:2008zzm}.}
+%          \label{fig:HLT_trigger}
+%\end{figure}
+The first level uses limited detector information and makes decisions based on muons, electron, photons, jets, and $\tau$-leptons carrying a high transverse momentum.
+It is also capable of identifying large missing and total transverse energy.
+ It has a maximum acceptance rate of 75kHz and makes a decision in less that 2.5$\mu$s.
+This event rate is further reduced to 200 Hz by the HLT that uses the full granularity and precision of the inner detector, calorimeter and muon systems to select events.
 
 
 %The $\eta$ coverage of the different detector systems can be seen in Fig.~\ref{fig:atlaspseudorap}.
@@ -141,18 +230,41 @@ The first level uses limited detector information and makes decisions based on m
 %%\begin{figure}[ht]
 %%	\centering
 %%	\includegraphics[width=0.7\textwidth]{figures/atlas.pdf} %
-%%	\caption{The ATLAS detector. Figure taken from Ref.~\cite{Aad:2008zzm}.}	
+%%	\caption{The ATLAS detector.
+%Figure taken from Ref.~\cite{Aad:2008zzm}.}	
 %%	\label{fig:atlas}%
 %%\end{figure}
-
-
-
-
-
 %
 %\subsection{Magnet System}
-%The ATLAS detector has a magnet configuration that consists of a thin superconducting solenoid surrounding the inner detector cavity, and three large superconducting toroids arranged symmetrically around the calorimeters. The inner detector is immersed in a 2 T magnetic field, and achieves pattern recognition, momentum and vertex measurements, and electron identification by a combination of high resolution semiconductor pixel and strip detectors in the inner tracking volume, and a straw tube detector for transition radiation in the outer volume. 
-
-
+%The ATLAS detector has a magnet configuration that consists of a thin superconducting solenoid surrounding the inner detector cavity, and three large superconducting toroids arranged symmetrically around the calorimeters.
+%The inner detector is immersed in a 2 T magnetic field, and achieves pattern recognition, momentum and vertex measurements, and electron identification by a combination of high resolution semiconductor pixel and strip detectors in the inner tracking volume, and a straw tube detector for transition radiation in the outer volume.
 
 %\FloatBarrier
+
+\section{Jet Reconstruction for Heavy Ion Collisions in ATLAS}
+The ATLAS jet reconstruction procedure is summarized in Figure~\ref{fig:atlasHIjetreco}.
+For heavy ion collisions in ATLAS, the inputs to the algorithm are the $\eta \times \phi = 0.1 \times 0.1$ calorimeter towers.
+The tower energies are determined by summing up the energies of the individual calorimeter cells.
+The \antikt\ algorithm is first run with the distance parameter $R=0.2$, following which an underlying event subtraction procedure is performed.
+A first estimate of the average underlying event energy density $\rho_i (\eta)$ is done in 0.1 slices of $\eta$ in each calorimeter layer $i$ after excluding the regions that overlap with the seed jets.
+A modulation of $2v_{2} \cos[2(\phi-\Psi_2)] $ is applied to account for the flow from the QGP and the underlying event is subtracted to give $E_{Tj}^{\mathrm{sub}}$:
+
+\begin{align}
+E_{Tj}^{\mathrm{sub}} = E_{Tj} - A_j \rho_i (\eta_j) \Big(1+2 \sum_{n=2}^{4} {v_{n}}_i \big(\cos[2(\phi-\Psi_n)] \big) \Big)
+\end{align}
+where $E_{Tj} , \eta_j, \phi_j$ and $A_j$ are the cell $E_T, \eta, \phi$ and area for cell $j$ in layer $i$.
+This process is done iteratively done one more time after getting new seeds with the distance parameter $R = 0.2$ and excluding areas that are within $\Delta R = 0.4$ of the seeds.
+Updated values of $\rho{'}_i$ and $v{'}_2$ are recalculated and used to estimate the background that is subtracted from the original cell energies.
+More details on this procedure can be found in \cite{2013220}.
+
+The $\eta$ coverage of the different detector systems can be seen in Fig.~\ref{fig:atlaspseudorap}.
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/setup/atlasHIjetReco} %
+	\caption{A schematic of the ATLAS jet reconstruction procedure.
+	Figures taken from \cite{}.}	
+	\label{fig:atlasHIjetreco}%
+\end{figure}
+
+
+%\input{jet_reconstruction.tex}
