@@ -15,8 +15,6 @@ Because of their color charge, gluon led jets have a softer fragmentation and re
 \end{center}
 \end{figure}
 
-
-
 \subsection{Jets in $e^+ e^-$ collisions}
 The simplest process that can be used to study jets is the process $e^+ e^- \rightarrow q \bar{q} \rightarrow 2 \text{ jets}$.
 The electron and positron annihilates to produce a photon that can decay into a $q \bar{q}$ pair, that hadronize and form jets.
@@ -27,14 +25,13 @@ At the Large Electron-Positron Collider (LEP), higher collision energies allowed
 In these processes, to leading order, the \qqbar\ pair evolved via gluon radiation before converting to hadrons \cite{Mueller_1991}, allowing for events with more than two jets.
 Jet production in \epm\ collisions is also one of the best ways to test the validity of perturbative QCD \cite{Kramer:1986mc}.
 
-
-
 %%%%%%%%%%%%%%%%%%%
 \subsection{Jets in $pp$ collisions}
 Jet production in a vacuum is well described in context of perturbative QCD \cite{Sjostrand:2007gs}.
 Processes involving large momentum transfers like high \pt\ hadron production are shown in Figure~\ref{fig:feynman_jet}
 \footnote{In the context of a particle collision, the \pt\ of a particle is the momentum it carries in a direction perpendicular to the beam axis.
-It is given by $\pt = |p| \sin\theta$ where $\theta$ is the angle of the particle with respect to the beam axis.}.
+It is given by $\pt = |p| \sin\theta$ where $\theta$ is the angle of the particle with respect to the beam axis.
+The rapidity $y$ is related to an outgoing particles momentum along the beam axis, and is given by $y = 1/2 \ln[(E+p_z) / (E-p_z)]$}.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -97,6 +94,7 @@ This in particular enables direct comparisons of jet observables in \pp\ collisi
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jets in heavy ion collisions}
 %Both the PDFs and FFs are universal and their scale dependence evolves via the Dokshitzer-Gribov-Lipatov-Altarelli-Parisi (DGLAP) equations \cite{ALTARELLI1977298, Gribov:1972ri, Dokshitzer:1977sg}.
@@ -152,6 +150,7 @@ A variety of radiative energy loss frameworks that have been developed include: 
 \end{itemize}
 
 Both hot and cold nuclear matter effects can be described by modifying Equation~\ref{eq:hadronCS} as:
+
 \begin{align}
 d \sigma_{AB \rightarrow hX}  \approx & \sum_{abjj'd} f_{a/A} (x_a) \otimes f_{b/B} (x_b) \\ 
 & \otimes d\sigma_{ab\rightarrow jd} (\mu_f, \mu_F, \mu_R)  \nonumber \\
@@ -167,13 +166,15 @@ This is typically taken as part of the fragmentation modification as:
 \end{align}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jet Algorithms}
 \label{sec:jet_algo}
 Jet algorithms map the momenta of final state particles into the momenta of jets, and form a core component of any jet measurement.
 They can be broadly categorized as sequential recombination and cone algorithms \cite{Atkin_2015}. 
 
-Cone algorithms cluster particles in the $\eta-\phi$ space \footnote{$\eta = -\ln [\tan(\theta/2)]$ is the pseudorapidity and is a spatial coordinate that describes the angle $\theta$ of a particle with respect to the beam axis. $\phi$ is the azimuthal angle around the beam axis. The coordinate system of detectors is typically based on the $\eta-\phi$ plane.} assuming that the particles of a jet will be located in a conical region of the detector.
+Cone algorithms cluster particles in the $\eta-\phi$ space \footnote{The pseudorapidity $\eta = -\ln [\tan(\theta/2)]$ is related to the rapidity and is a spatial coordinate that describes the angle $\theta$ of a particle with respect to the beam axis. $\phi$ is the azimuthal angle around the beam axis. The The coordinate system of detectors is typically based on the $\eta-\phi$ plane.} assuming that the particles of a jet will be located in a conical region of the detector.
 Some examples of cone algorithms are: iterative cone - progressive removal (IC-PR) \cite{ARNISON1983214}, iterative cone - split merge (IC-SM) \cite{Blazey:2000qt}, and SISCone \cite{Salam_2007}.
 
 Sequential recombination algorithms on the other hand work by grouping particles in momentum space, with the result that they have fluctuating areas in $\eta-\phi$ space.
@@ -266,8 +267,6 @@ Figure taken from \cite{Cacciari:2008gp}.}
 %\label{fig:incljetCS}
 %\end{center}
 %\end{figure}
-%
-%
 %
 %\begin{figure}[htbp]
 %\begin{center}

@@ -20,7 +20,7 @@ The LHC delivers up to $10^{34} \mathrm{cm}^2\mathrm{s}^1$ of luminosity to the 
 The LHCb detector is a lower luminosity experiment, that receives up to $10^{32} \mathrm{cm}^2\mathrm{s}^1$, and ALICE, a dedicated ion experiment aims at a peak luminosity of $10^{27} \mathrm{cm}^2\mathrm{s}^1$ for nominal lead-lead operation.
 In 2015, the LHC delivered an integrated luminosity of 0.49 \pb\ of \pbpb\ and 25 \pb\ of \pp\ data.
 
-A schematic of the entire accelerator complex and the path followed by protons and heavy ions is show in Fig.~\ref{fig:cern}.
+A schematic of the entire accelerator complex and the path followed by protons and heavy ions is show in Figure~\ref{fig:cern}.
 The protons in the LHC are obtained by stripping a hydrogen atom of its electrons with an electric field.
 They are then supplied to the LHC via the Linac2 - Proton Synchrotron Booster - Proton Synchrotron - Super Proton Synchrotron chain.
 The complete ionization of lead on the other hand is done in multiple stages, with the first stage in Linac3, which provides $\mathrm{Pb}^{+29}$ via an ion source.
@@ -31,7 +31,7 @@ The final stripping of lead ions takes place after the PS, on a 0.8 mm thin alum
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.\textwidth]{figures/setup/cern.jpg} %
+	\includegraphics[width=0.8\textwidth]{figures/setup/cern.jpg} %
 	\caption{The accelerator complex at CERN.
 ATLAS can be seen inside the SPS on the LHC ring.
 Figure taken from Ref.~\cite{Christiane:1260465}.}
@@ -41,7 +41,7 @@ Figure taken from Ref.~\cite{Christiane:1260465}.}
 %The LHC beams have a nominal bunch spacing of 25 ns corresponding to 2808 bunches for \pp\ and a bunch spacing of 100 ns corresponding to 492 bunches for \pbpb.
 
 \section{The ATLAS Detector}
-The ATLAS detector (Fig.~\ref{fig:atlas}) is a general purpose detector at the LHC.
+The ATLAS detector (Figure~\ref{fig:atlas}) is a general purpose detector at the LHC.
 It uses a right-handed coordinate system with its origin at the nominal interaction point (IP) in the
  centre of the detector and the $z$-axis along the beam pipe.
 The $x$-axis points from the IP to the centre of the LHC ring, and the $y$ axis points upward.
@@ -154,11 +154,11 @@ The LAr hadronic end cap calorimeter (HEC) consists of two independent wheels pe
 It extends out from $1.5 < |\eta| < 3.2$, and overlaps with the forward calorimeter and the tile calorimeter.
 The HEC covers the radial region of 0.475 to 2.03 m.
 
-The LAr Forward calorimeter provides coverage over the $3.1 < |\eta| < 4.9$.
+The LAr Forward calorimeter (FCal) provides coverage over the $3.1 < |\eta| < 4.9$.
 It is approximately 10 interaction lengths deep, and has three modules, one of which is optimized for electromagnetic measurements, while the other two for hadronic measurements.
 Each module is made of concentric rods and tubes parallel to the beam axis.
 
-A summary of the depth of the calorimeter in terms of the interaction lengths, as a function of pseudorapidity is shown in Fig.~\ref{fig:interaction_lenghts}.
+A summary of the depth of the calorimeter in terms of the interaction lengths, as a function of pseudorapidity is shown in Figure~\ref{fig:interaction_lenghts}.
 
 \begin{figure}[ht]
 	\centering
@@ -167,6 +167,7 @@ A summary of the depth of the calorimeter in terms of the interaction lengths, a
           Figure taken from Ref.~\cite{Aad:2008zzm}.}
           \label{fig:interaction_lenghts}
 \end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Muon Spectrometer}
@@ -195,7 +196,7 @@ The trigger and data acquisition system (TDAQ) have different subsystems that ar
 There are three distinct levels: L1, L2, and the event filter.
 The latter two form the High Level Trigger (HLT) system.
 The L1 trigger uses custom electronics, while the HLT is software based.
-%The L1 trigger, shown in Fig.\ref{fig:L1_trigger}, uses custom electronics, while the HLT, shown in Fig.\ref{fig:HLT_trigger}, is software based.
+%The L1 trigger, shown in Figure~\ref{fig:L1_trigger}, uses custom electronics, while the HLT, shown in Figure~\ref{fig:HLT_trigger}, is software based.
 Each level uses information from the previous level to select events.
 %
 %\begin{figure}[ht]
@@ -219,7 +220,7 @@ It is also capable of identifying large missing and total transverse energy.
 This event rate is further reduced to 200 Hz by the HLT that uses the full granularity and precision of the inner detector, calorimeter and muon systems to select events.
 
 
-%The $\eta$ coverage of the different detector systems can be seen in Fig.~\ref{fig:atlaspseudorap}.
+%The $\eta$ coverage of the different detector systems can be seen in Figure~\ref{fig:atlaspseudorap}.
 %\begin{figure}[htbp!]
 %	\centering
 %	\includegraphics[width=0.7\textwidth]{figures/setup/atlaspseudorap.png} %
@@ -240,6 +241,10 @@ This event rate is further reduced to 200 Hz by the HLT that uses the full granu
 %The inner detector is immersed in a 2 T magnetic field, and achieves pattern recognition, momentum and vertex measurements, and electron identification by a combination of high resolution semiconductor pixel and strip detectors in the inner tracking volume, and a straw tube detector for transition radiation in the outer volume.
 
 %\FloatBarrier
+
+
+\section{Centrality Determination in ATLAS}
+\input{centrality.tex}
 
 \section{Jet Reconstruction for Heavy Ion Collisions in ATLAS}
 \input{jet_reconstruction.tex}
