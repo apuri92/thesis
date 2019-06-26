@@ -47,6 +47,7 @@ Updated values of $\rho{'}_i$ and $v{'}_2$ are recalculated and used to estimate
 This is then subtracted from the original cell energies to give kinematics for the $R= 0.4$ jets.
 The average subtracted energy normalized by the area of the jet reconstructed jet, as a function of the energy in the forward calorimeter is shown in Fig~\ref{fig:subtr_energy}.
 It can be seen that in the barrel region for $|\eta| < 0.1$, $R=0.4$ jets have a background that is approximately $300/(\pi\times 0.4^2) \approx 150$ GeV.
+Figure~\ref{fig:jet_event_display} shows an ATLAS event display for a heavy ion collision with a reconstructed jet.
 
 \begin{figure}[htbp!]
 	\centering
@@ -60,37 +61,12 @@ It can be seen that in the barrel region for $|\eta| < 0.1$, $R=0.4$ jets have a
 \end{figure}
 
 
-These jets still require a calibration before they can be used for analysis.
-This includes the following \cite{Aad:2014bia}:
-\subparagraph{Origin Correction: } This correction ensures that jets point back to the primary vertex and not the nominal center of the detector.
-\subparagraph{MC based Calibration: } This is a MC based correction that depends on the comparison between the energy and pseudorapidity of the reconstructed jet and the corresponding matched truth jet.
-\subparagraph{\textit{In situ}+Cross Calibration: } This calibration is based on the differences between data and MC as described by a well-measured object like a photon or Z boson.
-This poses a challenge for heavy ion collisions because unlike in \pp\ collisions, there simply aren't enough statistics for these objects.
-Here the cross-calibration procedure accounts for differences in the jet reconstruction procedure in heavy ion collisions and \pp\ collisions, and enables the usage of the \insitu\ corrections from \pp\ collisions.
-
-
-The validity of the jet reconstruction and calibration procedure can be tested by evaluating the jet energy scale and jet energy resolution.
-These are the mean and width respectively of the jet response distribution that is given by $\ptreco / \pttruth$ in MC and are shown in Figure~\ref{fig:jes_jer}.
-\ptreco\ is the reconstructed jets transverse momentum, while \pttruth\ is the transverse momentum of the corresponding ``truth'' jet.
-
-
 \begin{figure}[htbp!]
 	\centering
-	\includegraphics[width=\textwidth]{figures/setup/jes_jer} %
+	\includegraphics[width=0.6\textwidth]{figures/setup/jet_event_display} %
 	\caption{
-	The Jet Energy Scale (left) and Jet Energy Resolution (right) as a function of \pttruth.
-	Both are for jets with $|y| < 2.8$. The different curves are for \pp\ and varying \pbpb\ centrality.
-	Figures taken from \cite{2019108}.}	
-	\label{fig:jes_jer}%
+	An asymmetric dijet event in \pbpb\ collisions at \sqrtsnn = 2.76 TeV as measured by the ATLAS detector. 
+	Figures taken from \cite{atlasRun1EventDisplay}.}	
+	\label{fig:jet_event_display}
 \end{figure}
-The JES is seen to be almost unity within 1\%. across a broad kinematic range.
-The JER is smaller for jets with higher transverse momentum, and depends on centrality.
-It is the largest in central collisions and gets better for more peripheral collisions.
-The JER can be fit to the form \cite{Aad:hi_jets}:
 
-\begin{align}
-\frac{\sigma[\Delta \Et]}{E_{\rm T}^{\rm true}} = \frac{a}{\sqrt{E_{\rm T}^{\rm true}}} \oplus \frac{b}{E_{\rm T}^{\rm true}} \oplus c
-\end{align}
-where $a$ and $c$ are related to the detector response.
-The $b$ term describes the underlying event fluctuations and depends on centrality.
-The large underlying event in central collisions results in the JER being the largest in that centrality interval. 
