@@ -3,30 +3,27 @@
 
 \section{Overview}
 
-Measurements of jets in heavy ion collisions are powerful tools to determine the properties of this matter by measuring the modification of jet production and fragmentation after the jets have traversed the hot QCD matter.
+Measurements of jets in heavy ion collisions are powerful tools to determine the properties of the quark gluon plasma by measuring the modification of jet production and fragmentation after the jets have traversed the hot QCD matter.
 As discussed in Section~\ref{sec:jetMeasurements}, jets with large transverse momenta in central lead-lead (\pbpb) collisions at the LHC are measured at approximately half the rates in \pp\ collisions when the nuclear overlap function of \pbpb\ collisions is taken into account~\cite{Abelev:2013kqa,Aad:2014bxa,Adam:2015ewa,Khachatryan:2016jfl, Khachatryan:2016odn, 2019108}.
 Back-to-back dijet~\cite{Aad:2010bu,Chatrchyan:2011sx,Aaboud:2017eww} and photon-jet pairs~\cite{Chatrchyan:2012gt,2019167} are observed to have less balanced transverse momenta in \pbpb\ collisions compared to \pp\ collisions.
 Jet shape measurements in the \pp\ and \pbpb\ collision systems have shown a broadening of the jets due to the QGP~\cite{Aad:2011sc, Acharya:2018uvf, Chatrchyan:2012mec, Chatrchyan:2013kwa}, and jet fragmentation functions in \pbpb\ collisions are modified with an excess for low and high momentum particles and depletion of intermediate momentum particles inside the jet compared to pp collisions~\cite{Aad:2014wha,Chatrchyan:2014ava,Aaboud:2017bzv,PhysRevC.98.024908}.
 Particles carrying a large fraction of the jet momentum are generally closely aligned with the jet axis, whereas low momentum particles are observed to have a much broader angular distribution extending outside the jet~\cite{Chatrchyan:2011sx,Khachatryan2016,Khachatryan:2016tfj,Sirunyan:2018jqr}.
-All these studies have suggested that the energy lost via jet-quenching is being transferred to soft particles around the jet axis via soft gluon emission~\cite{Vitev:2008rz,Ovanesyan:2011xy,Blaizot:2014ula,Qin:2015srf,Escobedo:2016jbm,Casalderrey-Solana:2016jvj,Tachibana:2017syd} and investigating the radial distribution of particles as a function of transverse momentum has the potential to provide further insight into on the structure of jets in the QGP.
-This can help provide information on not only how the jet is affected by the plasma, but also how the plasma is affected by the jet. 
+All these studies have suggested that the energy lost via jet-quenching is being transferred to soft particles around the jet axis via soft gluon emission~\cite{Vitev:2008rz,Ovanesyan:2011xy,Blaizot:2014ula,Qin:2015srf,Escobedo:2016jbm,Casalderrey-Solana:2016jvj,Tachibana:2017syd} and investigating the radial distribution of particles as a function of transverse momentum has the potential to provide further insight into the structure of jets in the QGP.
+This can help provide information on not only how the jet is affected by the plasma, but also how the plasma is affected by the jet.
 
-This paper presents charged-particle \pt\ distributions around the jet axis as shown in Figure~\ref{fig:cartoon_dptr}. 
+This thesis presents charged-particle \pt\ distributions around the jet axis as shown in Figure~\ref{fig:cartoon_dptr}. 
 The measured yields are defined as:
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/main/general/cartoon_dptr}
-\caption{A schematic showing the distribution of tracks inside and outside a jet cone of radius R.}
+\caption{A schematic showing the distribution of tracks inside and outside a jet cone of radius $R$.}
 \label{fig:cartoon_dptr}
 \end{figure}
 
 
 \begin{align}
 \Dptr = \frac{1}{N_{\mathrm{jet}}} \frac{1}{A} \frac{\mathrm{d} n_{\mathrm{ch}} (\pt, r)}{\mathrm{d} \pt},
-%%%
-%D(\pt,\ptjet) = \frac{1}{N_{\mathrm{jet}}} ~ \frac{1}{\epsilon(\pttrk)} ~ \frac{\mathrm{d} N_{\mathrm{ch}}}{\mathrm{d} \pt}~(\ptjet).
-%%%
 \end{align}
 where $r = \sqrt{\Delta \eta^2 + \Delta \phi^2}$ is the angular distance from the jet axis and $N_{\mathrm{jet}}$ is the number of jets in consideration.
 $A = \pi (r_{\mathrm{max}}^2 - r_{\mathrm{min}}^2) $ is the area of an annulus around the jet axis with its inner and outer radii $r_{\mathrm{min}}$ and $r_{\mathrm{max}}$ respectively and $n_{\mathrm{ch}}(\pt, r)$ is the number of charged particles with a given \pt\ within the annulus.
@@ -51,33 +48,21 @@ The following sections describe all details of this analysis as follows:
 \item The different event selection criteria are discussed in \ref{sec:event_selection}
 \item The cuts and corrections applied in the analysis procedure are discussed in  \ref{sec:cuts_corrections}
 \item The various sources of systematic uncertainties and their sizes are discussed in \ref{sec:systematic}
-\item The results of this analysis are described in \ref{sec:results}
-\item The results of the analysis are further discussed and interpreted in \ref{sec:discussion}
+\item The results of this analysis are described and interpreted in \ref{sec:results}
 \end{itemize}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%The analysis is done using 0.49~nb$^{-1}$ of \pbpb\ collisions and 
-%25~pb$^{-1}$ of \pp\ collisions at center-of-mass energy of 5.02~\TeV\ collected in 2015 by ATLAS.
-
-%The \pbpb\ collisions are divided into the following centrality intervals: 0--10\%, 10--20\%, 20--30\%, 30--40\%, 40--60\%, 60--80\%.
-%It uses jets reconstructed with the \antikt\ algorithm \cite{Cacciari:2008qp} using a radius parameter of \RFour, restricted to the rapidity interval of $|\yjet| <$~1.7 and having transverse momenta \ptjet\ in the 126--316 GeV range.
-%Charged particles associated with these jets are restricted to $|\eta| < 2.5$ and have a transverse momenta of $\pt > 1$ GeV.
-%The measurement is done in annuli at increasing distances from the jet axis.
-%These annuli have their inner and outer radius $r_{\textrm{min}}$ and $r_{\textrm{max}}$ and take the following values: 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8.
-%%%%%%%%%%%%%%%%%%%%%%%
 
 %\section{Definition of Measured Quantities}
 %\label{sec:trkjet_corr_measurement}
 %\input{trkjet_corr_measurement.tex}
 %
-\section{Input Data}
-\label{sec:used_data}
-\input{used_data.tex}
-
-\section{Event Selection }
-\label{sec:event_selection}
-\input{event_selection.tex}
+%\section{Input Data}
+%\label{sec:used_data}
+%\input{used_data.tex}
+%
+%\section{Event Selection }
+%\label{sec:event_selection}
+%\input{event_selection.tex}
 
 %\section{Jet Reconstruction}
 %\label{sec:reconstruction}
@@ -94,10 +79,6 @@ The following sections describe all details of this analysis as follows:
 \section{Results}
 \label{sec:results}
 \input{results.tex}
-
-\section{Discussion}
-\label{sec:discussion}
-\input{discussion.tex}
 
 %\appendix
 %\section{Appendix}
