@@ -2,7 +2,7 @@
 % !TEX root = thesis-ex.tex
 
 A description of the analysis procedure to reconstruct the $\Dptr$ distribution, along with the derivation and application of the various corrections is presented in the following sections.
-The analysis structure is illustrated by the diagram in Figure~~\ref{fig:analysis_flow} where each part of the analyses is described in a separate subsection and can be summarized as follows: 
+The analysis structure is illustrated by the diagram in Figure~\ref{fig:analysis_flow} where each part of the analyses is described in a separate subsection and can be summarized as follows: 
 
 
 \begin{figure}
@@ -43,7 +43,8 @@ The isolation cut removes approximately 0.01\% of jets (see Figure \ref{fig:ISO}
 \centering
 \includegraphics[width=0.9\textwidth]{figures/main/performance/jet_iso.pdf}
 \caption{The ratios of the jet spectra with no isolation to that with isolation in the kinematic range of interest for \pbpb\ collisions, in all centralities.
-The isolation requirement rejects less that 0.1\% of jets, and has almost no impact on the final measurement}
+The isolation requirement rejects less that 0.1\% of jets, and has almost no impact on the final measurement.
+}
 \label{fig:ISO}
 \end{figure}  
 
@@ -193,8 +194,7 @@ Figure taken from Ref.~\cite{Sickles:2235420}.}
 \caption{The impact of each cut applied individually in the \PbPb\ MC 
 to the starting collection of tracks, as a function of the track \pT\ inclusive in collision centrality for the default and the tight set of tracking requirements.
 The final combination of all cuts
-is shown as well.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+is shown as well.}
 \label{fig:PbPbcutflow_eta}
 \end{figure}
 
@@ -225,22 +225,23 @@ Taken from \cite{Bold:2194917}.}
 The tracking reconstruction efficiency is defined as the ratio between the number of primary truth charged particles that are reconstructed and the total number of primary truth charged particles in the given \pt\ and $\eta$ bin.
 It is evaluated using MC tracks, where tracks are required to pass all the tracking cuts imposed on the data.
 
-Matching between the reconstructed and the truth track is done via a cut on $mc_{\mathrm{prob}}$, calculated as:
+Matching between the reconstructed and the truth track is done via a cut on \mcprob.
+This is defined as the probability that a reconstructed track matched to a truth track actually was a truth track.
+It is calculated as:
 
-\begin{equation}
-mc_{\mathrm{prob}} = \frac{10N^{\mathrm{common}}_{\mathrm{pix}} + 5N^{\mathrm{common}}_{\mathrm{SCT}} + N^{\mathrm{common}}_{\mathrm{TRT}}}{10N^{\mathrm{track}}_{\mathrm{pix}} + 5 N^{\mathrm{track}}_{\mathrm{SCT}} + N^{\mathrm{track}}_{\mathrm{TRT}}
-\label{eq:mc_prob}}
-\end{equation}
+\begin{align}
+\mcprob = \frac{10N^{\mathrm{common}}_{\mathrm{pix}} + 5N^{\mathrm{common}}_{\mathrm{SCT}} + N^{\mathrm{common}}_{\mathrm{TRT}}}{10N^{\mathrm{track}}_{\mathrm{pix}} + 5 N^{\mathrm{track}}_{\mathrm{SCT}} + N^{\mathrm{track}}_{\mathrm{TRT}}}
+\end{align}
 where $N^{\mathrm{common}}_X$  are the number of hits in detector $X$ in common between the truth and reconstructed track.
 $N^{\mathrm{track}}_X$ is the number of total hits in the reconstructed track.
 
-Tracks with $mc_{prob} > 0.3$ are associated with the truth track and those with a lower value are not and are classified as fake tracks.
-The choice of $mc_{prob} = 0.3$ is based on the recommendation from the ATLAS tracking group and was used in~\cite{201865}.
-The sensitivity of the measurement on the value of the $mc_{\mathrm prob}$ cut is included in the systematic uncertainties.
+Tracks with $\mcprob > 0.3$ are associated with the truth track and those with a lower value are not and are classified as fake tracks.
+The choice of $\mcprob = 0.3$ is based on the recommendation from the ATLAS tracking group and was used in~\cite{201865}.
+The sensitivity of the measurement on the value of the \mcprob\ cut is included in the systematic uncertainties.
 
 In MC samples, the ``track barcode'' classifies reconstructed tracks to different classes based on the origin (primary, secondary, pileup, beam halo, fake).
 We require $0 < \mathrm{barcode} < 200000$ in evaluation of the tracking efficiency to remove pileup, beam halo, secondary particles, and fake particles.
-Reconstructed tracks that do not have a matched truth track with given $mc_{\mathrm{prob}}$ are labeled all together as fake tracks.
+Reconstructed tracks that do not have a matched truth track with given \mcprob\ are labeled all together as fake tracks.
 The tracking cuts need to provide both good efficiency for generator level tracks and to adequately reject fakes.
 
 \begin{figure}
@@ -264,7 +265,7 @@ The efficiency exhibits a small, but monotonic increase with the track \pt.
 Only a small variation with the track $\eta$ is observed in the region $|\eta|<1.1$.
 The efficiency correction is applied on a track-by-track basis, assuming $\pttrk = \pTtrue$.
 While that assumption is not strictly valid, the efficiency varies sufficiently slowly with $\pTtrue$ that the error introduced by this assumption is negligible, up to 1\%.
-The tracking efficiency determined in Ref.~\cite{PhysRevC.98.024908} was not seen to be dependent on \ptjet\ for $\pttrk \lesssim 40$ GeV as can be seen in Figure~\ref{fig:pbpbeffdefaultjetpt_y0}-\ref{fig:ppeffdefaultjetpt}.
+The tracking efficiency determined in Ref.~\cite{PhysRevC.98.024908} was not seen to be dependent on \ptjet\ for $\pttrk \lesssim 40$ GeV as can be seen in Figures~\ref{fig:pbpbeffdefaultjetpt_y0}-\ref{fig:ppeffdefaultjetpt}.
 The small depletion of the efficiency for tracks with $\pt \sim 10-40$~GeV was attributed to the convolution of how jet fragments and with the performance of the track reconstruction in the dense core of the jet~\cite{PhysRevC.98.024908}.
 
 
@@ -304,7 +305,7 @@ In \pbpb\ collisions, the ``fake'' rate also includes tracks which are from the 
 The rate of these underlying event tracks increases with decreasing \pttrk\ and increasing collision centrality.
 The contribution from UE is negligible for tracks with \pT\ above 10 GeV as no centrality dependence is seen.
 The Figure~\ref{fig:fakeratepbpb} excludes the very low \pT\ region where the distribution would be completely dominated by the UE.
-The size of the UE is then presented further in Figure~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}.
+The size of the UE is then presented further in Figure~\ref{fig:UEimpact}.
 To separate the contribution of UE tracks (see section~\ref{sec:cuts_UE}) from the fake tracks in \PbPb\ collisions and cross-check the centrality dependence of the fake rate, 200,000 MB \PbPb\ fully reconstructed HIJING MC~\cite{Wang:1991hta} events were used.
 The HIJING MC generator is capable of simulating global properties of HI collisions.
 The estimated fake rate of tracks associated with jets with $\pT>40$ GeV is at the level of 1\% and it exhibits similar behavior as observed in Figure~\ref{fig:fakeratepbpb}.
@@ -320,7 +321,7 @@ No significant dependence of the fake rate on the collision centrality was found
 \includegraphics[width=0.45\textwidth]{figures/main/corrections/fake_rates/FakesEta_pp_5p02_r003_Tight_mcprob0p3_JZ3_jetpt_6.pdf} &
 \end{tabular}
 \caption{Fake rate for five different \ptjet\ selections in 5.02 TeV \pp\ collisions and four pseudorapidity intervals.
-The fake rate is evaluated for default value of $MC_{\mathrm{prob}}$ cut of 0.3 used in 2015 analysis.
+The fake rate is evaluated for default value of \mcprob\ cut of 0.3 used in 2015 analysis.
 Figure taken from Ref.~\cite{Sickles:2235420}.}
 \label{fig:fakeratepp}
 \end{figure}  
@@ -343,8 +344,7 @@ Figure taken from Ref.~\cite{Sickles:2235420}.}
 \centering
 \includegraphics[width=1.\textwidth]{figures/main/performance/fake_rate_hijingMB.pdf}
 \caption{ Fake rate for six different centrality intervals in 5.02 TeV \pbpb\ HIJING MC collisions.
-The fake rate is evaluated for default value of $\mathrm{MC_{\rm prob}} = 0.3$ in 2015 analysis.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+The fake rate is evaluated for default value of $\mcprob = 0.3$ in 2015 analysis.}
 \label{fig:fakeratehijing}
 \end{figure}
 
@@ -353,7 +353,7 @@ To correct for the contribution from fake and secondary particles, charged parti
 These distributions are then subtracted from the measured distributions both in the data and MC.
 This procedure is applied for tracks above 10 GeV in \PbPb\ collisions and for tracks above 1 GeV in \pp\ collisions.
 The correction also removes any residual UE above 10~GeV in case of \PbPb.
-The choice of the 10 GeV cut is based on the centrality dependence of the rate of truth-unmatched tracks in MC overlay samples shown in Figure~~\ref{fig:fakeratepbpb}.
+The choice of the 10 GeV cut is based on the centrality dependence of the rate of truth-unmatched tracks in MC overlay samples shown in Figure~\ref{fig:fakeratepbpb}.
 The correction for UE, fake and secondary tracks below 10 GeV in \PbPb\ collisions is discussed in the next section.
 
 
@@ -364,7 +364,7 @@ The underlying event subtraction performed on the calorimetric jet energy is des
 Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions.
 This background strongly depends on the collisions centrality and on the charged particle \pt.
 In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PhysRevC.98.024908}.
-This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Figure~~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV.
+This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Figure~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV.
 
 In \pp\ collisions, the UE is not subtracted.
 The pileup contribution is negligible and subtracting the intrinsic UE from the hard scattering processes would also necessitate a similar subtraction in the particle level fragmentation functions in \pbpb\ that would be generator dependent and make comparisons between \pp\ and \pbpb\ non-trivial.
@@ -427,6 +427,7 @@ Since the secondaries are generated by primary PYTHIA particles, the enhancement
 %This method does not require a correction for the correlation between the underlying event and the JER because it is based on tracks without a truth match.
 
 \begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth]{figures/main/UE/UE_v_dR_pt1GeV.pdf}
 \caption{UE estimated from tracks which do not have an associated truth particle in jet with \pt\ from 126 to 158 GeV and for the lowest track \pt\ interval (1--1.58 GeV).
 The two different distribution shows the UE with and without the contribution from the secondary particles.}
@@ -473,20 +474,22 @@ The cone method estimates the UE yields only from events containing jets include
 
 The UE contribution as measured using the cone method in data needs to be further corrected for three effects:
 
-\subparagraph{Correction for $\eta$-dependence: } To account for differences in the yields of UE particles at the position of the jet and at the position of the track for the random cone entering the UE estimate, the $\eta$ distribution of charged particles from MC overlay events is used to appropriately weigh the UE tracks.
+\paragraph{Correction for $\eta$-dependence:}
+To account for differences in the yields of UE particles at the position of the jet and at the position of the track for the random cone entering the UE estimate, the $\eta$ distribution of charged particles from MC overlay events is used to appropriately weigh the UE tracks.
 The correction is then the ratio of the value of the $\fd \nch / \fd\eta$ at the position of the jet and the track.
 The impact of the correction in 0-10\% \pbpb\ collisions is shown in Figure~\ref{fig:eta_corr}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45\textwidth]{figures/main/UE/eta_correction.pdf}
-\caption{ Ratio of the $\NchUECone$ distributions with and without the correction for $\eta$ dependence in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
-Figure taken from Ref.~\cite{Sickles:2235420}.}
-\label{fig:eta_corr}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.45\textwidth]{figures/main/UE/eta_correction.pdf}
+%\caption{Ratio of the $\NchUECone$ distributions with and without the correction for $\eta$ dependence in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
+%Figure taken from Ref.~\cite{Sickles:2235420}.}
+%\label{fig:eta_corr}
+%\end{figure}
 
 
-\subparagraph{Correction for flow: }  Elliptic flow is the characteristic sinusoidal modulation of the yields of particles along the azimuth in heavy ion collisions.
+\paragraph{Correction for flow:}
+Elliptic flow is the characteristic sinusoidal modulation of the yields of particles along the azimuth in heavy ion collisions.
 The maximum amplitude of the modulation determines the reaction plane, with more momenta being measured in plane than out of plane.
 Ref.~\cite{Aaboud:2018ves} provides a basic measurement of the magnitude of the elliptic flow, and its \pt\ dependence.
 The correction for this effect was based on a parametrization of the \pTch and centrality dependence of previously measured elliptic flow coefficients, $v_{2}$ \cite{Aaboud:2018ves}.
@@ -496,15 +499,34 @@ The correction is less (greater) than unity for jets in a direction perpendicula
 Jets perpendicular (parallel) to the plane typically have a lower (higher) UE, and a cone at a random position in the ID is corrected down (up).
 The size of the correction is at the level of a few percent, and decreases with increasing track \pt, as is shown in Figure~\ref{fig:flow_corr}
 
+
 \begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{figures/main/UE/flow_correction.pdf}
-\caption{Ratio of the $\NchUECone$ distributions with and without the correction for elliptic flow in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+\begin{subfigure}{0.5\textwidth}
+\centering \includegraphics[width=1\textwidth]{figures/main/UE/eta_correction.pdf}
+\caption{}
+\label{fig:eta_corr}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering \includegraphics[width=1\textwidth]{figures/main/UE/flow_correction.pdf}
+\caption{}
 \label{fig:flow_corr}
+\end{subfigure}
+\caption{Ratio of the $\NchUECone$ distributions with and without the correction for (left) $\eta$ dependence and (right) elliptic flow in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
+Figures taken from Ref.~\cite{Sickles:2235420}.}
+\label{fig:cone_corrections}
 \end{figure}
 
-\subparagraph{UE and JER correlation: }
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.45 \textwidth]{figures/main/UE/flow_correction.pdf}
+%\caption{Ratio of the $\NchUECone$ distributions with and without the correction for elliptic flow in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
+%Figure taken from Ref.~\cite{Sickles:2235420}.}
+%\label{fig:flow_corr}
+%\end{figure}
+
+\paragraph{UE and JER correlation:}
 The interplay between the UE and the JER will be described here is discussed in further detail in Ref.~\cite{ATLAS-COM-PHYS-2012-1653}.
 Due to the steeply falling nature of the jet \pt\ spectra, the smearing due to jet energy resolution leads to a net migration of jets from lower \pt\ to higher \pt\ values (hereafter referred to as ``up-feeding'') such that a jet reconstructed with a given \pTrec\ will correspond, on average, to a lower truth jet \pT, \avgpttrue.
 The up-feeding was observed to induce in the MC a difference between the UE yields determined using the MC overlay events and the actual UE contribution to reconstructed jets.
@@ -518,12 +540,13 @@ These multiplicative factors, $w_{\mathrm{UE}}$, were estimated as a ratio of UE
 \begin{eqnarray}
 w_{\mathrm{UE}} (\pT) = \frac{\fd \nchUE^{\mathrm{Map}}/ \fd \pTch}{\fd \nchUE^{\mathrm{Cone}}/ \fd \pTch}\bigg|_{\mathrm{MC}}
 \end{eqnarray}   
-Examples of these factors are shown in Fig~\ref{fig:UEweights}.
+Examples of these factors are shown in Figure~\ref{fig:UEweights}.
 The correction by construction corrects also for fakes and secondary contribution in the track \pT\ region 1-10~GeV in \PbPb\ collisions.
 %These factors are also shown in Figure~\ref{fig:UEweights_r_jet0}, as a function of \rvar\ for different track \pt\ bins, for $126 < \ptjet\ < 158 \GeV$.
 The size of these corrections integrated over $\rvar = 0.4$ is comparable to the UE-JER correction done in \cite{PhysRevC.98.024908}.
 
 \begin{figure}
+\centering
 \begin{subfigure}{1.\textwidth}
 \centering \includegraphics[page=2,width=1.\textwidth]{figures/main/UE/UE_factors.pdf}
 \caption{}
@@ -552,7 +575,7 @@ The production of secondary particles is associated with presence of primary par
 Thus, the production of secondary particles is enhanced in the jet due to the higher density of primary particles compared to the regions outside a jet.
 This was shown in Figure~\ref{fig:UEdR} where the UE evaluated in term of particles without matching to truth particles in MC with and without the contribution from secondary particles is presented and where the yield of secondary particles is significant only at smaller $dR$, that is, within a jet.
 Figure~\ref{fig:UEdR} also shows that the relative yield of secondary particles to the yield of the UE particles is increasing with decreasing collisions centrality.
-Furthermore, the relative contribution of secondary particles to the UE increases with the track \pT\ as the fraction of the secondary particles decreases only slowly with the increasing track \pT\ (Figs.\ref{fig:fakeratepbpb}), however, the UE decreases strongly with the increasing track \pT\ (Figure~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}).
+Furthermore, the relative contribution of secondary particles to the UE increases with the track \pT\ as the fraction of the secondary particles decreases only slowly with the increasing track \pT\ (Figure~\ref{fig:fakeratepbpb}), however, the UE decreases strongly with the increasing track \pT\ (Figure~\ref{fig:UEimpact}).
 This results in lower UE contribution estimated using the MB collisions where tracks are not associated to a jet.
 
 
@@ -602,7 +625,7 @@ In \pp\ collisions the magnitude of the fake track subtraction is always much le
 \caption{}
 \label{fig:UEimpact_r10}
 \end{subfigure}
-\caption{Ratio between the raw \Dptr\ distributions before and after the UE  subtraction in different centrality classes and different jet \pT\ intervals for different distances from the jet axis: \ref{fig:UEimpact_r2}  $0.05 < r < 0.10$, \ref{fig:UEimpact_r4}  $0.15 < r < 0.20$, \ref{fig:UEimpact_r2}  $0.25 < r < 0.30$, \ref{fig:UEimpact_r2}  $0.60 < r < 0.70$.}
+\caption{Ratio between the raw \Dptr\ distributions before and after the UE  subtraction in different centrality classes and different jet \pT\ intervals for different distances from the jet axis: $0.05 < r < 0.10$, $0.15 < r < 0.20$, $0.25 < r < 0.30$, $0.60 < r < 0.70$.}
 \label{fig:UEimpact}
 \end{figure}
 
@@ -620,7 +643,10 @@ For the \pp\ data, we have not performed any UE subtraction.
 \subsection{Unfolding}
 \label{sec:unfolding}
 
-Instrumental effects are corrected by an unfolding procedure.
+Unfolding procedures are used to remove Instrumental effects like detector resolutions and allow for direct comparisons to theory calculations \cite{DAgostini:1994zf}.
+This is done via the approach based on Bayes theorem that is implemented in the RooUnfold package and uses ``response matrices'' \cite{Adye:2011gm}.
+These matrices are multidimensional object that created using the MC and describe the migration between the reconstructed quantities and the corresponding truth quantities that are to be unfolded.
+
 This analysis uses three separate unfolding procedures that are discussed in this section.
 
 \begin{itemize}
@@ -629,7 +655,7 @@ This analysis uses three separate unfolding procedures that are discussed in thi
 \item Bin by bin correction for the jet and track position resolution.
 \end{itemize}
 
-To achieve better correspondence with the data, the response matrices for both the one and two dimensional unfolding are reweighed so that the distributions match the shapes in the reconstructed data.
+To achieve better correspondence with the data, the response matrices for both the one and two dimensional unfolding are reweighted so that the distributions match the shapes in the reconstructed data.
 
 \subsubsection{One Dimensional Unfolding for Jet Spectra}
 \label{sec:1dunfolding}
@@ -637,42 +663,47 @@ The charged particle spectra need to be normalized by the number of jets in give
 Thus, the jet spectra needs to be corrected for bin migration due to the finite JER by unfolding procedure.
 The unfolding is done via a one dimensional Bayesian unfolding procedure with 4 iterations implemented as part of the RooUnfold~\cite{Adye:2011gm} package.
 The \pp\ and \PbPb\ MC samples are used to construct two dimensional response matrices in terms of \ptjettruth\ and \ptjetreco.
-These matrices can be seen in Fig:\ref{fig:PbPb_jetspect_respmatrix}-\ref{fig:pp_jetspect_respmatrix} and are evaluated separately for \pp\ and in different centrality intervals for \PbPb\ collisions.
-The technical closure of this unfolding procedure (done using unreweighted response matrices to unfold the reconstructed jet spectra) is shown in Fig:\ref{fig:PbPb_jetspect_closure}-\ref{fig:pp_jetspect_closure}, as a function of \ptjet\ for jets in the $|y| < $ 1.7 region.
+These matrices can be seen in Figure~\ref{fig:jetspect_respmatrix} and are evaluated separately for \pp\ and in different centrality intervals for \PbPb\ collisions.
+The technical closure of this unfolding procedure (done using un-reweighted response matrices to unfold the reconstructed jet spectra) is shown in Figure~\ref{fig:jetspect_closure}, as a function of \ptjet\ for jets in the $|y| < $ 1.7 region.
 A good recovery of the truth distribution is seen for both 1\% for \pbpb\ and \pp\ MC samples.
 
+
 \begin{figure}
+\begin{subfigure}{0.7\textwidth}
 \centering
-\includegraphics[page=5, width=0.9\textwidth]{figures/main/corrections/resp_matrix_jet_PbPb_MC.pdf}
-\caption{The response matrices in terms of \ptjetreco\ and \ptjettruth\ in the jet $|y| < $1.7 region, in data overlay \pbpb\ MC samples.
-Each panel is a different centrality bin.}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/resp_matrix_jet_PbPb_MC.pdf}
+\caption{}
 \label{fig:PbPb_jetspect_respmatrix}
-\end{figure}
-
-\begin{figure}
+\end{subfigure} 
+\begin{subfigure}{0.30\textwidth}
 \centering
-\includegraphics[page=5, width=0.55\textwidth]{figures/main/corrections/resp_matrix_jet_pp_MC.pdf}
-\caption{The response matrices in terms of \ptjetreco\ and \ptjettruth\ in the jet $y < $1.7 region, in \pp\ MC samples.}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/resp_matrix_jet_pp_MC.pdf}
+\caption{}
 \label{fig:pp_jetspect_respmatrix}
+\end{subfigure}
+\caption{The response matrices in terms of \ptjetreco\ and \ptjettruth\ in the jet $|y| < $1.7 region, in (left) data overlay \pbpb\ MC samples, with each panel being a different centrality bin and (right) in \pp\ MC samples.}
+\label{fig:jetspect_respmatrix}
 \end{figure}
 
+
+
 \begin{figure}
+\begin{subfigure}{0.7\textwidth}
 \centering
-\includegraphics[page=5, width=0.9\textwidth]{figures/main/corrections/spect_closure_PbPb_MC.pdf}
-\caption{The jet spectra and MC closure as a function of \ptjet\ in the jet $|y| < $1.7 region, in data overlay \pbpb\ MC samples.
-The closure is seen to be well within 1\%.
-Each panel is a different centrality bin.}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/spect_closure_PbPb_MC.pdf}
+\caption{}
 \label{fig:PbPb_jetspect_closure}
-\end{figure}
-
-\begin{figure}
+\end{subfigure} 
+\begin{subfigure}{0.30\textwidth}
 \centering
-\includegraphics[page=5, width=0.55\textwidth]{figures/main/corrections/spect_closure_pp_MC.pdf}
-\caption{The jet spectra and MC closure as a function of \ptjet\ in the jet $|\eta| < $1.7 region, in \pp\ MC samples.
-The closure is seen to be well within 1\%.}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/spect_closure_pp_MC.pdf}
+\caption{}
 \label{fig:pp_jetspect_closure}
+\end{subfigure}
+\caption{The jet spectra and MC closure as a function of \ptjet\ in the jet $|y| < $1.7 region, in (left) data overlay \pbpb\ MC samples, with each panel being a different centrality bin and (right) in \pp\ MC samples.
+The closure is seen to be well within 1\%.}
+\label{fig:jetspect_closure}
 \end{figure}
-
 
 
 \subsubsection{Two Dimensional Unfolding for Charged Particle Spectra}
@@ -683,8 +714,8 @@ The observed correlation between the jet response in the detector and the jet fr
 For example, gluon jets, which have in general a softer fragmentation function, are observed to have a lower energy response than quark jets~\cite{Aad:2014bia}.
 %The Global Sequential Calibration to the \pp\ jet collections~\cite{ATLAS:2015oia}, reduces the fragmentation dependence to the JES, but these calibrations are not available for the HI jet collections used in this analysis.
 We use the RooUnfold~\cite{Adye:2011gm} implementation of the two dimensional iterative Bayesian unfolding~\cite{D'Agostini:1994zf} with 4 iterations.
-The MC \pbpb\ and \pp\ samples are used to construct a 4-dimensional response matrix in \pttrktruth, \ptjettruth, \pttrkreco, and \ptjetreco, shown in Figure~\ref{fig:PbPb_ChPS_respmatrix}-\ref{fig:pp_ChPS_respmatrix}.
-The response matrix $A_{ijkl}$ describes the probability that event from the truth track \pt\  bin $j$ and truth jet \pT\ bin $l$ is found in reconstructed bin $i$,$k$:
+The MC \pbpb\ and \pp\ samples are used to construct a 4-dimensional response matrix in \pttrktruth, \ptjettruth, \pttrkreco, and \ptjetreco, shown in Figure~\ref{fig:ChPS_respmatrix}.
+The response matrix $A_{ijkl}$ describes the probability that an event from the truth track \pt\  bin $j$ and truth jet \pT\ bin $l$ is found in reconstructed bin $i$,$k$:
 
 \begin{equation}
 \mu_{jl} = \sum_{i,k} A_{ijkl}x^{\text{truth}}_{jl}.
@@ -692,18 +723,20 @@ The response matrix $A_{ijkl}$ describes the probability that event from the tru
 
 
 \begin{figure}
+\begin{subfigure}{0.7\textwidth}
 \centering
-\includegraphics[page=5, width=1.0\textwidth]{figures/main/corrections/resp_matrix_ChPS_PbPb_MC.pdf}
-\caption{The response matrices in terms of \ptjetreco, \ptjettruth, \pttrkreco, and \pttrktruth, for reconstructed track - reconstructed jet pairs, that have 0.20 $< r < $0.25, in data overlay \pbpb\ MC samples.
-Each panel is a different centrality bin.}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/resp_matrix_ChPS_PbPb_MC.pdf}
+\caption{}
 \label{fig:PbPb_ChPS_respmatrix}
-\end{figure}
-
-\begin{figure}
+\end{subfigure} 
+\begin{subfigure}{0.30\textwidth}
 \centering
-\includegraphics[page=5, width=1.0\textwidth]{figures/main/corrections/resp_matrix_ChPS_pp_MC.pdf}
-\caption{The response matrix in terms of \ptjetreco, \ptjettruth, \pttrkreco, and \pttrktruth, for reconstructed track - reconstructed jet pairs, that have 0.20 $< r < $0.25, in \pp\ MC samples}
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/resp_matrix_ChPS_pp_MC.pdf}
+\caption{}
 \label{fig:pp_ChPS_respmatrix}
+\end{subfigure}
+\caption{The response matrices in terms of \ptjetreco, \ptjettruth, \pttrkreco, and \pttrktruth, for reconstructed track - reconstructed jet pairs, that have 0.20 $< r < $0.25, in (left) data overlay \pbpb\ MC samples, with each panel being a different centrality bin and (right) in \pp\ MC samples.}
+\label{fig:ChPS_respmatrix}
 \end{figure}
 
 
@@ -711,94 +744,94 @@ Each panel is a different centrality bin.}
 \label{sec:bbbcorrection}
 
 There is an additional unfolding procedure applied in this analysis to correct for the jet and the track position resolution that results in the migration in angular distance $r$.
-The migration is dominated by the poor jet angular resolution (Figure~\ref{fig:PerformancepbpbJPReta0p4}-\ref{fig:PerformancepbpbJPRphi0p4}), since the track angular resolution (Figure~\ref{fig:PbPb_trk_eta_res}-\ref{fig:PbPb_trk_phi_res}) is very good.
+The migration is dominated by the poor jet angular resolution (shown in Figure~\ref{fig:jet_posResolution}), since the track angular resolution shown in Figure~\ref{fig:trk_posResolution} is very good.
 
 \begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth]{figures/main/corrections/trk_res_eta_ppTight.pdf}
-\caption{The $\eta$ resolution of the tracker in different $\eta$ bins for data overlay \pbpb\ MC samples.
+\begin{subfigure}{.5\textwidth}
+\centering \includegraphics[width=1.\textwidth]{figures/main/corrections/trk_res_eta_ppTight.pdf}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}  
+\centering \includegraphics[width=1.\textwidth]{figures/main/corrections/trk_res_phi_ppTight.pdf}
+\caption{}
+\end{subfigure}
+\caption{The (left) $\eta$ and (right) $\phi$ position resolution of the tracker as a function of \pttruth\ for different centrality and $\eta$ regions in \pbpb\ MC overlay samples.
 The different curves are different centralities, and it can be seen that there is no centrality dependence.}
-\label{fig:PbPb_trk_eta_res}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth]{figures/main/corrections/trk_res_phi_ppTight.pdf}
-\caption{The $\phi$ resolution of the tracker in different $\phi$ bins for data overlay \pbpb\ MC samples.
-The different curves are different centralities, and it can be seen that there is no centrality dependence.}
-\label{fig:PbPb_trk_phi_res}
+\label{fig:trk_posResolution}
 \end{figure}
 
 The correction factors are derived using response matrices that correlate the reconstructed and truth angular distance $r$.
 These matrices are evaluated for different jet and track \pT\ in different centrality classes.
-Examples of the response matrices are shown in Fig~\ref{fig:PbPb_bbb_2d_response} and Figure~\ref{fig:pp_bbb_2d_response} for \pbpb\ and \pp\ MC samples.
+Examples of the response matrices are shown in Figure~\ref{fig:bbb_2d_response} for \pbpb\ and \pp\ MC samples.
 The bin-by-bin correction procedure is applied to \Dptr\ distribution unfolded to the particle level in terms of track and jet \pT\ by the two unfolding procedures discussed above.
-Thus, the correction factors for angular resolution were derived using the the reconstructed jets and tracks where the reconstructed jet and track \pT\ is replaced by the corresponding truth \pT.
+The correction factors for angular resolution were derived using the the reconstructed jets and tracks where the reconstructed jet and track \pT\ is replaced by the corresponding truth \pT.
 The bin-by-bin factors are then estimated as ratio of projections from the response matrices on the truth and reconstructed axis.
-These correction factors are shown in Figure~~\ref{fig:pos_corr_factors_PbPb_c0} and Figure~~\ref{fig:pos_corr_factors_pp} for \pbpb\ and \pp\ collisions as a function of \rvar.
+These correction factors are shown in Figure~\ref{fig:pos_corr_factors} for \pbpb\ and \pp\ collisions as a function of \rvar.
 The efficiency and purity are a measure of what fraction of jets are reconstructed in the same bin as their generator level counterpart.
-The efficiency is given by the fractional distribution of reconstructed jets at a fixed truth \ptjet while the purity is given by the fractional distribution of truth jets at a fixed reconstructed \ptjet.
-These are shown in the Figure~\ref{fig:RespPurity_PbPb}-\ref{fig:RespEfficiency_PbPb}.
-
+The efficiency is given by the fractional distribution of reconstructed jets at a fixed truth \ptjet\ while the purity is given by the fractional distribution of truth jets at a fixed reconstructed \ptjet.
+These are shown in the Figures~\ref{fig:RespEfficiencyPurity}.
 
 
 \begin{figure}
 \centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/ShapeResponse2D_PbPb.pdf}
-\caption{The response matrix for the bin by bin correction applied to the unfolded charged particle spectra.
-This accounts for the jet position resolution.
-Each panel is a different \pttrk\ bin, for $126 < \ptjet\ < 158$ GeV jets, in central collisions from data overlay \pbpb\ MC samples}
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/ShapeResponse2D_PbPb.pdf}
+\caption{}
 \label{fig:PbPb_bbb_2d_response}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/ShapeResponse2D_pp.pdf}
+\end{subfigure} \\
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/ShapeResponse2D_pp.pdf}
+\caption{}
+\label{fig:pp_bbb_2d_response}
+\end{subfigure}
 \caption{The response matrix for the bin by bin correction applied to the unfolded charged particle spectra.
 This accounts for the jet position resolution.
-Each panel is a different \pttrk\ bin, for $126 < \ptjet\ < 158$ GeV jets, from \pp\ MC samples}
-\label{fig:pp_bbb_2d_response}
+Each panel is a different \pttrk\ bin, for $126 < \ptjet\ < 158$ GeV jets, in (top) central collisions from \pbpb\ MC overlay samples and (bottom) \pp\ MC samples.}
+\label{fig:bbb_2d_response}
 \end{figure}
 
 
 \begin{figure}
 \centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/RatioProj_PbPb}
-\caption{The correction factors applied to the unfolded charged particle spectra, shown for the most central \pbpb\ collisions, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range.
-These factors correct for the jet position resolution in \pbpb\ collisions.}
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/RatioProj_PbPb}
+\caption{}
 \label{fig:pos_corr_factors_PbPb_c0}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/RatioProj_pp}
-\caption{The correction factors applied to the unfolded charged particle spectra in \pp\ collisions, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range.
-These factors correct for the jet position resolution in \pp\ collisions.}
+\end{subfigure} \\
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/RatioProj_pp}
+\caption{}
 \label{fig:pos_corr_factors_pp}
+\end{subfigure}
+\caption{The correction factors applied to the unfolded charged particle spectra, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range, in (top) central collisions from \pbpb\ MC overlay samples and (bottom) \pp\ MC samples.} 
+\label{fig:pos_corr_factors}
 \end{figure}
-
 
 
 \begin{figure}
 \centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/RespPurity_PbPb}
-\caption{The purity of the bin-by-bin unfolding factors used to correct for the angular resolution for different \pttrk\ ranges tracks (in different panels), shown as a function of \rvar\ for different \ptjet\ ranges, in the most central 0--10\% \pbpb\ collisions.}
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/RespPurity_PbPb}
+\caption{}
 \label{fig:RespPurity_PbPb}
+\end{subfigure}
+\begin{subfigure}{1.\textwidth}
+\centering \includegraphics[page=1, width=1\textwidth]{figures/main/corrections/RespEfficiency_PbPb}
+\caption{}
+\label{fig:RespEfficiency_PbPb}
+\end{subfigure}
+\caption{The (top) purity and (bottom) efficiency of the bin-by-bin unfolding factors used to correct for the angular resolution for different \pttrk\ ranges tracks (in different panels), shown as a function of \rvar\ for different \ptjet\ ranges, in the most central 0--10\% \pbpb\ collisions.}
+\label{fig:RespEfficiencyPurity}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/RespEfficiency_PbPb}
-\caption{The efficiency of the bin-by-bin unfolding factors used to correct for the angular resolution for different \pttrk\ ranges tracks (in different panels), shown as a function of \rvar\ for different \ptjet\ ranges, in the most central 0--10\% \pbpb\ collisions.}
-\label{fig:RespEfficiency_PbPb}
-\end{figure}
 
 The robustness of this correction can be validated by constructing \Dptr\ distributions using a coarser \pt\ binning (entire analysis chain is re-done) and comparing them to a summation of the individually unfolded narrow bins.
 This comparison can be seen in Figure~\ref{fig:MergedBinCheck}, for $1 < \pt < 4$ GeV, $126 < \ptjet < 158$ GeV,  for 0-10\%.
 central \pbpb\ and \pp\ collisions, and is seen to be unity.
 
 \begin{figure}
-\includegraphics[width=0.95\textwidth]{figures/main/general/MergedBinCheck.pdf}
+\centering
+\includegraphics[width=0.7\textwidth]{figures/main/general/MergedBinCheck.pdf}
 \caption{The \Dptr\ distributions in \pp\ and 0--10\% central \pbpb, constructed using a single bin from 1--4 GeV (merging the first three \pt\ bins in this analysis) compared to the \Dptr\ distributions constructed by adding up the bins individually: \mbox{1--1.6 GeV}, \mbox{1.6--2.5 GeV} and \mbox{2.5--4 GeV}.
 This comparison tests the robustness of the angular bin by bin correction and its dependence on the width of the \pt\ bins.}
 \label{fig:MergedBinCheck}
@@ -807,75 +840,75 @@ This comparison tests the robustness of the angular bin by bin correction and it
 
 It can be seen that these corrections become large at the edges of the jet cone for tracks that carry a significant fraction of the jet momentum.
 This is an artifact of the jet reconstruction algorithm, where a truth track near the edge of a truth jet will pull the reconstructed jet towards itself, causing a depletion of high \pt\ particles at the edge of the jet cone.
-This depletion can be seen in the distribution of truth charged particles in truth jets shown in Figure~\ref{fig:truthProj_pp} and was also seen in \cite{Choudalakis:1248716}.
+This depletion can be seen in the distribution of truth charged particles in truth jets shown in Figure~\ref{fig:truthProj_pp} and was also seen in Ref.~\cite{Choudalakis:1248716}.
 These large factors result in a large non-closure near the jet edge for tracks carrying a significant momentum fraction of the jet.
 To exclude these effects, the results are only shown for tracks that show a closure of less than 5\%.
 
 \begin{figure}
 \centering
-\includegraphics[page=1, width=0.9\textwidth]{figures/main/corrections/TruthProj_pp}
+\includegraphics[page=1, width=1\textwidth]{figures/main/corrections/TruthProj_pp}
 \caption{The distribution of truth charged particles in truth jets for different track \pt\ ranges and \ptjet\ ranges in \pp\ collisions.
 It can be seen that there is a kink in the distribution at the jet edge for high \pt\ tracks.}
 \label{fig:truthProj_pp}
 \end{figure}
 
 
-The \Dptr\ distributions at various stages of the analysis in \pp\ MC and data (Fig:\ref{fig:evol_pp}), and \pbpb\ MC and data (Fig:\ref{fig:evol_PbPb_MC}-\ref{fig:evol_PbPb_data}) are also shown.
+The \Dptr\ distributions at various stages of the analysis in \pp\ and \pbpb\ MC and data are shown in Figure~\ref{fig:evol_pp} and Figure~\ref{fig:evol_PbPb}.
 
 \begin{figure}
-\centerline{
-\begin{tabular}{c}
-\includegraphics[page=5, width=0.5\textwidth]{figures/main/corrections/evol_pp_MC.pdf}
-\includegraphics[page=5, width=0.5\textwidth]{figures/main/corrections/evol_pp_data.pdf}
-\end{tabular}
-}
+\begin{subfigure}{0.5\textwidth}
+\centering \includegraphics[page=5, width=1\textwidth]{figures/main/corrections/evol_pp_MC.pdf}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering \includegraphics[page=5, width=1\textwidth]{figures/main/corrections/evol_pp_data.pdf}
+\caption{}
+\end{subfigure}
 \caption{The evolution of the \Dptr\ distributions for \pp\ MC (left) and data (right) as various corrections are applied.
 The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV.
-The ratios showing the effect of the unfolding and bin by bin corrections (left and right), as well as the MC closure (left) are shown in the lower half of the panels.
-}
+The ratios showing the effect of the unfolding and bin by bin corrections (left and right), as well as the MC closure (left) are shown in the lower half of the panels.}
 \label{fig:evol_pp}
 \end{figure}
 
 
 \begin{figure}
-\centerline{
-\includegraphics[page=5, width=0.85\textwidth]{figures/main/corrections/evol_PbPb_MC.pdf}
-}
-\caption{The evolution of the \Dptr\ distributions for \PbPb\ MC as various corrections are applied.
-The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV.
-The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels.
-The different panels are different centrality selections.}
-\label{fig:evol_PbPb_MC}
-\end{figure}
-
-\begin{figure}
-\centerline{
-\includegraphics[page=5, width=0.85\textwidth]{figures/main/corrections/evol_PbPb_data.pdf}
-}
-\caption{The evolution of the \Dptr\ distributions for \PbPb\ data (bottom six panels) as various corrections are applied.
-The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV.
-The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels.
-The different panels are different centrality selections.}
-\label{fig:evol_PbPb_data}
-\end{figure}
-
-
-The MC closure of the charged particle spectra as a function of \pt\ in \pp\ and data overlay \pbpb\ MC samples can be seen in Fig:\ref{fig:PbPb_ChPS_closure}-\ref{fig:pp_ChPS_closure}, and is well within 1\% for low \pt\ particles.
-
-\begin{figure}
 \centering
-\includegraphics[page=5, width=1.0\textwidth]{figures/main/corrections/ChPS_final_PbPb_MC.pdf}
-\caption{The charged particle spectra and MC closure as a function of \pttrk\ for different \ptjet\ bins, reconstructed track - reconstructed jet pairs, that have 0.20 $< r < $0.25, in data overlay \pbpb\ MC samples.
-Each panel is a different centrality bin.
-The closure is seen to be well within 1\%.}
+\begin{subfigure}{0.9\textwidth}
+\centering \includegraphics[page=5, width=1\textwidth]{figures/main/corrections/evol_PbPb_MC.pdf}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.9\textwidth}
+\centering \includegraphics[page=5, width=1\textwidth]{figures/main/corrections/evol_PbPb_data.pdf}
+\caption{}
+\end{subfigure}
+\caption{The evolution of the \Dptr\ distributions for \PbPb\ MC (top) and data (bottom) as various corrections are applied.
+The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV.
+The ratios showing the effect of the subtraction, unfolding and bin by bin correction as well as the comparison to truth are shown in the lower half of each panel.
+The different panels are different centrality selections.}
+\label{fig:evol_PbPb}
+\end{figure}
+
+
+The MC closure of the charged particle spectra as a function of \pt\ in \pp\ MC and \pbpb\ MC overlay samples can be seen in Figures~\ref{fig:ChPS_closure} and is well within 1\% for low \pt\ particles.
+
+
+\begin{figure}
+\begin{subfigure}{0.7\textwidth}
+\centering
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/ChPS_final_PbPb_MC.pdf}
+\caption{}
 \label{fig:PbPb_ChPS_closure}
+\end{subfigure} 
+\begin{subfigure}{0.30\textwidth}
+\centering
+\includegraphics[page=5, width=1\textwidth]{figures/main/corrections/ChPS_final_pp_MC.pdf}
+\caption{}
+\label{fig:pp_ChPS_closure}
+\end{subfigure}
+\caption{The response matrices in terms of \ptjetreco\ and \ptjettruth\ in the jet $|y| < $1.7 region, in (left) \pbpb\ MC overlay with each panel being a different centrality bin and (right) in \pp\ MC.}
+\label{fig:ChPS_closure}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[page=5, width=0.55\textwidth]{figures/main/corrections/ChPS_final_pp_MC.pdf}
-\caption{The charged particle spectra and MC closure as a function of \pttrk\ for different \ptjet\ bins, reconstructed track - reconstructed jet pairs, that have 0.20 $< r < $0.25, in \pp\ MC samples.
-The closure is seen to be well within 1\%}
-\label{fig:pp_ChPS_closure}
-\end{figure}
+
+
 
