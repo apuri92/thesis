@@ -42,7 +42,10 @@ When these pancake-like discs collide, their color fields interact and there is 
 %\end{figure}
 %
 %
-The energy densities attained at RHIC and the LHC are as low as $1 \rm{GeV}/\rm{fm}^3$ \cite{PhysRevC.93.024901} and $12 \rm{GeV}/\rm{fm}^3$ \cite{PhysRevC.94.034903, PhysRevLett.109.152303} respectively, both of which are above the $0.2 - 1 \rm{GeV}/\rm{fm}^3$ energy density range required to form the QGP \cite{Karsch2002, PhysRevD.90.094503}.
+The energy density in the collision depends on the number of nucleons that participate in the collision and the collision energy.
+It can range from $1 \rm{ GeV}/\rm{fm}^3$ for $\sqrtsnn = 7.7$ GeV at the lower limit of energies at RHIC \cite{PhysRevC.93.024901} to $15 \rm{ GeV}/\rm{fm}^3$ for $\sqrtsnn = 5.02$ TeV at the LHC \cite{PhysRevC.94.034903, PhysRevLett.109.152303, Jiang:2018wzu}.
+This is above the $0.2 - 1 \rm{GeV}/\rm{fm}^3$ energy density range required to form the QGP \cite{Karsch2002, PhysRevD.90.094503}.
+
 
 %Lattice QCD calculations in thermodynamics show that at these energies, the partons produced in the collision cannot be treated as a collection of distinct hadrons.
 
@@ -92,7 +95,7 @@ The impact parameter is given by $b$.}
 
 The basic parameters of a heavy ion collision such as the number of participants \Npart\ and number of binary collisions \Ncoll\ can be determined using the Glauber Monte Carlo simulations \cite{glauberArticle, glauberMisc}.
 This technique considers a nucleus-nucleus collision as a collection of independent binary nucleon-nucleon collisions; the colliding nuclei are modeled as a set of uncorrelated nucleons being positioned within the nucleus based on a the nuclear density function uniform in azimuthal and in polar angles.
-The nuclear density function in this model is a parameterized Fermi distribution given by: 
+The nuclear density function in this model is a Woods-Saxon distribution given by: 
 
 \begin{align}
 \rho(r) = \rho_0 \frac{1 + w (r/R)^2}{1+e^{\frac{r-R}{a}}}
@@ -118,7 +121,7 @@ They are then made to travel on straight trajectories, colliding if $d \leq \sqr
 \includegraphics[width=0.85\textwidth]{figures/theory/glauberMC}
 \caption{A Glauber Monte Carlo event for $Au+Au$ at \sqrtsnn = 200 geV with impact parameter of 6 fm viewed in the (left) transverse plane and (right) along the beam axis.
 Darker circles represent the participating nucleons.
-Taken from \cite{doi:10.1146/annurev.nucl.57.090506.123020}.}
+Taken from Ref.~\cite{doi:10.1146/annurev.nucl.57.090506.123020}.}
 \label{fig:glauberMC}
 \end{center}
 \end{figure}
@@ -167,14 +170,14 @@ An example of this is shown in Figure~\ref{fig:cent_estimate}.
   \begin{minipage}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{figures/theory/NcollNpart}
 \caption{The $\Ncoll-\Npart$ correlation for \pbpb\ collisions at \sqrtsnn\ = 5.02 TeV.
-Taken from \cite{Perepelitsa:2212936}.}
+Taken from Ref.~\cite{Perepelitsa:2212936}.}
 \label{fig:NcollNpart}
   \end{minipage}
  \qquad  \qquad  \qquad
   \begin{minipage}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{figures/theory/cent_estimate}
 \caption{The correlation between the observable \Nch\ and \Npart\ to determine the centrality distribution.
-Taken from \cite{doi:10.1146/annurev.nucl.57.090506.123020}.}
+Taken from Ref.~\cite{doi:10.1146/annurev.nucl.57.090506.123020}.}
 \label{fig:cent_estimate}
   \end{minipage}
   \end{center}

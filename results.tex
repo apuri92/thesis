@@ -1,15 +1,17 @@
 % !TEX root = thesis-ex.tex
 
 The \Dptr\ distributions are studied as a function of \ptjet\ for \pp\ data and \PbPb\ collisions with different centralities.
-The interplay between the hot and dense matter and the parton shower is explored by evaluating the ratios and differences between \Dptr\ distributions in \pbpb\ and \pp\ collisions, as well as some integrated quantities.
-
+The interplay between the hot and dense matter and the parton shower is explored by evaluating the ratios and differences between the \Dptr\ distributions in \pbpb\ and \pp\ collisions.
+Some selected moments of these distributions are also investigated.
 
 
 %%%%%%%    DPtr distributions    %%%%%%%
 \subsection{\Dptr\ distributions}
 \label{sec:dptr}
 The \Dptr\ distributions evaluated in \pp\ and \pbpb\ collisions for $126 < \ptjet < 158$ GeV are shown in Figure~\ref{fig:dptr}.
-The distributions exhibit a difference in shape between \PbPb\ and \pp\ collisions, with the \pbpb\ distributions being broader at low \pt\ (\pt < 4 GeV) and narrower at high \pt\ (\pt > 4 GeV) in \mbox{0--10\%} central collisions.
+These distributions decrease as a function of distance from the jet axis.
+The rate at which they fall off sharply increases for higher \pt\ particles, with most of these being concentrated near the jet axis.
+The distributions exhibit a difference in shape between \PbPb\ and \pp\ collisions, with the \pbpb\ distributions being broader at low \pt\ ($\pt < $4 GeV) and narrower at high \pt\ ($\pt > 4$ GeV) in \mbox{0--10\%} central collisions.
 This modification is centrality dependent and is smaller for peripheral \pbpb\ collisions.
 
 \begin{figure}[h]
@@ -21,13 +23,12 @@ This modification is centrality dependent and is smaller for peripheral \pbpb\ c
 \includegraphics[width=0.36\textwidth]{figures/main/results/DpT_dR_jet7_cent3} &
 \includegraphics[width=0.36\textwidth]{figures/main/results/DpT_dR_jet7_cent4} &
 \includegraphics[width=0.36\textwidth]{figures/main/results/DpT_dR_jet7_cent5} \\
-\end{tabular}
-}
+\end{tabular}}
 \caption{The \Dptr\ distributions in \pp\ (open symbols) and \pbpb\ (closed symbols) as a function of angular distance $r$ for \ptjet\ of 126 to 158~\GeV.
 The colors represent different track \pt\ ranges, and each panel is a different centrality selection.
 The vertical bars on the data points indicate statistical uncertainties while the shaded boxes indicate systematic uncertainties.
 The widths of the boxes are not indicative of the bin size and the points are shifted horizontally for better visibility.
-The distributions for $\pt > 6.3$ GeV are restricted to smaller \rvar\ values as discussed in Section~\ref{sec:analysis}.}
+The distributions for $\pt > 6.3$ GeV are restricted to smaller \rvar\ values as discussed in Section~\ref{sec:cuts_corrections}.}
 \label{fig:dptr}
 \end{figure}
 
@@ -43,11 +44,9 @@ For these particles, the enhancement of yields in \pbpb\ collisions compared to 
 The value of \RDptr\ is approximately constant for \rvar\ in the interval \mbox{0.3--0.6} and decreases for \mbox{$\rvar > 0.6$}.
 For charged particles with $\pt > 4.0$ \GeV, \RDptr\ shows a depletion outside the jet core for $r > 0.05$.
 The magnitude of this depletion increases with increasing \rvar\ up to $r = 0.3$ and is approximately constant thereafter.
-For 30--40\% mid-central collisions, the enhancement of particles with $\pt < 4.0$~\GeV\ is similar to that in the most central collisions, however the depletion of particles with $\pt > 4.0$~\GeV\ is not as strong.
+For 30--40\% mid-central collisions, the enhancement of particles with $\pt < 4.0$~\GeV\ has similar trends to that in the most central collisions, however the depletion of particles with $\pt > 4.0$~\GeV\ is not as strong.
 For 60--80\% peripheral collisions, \RDptr\ has no significant \rvar\ dependence and the values of \RDptr\ are within approximately 50\% of unity.
-
 The observed behavior inside the jet cone, $r < 0.4$, agrees with the measurement of the inclusive jet fragmentation functions~\cite{Aaboud:2017eww, Aaboud:2017bzv, PhysRevC.98.024908}, where yields of fragments with $\pt < 4$ GeV are observed to be enhanced and yields of charged particles with intermediate \pT\ are suppressed in \PbPb\ collisions compared to those in \pp\ collisions.
-%The variation of \RDptr\ with centrality, \ptjet, and charged-particle \pt\ is further discussed.
 Calculations done in Ref.~\cite{Tachibana:2017syd} show that the medium response to the jet compensates the energy that is lost by the jet in \pbpb\ collisions even up to $r = 1.0$ from the jet axis.
 The plateauing and slight decrease seen in Figure~\ref{fig:rdptr} for the \RDptr\ distributions in central \pbpb\ collisions beyond $r = 0.6$ from the jet axis suggests that the medium response to the jet is smaller than predicted for $r > 0.6$.
 
@@ -73,7 +72,6 @@ The widths of the boxes are not indicative of the bin size and the points are sh
 % This observation is in agreement with the previous measurement of jet fragmentation functions \cite{Chatrchyan:2014ava, Sirunyan:2018jqr, Aaboud:2017bzv, } and may indicate the dependence of the response of the hot dense matter to the momentum of a jet passing through it.
 %\FloatBarrier
 
-% !TEX root = trkjet.tex
 
 
 %%%%%%%    Centrality-RDptr distributions    %%%%%%%
@@ -96,11 +94,10 @@ The widths of the boxes are not indicative of the bin size and the points are sh
 \end{figure}
 
 %%%%%%%    trkpt-RDptr distributions    %%%%%%%
-%In Figure~\ref{fig:rdptr}, it was shown that for central and mid-central collisions, there is an enhancement of charged particles with $\pt <$~4.0~\GeV\ and a suppression of charged particles with $\pt >$~4.0~\GeV.
-Figure~\ref{fig:pttrkdep} shows the \pt\ dependence for selections in \rvar\  for 126--158 GeV and 200--251~\GeV\ jets in the following centrality intervals: 0--10\%, 30--40\% and 60--80\%.
+Figure~\ref{fig:pttrkdep} shows the \pt\ dependence of \RDptr\ for selections in \rvar\  for 126--158 GeV and 200--251~\GeV\ jets in the following centrality intervals: 0--10\%, 30--40\%, and 60--80\%.
 Interestingly, there is no significant suppression of the yields in \pbpb\ collisions for $\rvar < 0.05$ at all measured \pt.
 For larger \rvar\ values the yields are enhanced for charged particles with $\pt <$~4~\GeV\ and suppressed for higher \pt\ charged particles in both the 0--10\% and 30--40\% centrality selections and both \ptjet\  ranges presented here.
-The magnitude of the enhancement increases for decreasing \pt\ below 4 GeV while the suppression is enhanced with increasing \pt\ for 4--10 GeV, after which it is approximately constant.
+The magnitude of the enhancement increases for decreasing \pt\ below 4 GeV while the suppression is enhanced with increasing \pt\ for mbox{4--10 GeV}, after which it is approximately constant.
 At fixed \pt\ the magnitude of the deviation from unity is largest for $0.3< \rvar < 0.4$ and $0.5< \rvar < 0.6$.
 In the 60--80\% peripheral collisions, the same trend remains true (but with smaller magnitude modifications) for \mbox{$126 < \ptjet < 158$ GeV}; for the higher \ptjet\ selection the larger uncertainties do not allow a clear conclusion to be drawn for peripheral collisions.
 
@@ -154,12 +151,12 @@ In addition to the ratios of the \Dptr\ distributions, differences between the u
 
 These differences are presented as a function of $r$ for different \pt\ selections in 0--10\% central collisions in Figure~\ref{fig:deltadptr}.
 These distributions show an excess in the charged-particle yield density for \pbpb\ collisions compared to \pp\ collisions for charged particles with $\pt <4.0$ GeV.
-This ranges from 0.5 to 4 particles per unit area per GeV for 1 \GeV\ charged particles in 126--158~\GeV\ jets for 0--10\% central \pbpb\ collisions and increases with increasing \ptjet.
+This ranges from 0.5 to 4 particles per unit area per GeV for \mbox{1--1.6 GeV} charged particles in \mbox{126--158 GeV} jets for 0--10\% central \pbpb\ collisions and increases with increasing \ptjet.
 The largest excess for charged particles with $\pt <$~4.0~\GeV\ is within the jet cone.
 For large \rvar\ values, the difference decreases, but remains positive.
 A depletion for higher \pt\ particles of approximately 0.5 particles per unit area per GeV is seen for 126--158~\GeV\ jets in 0--10\% central \pbpb\ collisions.
 The magnitude of this depletion increases for higher \ptjet.
-There is a minimum in the \DeltaDptr\ distributions of charged particles with \mbox{$ 4.0 < \pt <  25.1$}~\GeV\ at $0.05 < \rvar < 0.10$ that is seen at many \ptjet\ ranges under investigation.
+A minimum in the \DeltaDptr\ distributions for charged particles with \mbox{$ 4.0 < \pt <  25.1$} GeV at $0.05 < \rvar < 0.10$ is observed.
 The magnitudes of the excesses and deficits discussed here are dependent on the selected charged-particle \pt.
 
 \begin{figure}
@@ -198,19 +195,12 @@ Both of these quantities are compared between the \pp\ and \pbpb\ systems to giv
 R_{\Theta(\rvar)} &= \frac{\Theta(\rvar)_{\mathrm{Pb+Pb}}}{\Theta(\rvar)_{\mathrm{pp}}} \\
 R_{P(\rvar)} &= \frac{P(\rvar)_{\mathrm{Pb+Pb}}}{P(\rvar)_{pp}}
 \end{align*}
-These integrated quantities are intended to provide some summary information about the location with respect to the jet axis, magnitude, and \ptjet\ dependence of the low-\pt\ charged-particle excess discussed above.
-The ratio quantities are useful for comparisons to other \pbpb\ measurements; $\Delta_{\Theta(\rvar)}$ is very similar to $\DeltaDptr$, however it is integrated over charged-particle \pt\ in the 1--4~\GeV\ interval \cite{PhysRevC.98.024908}.
+These integrated quantities are intended to provide aggregate information about the angular distance with respect to the jet axis, magnitude, and \ptjet\ dependence of the low-\pt\ charged-particle excess discussed above.
+The ratio quantities are useful for comparisons to other \pbpb\ measurements; $\Delta_{\Theta(\rvar)}$ is comparable to $\DeltaDptr$, however it is integrated over charged-particle \pt\ in the \mbox{1--4 GeV} interval \cite{PhysRevC.98.024908}.
 
-Figure~\ref{fig:deltaPdeltaT} shows the \DeltaTheta\ distributions as a function of \rvar\ in centrality intervals: 0--10\%, 30--40\%, 60--80\%.
+Figure~\ref{fig:deltaPdeltaT} shows the \DeltaTheta\ distributions as a function of \rvar\ for the following centrality intervals: 0--10\%, 30--40\%, and 60--80\%.
 In the most central collisions, a significant \ptjet\ dependence to \DeltaTheta\ is observed; for $\rvar <$~0.4 (particles within the jet cone) \DeltaTheta\ increases with increasing \ptjet.
-The value of \DeltaTheta\ decreases in more peripheral collisions and the \ptjet\ dependence is no longer significant.
-
-%%%
-%Now, the \ptjet\ dependence to the excess in charged-particle density can be seen clearly; 
-%in the most central collisions
-%there is an increase in \DeltaTheta\ with increasing \ptjet, but in the mid-central and peripheral collisions this is no longer
-%observed within the uncertainties.
-%%%%
+The value of \DeltaTheta\ decreases in more peripheral collisions where the \ptjet\ dependence is also no longer significant.
 
 \begin{figure}
 \centerline{
@@ -243,20 +233,16 @@ The widths of the boxes are not indicative of the bin size and the points are sh
 \end{figure}
 
 
-Figure~\ref{fig:RPRT} shows \RTheta\ and \RP\ for the following centrality intervals: 0--10\%, 30--40\% and 60--80\%.
-The \RTheta\ distributions of the most central collisions show a maximum for $\rvar \sim 0.4$ and a flattening or a decrease for larger \rvar.
+Figure~\ref{fig:RPRT} shows the \RTheta\ and \RP\ distributions as a function of \rvar\ for the 0--10\%, 30--40\%, and 60--80\% centrality intervals.
+The \RTheta\ distributions in the most central collisions show a maximum for $\rvar \sim 0.4$ and a flattening or a decrease for larger \rvar.
 However, since \RTheta\ remains at or above unity for the full range of \rvar\ values presented, \RP\ shows no suppression with increasing \rvar\ over the entire measured range.
-In more peripheral collisions the magnitude of the excess is reduced and the trends in \RTheta\ are less clear, however the slow increase of \RP\ is clearly seen for the 30--40\% central collisions.
-The flattening of the \RP\ distributions at large distances demonstrates what while wider jets have a softer fragmentation and contain more particles with less \pt\ in \pbpb\ compared to \pp\ collisions \cite{Chesler:2015nqz, Hulcher:2017cpt}, this effect flattens out for jets with radius larger than 0.6.
+A slow increase in \RP\ is clearly observed in 30--40\% central collisions.
+In more peripheral collisions the magnitude of the excess is reduced and the trends in \RTheta\ are less clear, though \RP\ is still seen to be above unity.
+The flattening of the \RP\ distributions at large distances suggests that while wider jets have a softer fragmentation and contain more particles with less \pt\ in \pbpb\ compared to \pp\ \mbox{collisions \cite{Chesler:2015nqz, Hulcher:2017cpt}}, this effect plateaus for jets with radius larger than 0.6.
 
-
-%%%%
-%These measurements show that the excess of particles with $\pt <$~4.0~\GeV\ observed in~\cite{PhysRevC.98.024908} extends
-%outside the \RFour\ jet cone.
-%The measured dependence of \RDptr\ suggests that the energy lost by jets through the jet quenching process is being transferred to particles with $\pt <$~4.0~\GeV\ at larger radial distances from the jet axis.
-%This is qualitatively consistent with theoretical calculations \mbox{\cite{Blaizot:2014ula}}.
-%Additionally, these observations are in agreement with the previous measurement of jet fragmentation functions \cite{Chatrchyan:2014ava, Sirunyan:2018jqr, Aaboud:2017bzv, PhysRevC.98.024908} and may indicate the dependence of the response of the hot dense matter to the momentum of a jet passing through it.
-%%%%%
+These measurements show that the excess of particles with $\pt <$~4.0~\GeV\ observed in~\cite{PhysRevC.98.024908} extends outside the \RFour\ jet cone.
+The measured dependence of \RDptr\ suggests that the energy lost by jets through the jet quenching process is being transferred to particles with $\pt <$~4.0~\GeV\ at larger radial distances from the jet axis.
+This is qualitatively consistent with theoretical calculations \mbox{\cite{Blaizot:2014ula}}.
+Additionally, these observations are in agreement with the previous measurement of jet fragmentation functions \cite{Chatrchyan:2014ava, Sirunyan:2018jqr, Aaboud:2017bzv, PhysRevC.98.024908} and may indicate the dependence of the response of the hot dense matter to the momentum of a jet passing through it.
 
 \FloatBarrier
-

@@ -1,9 +1,9 @@
 % !TEX root = thesis-ex.tex
 
-As colored objects start to fly apart in a particle collision, the energy required to separate them increases as a natural consequence of color confinement.
+The energy required to dissociate partons increases the further apart they are as a consequence of color confinement.
 If the energy with which they are flying apart is greater than the energy required to separate them, it becomes more favorable to produce a quark-antiquark ($q\bar{q}$) pair.
 This process of $q \bar{q}$ production continues recursively until it is not energetically favorable to do so, with the end result being conical sprays of hadrons called jets.
-This picture is qualitatively supported by Lattice QCD \cite{PhysRevD.71.114513}. 
+This picture is qualitatively supported by Lattice QCD~\cite{PhysRevD.71.114513}. 
 A schematic of this process is shown in Figure~\ref{fig:qqbar_to_jet}.
 Because of their color charge, gluon led jets have a softer fragmentation and result in more particles carrying lesser energy as compared to quark led jets \cite{Abbiendi:1999pi}.
 
@@ -36,7 +36,7 @@ The rapidity $y$ is related to an outgoing particles momentum along the beam axi
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.35\textwidth]{figures/theory/feynman_jet}
-\caption{Jet production from the process $pp \rightarrow hX$, factorizing in terms of the parton distribution functions, scattering cross sections, and jet fragmentation functions \cite{Qin:2015srf}.}
+\caption{Jet production from the process $pp \rightarrow hX$, factorizing in terms of the parton distribution functions, scattering cross sections, and jet fragmentation functions.}
 \label{fig:feynman_jet}
 \end{center}
 \end{figure}
@@ -60,15 +60,15 @@ The PDFs, measured via DIS experiments, characterize the initial state and repre
 \includegraphics[width=0.65\textwidth]{figures/theory/bjorkenX}
 \caption{The next to leading order (NLO) PDFs at (left) $Q^2 = 10 \mathrm{GeV}^2$ and (right) $Q^2 = 10^4 \mathrm{GeV}^2$.
 The band is the associated one-sigma (68\%) confidence level uncertainty.
-Taken from \cite{Martin2009}.}
+Figure from Ref.~\cite{Martin2009}.}
 \label{fig:bjorkenX}
 \end{center}
 \end{figure}
  
 The factorization of the jet production process is crucial because it allows for independently measuring and calculating the different components of the cross sections \cite{Majumder:2010qh}.
-Jet cross sections in \pp\ and $p \bar{p}$ collisions measured by a variety of different experiments are shown in Figure~\ref{fig:jetcs_pp}.
-A comparison of the measured jet cross sections to theory calculations is shown in Figure~\ref{fig:jetcs_pp_theory_comparison}.
+Jet cross sections in \pp\ and $p \bar{p}$ collisions measured by a variety of different experiments, and their comparison to theory calculations are shown in Figure~\ref{fig:jetcs}.
 This in particular enables direct comparisons of jet observables in \pp\ collisions to those in heavy ion collisions and determine their modifications.
+The fragmentation functions in \epm\ collisions in terms of collision energy \sqrts, and the scaled energy of the hadron $x$, are shown in Figure~\ref{fig:jetFrag}.
 
  \begin{figure}
 \centering
@@ -76,7 +76,7 @@ This in particular enables direct comparisons of jet observables in \pp\ collisi
   \centering
   \includegraphics[width=\linewidth]{figures/theory/jetcs_pp}
   \caption{Inclusive differential jet cross sections shown as a function of jet transverse momentum from different experiments.
-  Figure taken from Ref.~\cite{Olive_2016}.}
+  Figure from Ref.~\cite{Olive_2016}.}
   \label{fig:jetcs_pp}
 \end{subfigure}
 \qquad  \qquad  
@@ -85,11 +85,20 @@ This in particular enables direct comparisons of jet observables in \pp\ collisi
   \includegraphics[width=\linewidth]{figures/theory/jetcs_pp_theory_comparison}
   \caption{Ratios of data over theory for some jet cross sections measured by different experiments.
   The next to leading order predictions are derived using the NNPDF3.0 PDF set.
-  Figure taken from Ref.~\cite{Britzger:2017maj}}
+  Figure from Ref.~\cite{Britzger:2017maj}.}
   \label{fig:jetcs_pp_theory_comparison}
 \end{subfigure}
 \caption{(Left) Some inclusive jet cross sections in data (left) and their comparison to theory (right).}
 \label{fig:jetcs}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/theory/jetFrag}
+\caption{Measurements of the \epm\ fragmentation functions for (left) different center-of-mass energies as a function of $x$, and (right) for different ranges of $x$ as a function of \sqrts. The curves on the left are scaled for visibility. 
+Figure from Ref.~\cite{PhysRevD.98.030001}.}
+\label{fig:jetFrag}
+\end{center}
 \end{figure}
 
 
@@ -101,7 +110,7 @@ This in particular enables direct comparisons of jet observables in \pp\ collisi
 %These calculations can be compared to the inclusive charged particle distributions in \sqrts = 13 TeV \pp\ collisions and shown in Figure~\ref{fig:inclhadronCS}.
 %The energy lost by a jet serves as further confirmation that the medium produced in a heavy ion collision is strongly coupled.
 
-In the case of heavy ion collisions, after accounting for geometric scaling effects by the nuclear thickness function as mentioned in Section~\ref{sec:HICollisions},  jet observables can be modified due to two sources: the nuclear PDF being distinct from a proton PDF, and the formation of the quark gluon plasma.
+In the case of heavy ion collisions, after accounting for geometric scaling effects by the nuclear thickness function as mentioned in Section~\ref{sec:qgp_hi},  jet observables can be modified due to two sources: the nuclear PDF being distinct from a proton PDF, and the formation of the quark gluon plasma.
 The former is collectively referred to as cold nuclear matter (CNM) effect, and can be quantified by defining a nuclear modification factor for the PDF:
 
 \begin{align}
@@ -122,21 +131,45 @@ For $Q^2$ of the order of a few $\mathrm{GeV}^2$, this effect dominates for $0.2
 It results in $R_a^A (x, Q^2) > 1$  over the $x > 0.8$ region for $Q^2$ of the order of a few $\mathrm{GeV}^2$ \cite{Saito:1985ct}.
 \end{itemize}
 
-Cold nuclear matter effects are experimentally measured using $p+A$ systems where the size and shape of the plasma, and hence any effects thereof, are a lot smaller.
+CNM effects are experimentally measured using $p+A$ systems where the size and shape of the plasma, and hence any effects thereof, are smaller.
+Measurements of the jet nuclear modification factor in \pPb collisions, \RpPb, indicate that CNM effects are small for jets at all transverse momentum and pseudorapidity measured at the LHC \cite{2015392, Adam2016, Khachatryan2016b}.
+This is shown in Figure~\ref{fig:RpPb}.
+Energy densities in the \pbpb, \pPb, and \pp\ collision systems are shown in Figure~\ref{fig:pAenergyDensity}.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/theory/RpPb}
+\caption{The nuclear modification factor for jets in \pPb\ collisions as measured by CMS in different rapidity intervals.
+Figure from Ref.~\cite{Khachatryan2016b}.}
+\label{fig:pAenergyDensity}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/theory/everything_flows}
+\caption{Snapshots of typical energy density profiles in (left) \pbpb, (middle) \pPb, and (right+far right) \pp\ collisions.
+Figure from Ref.~\cite{Weller:2017tsr}.}
+\label{fig:RpPb}
+\end{center}
+\end{figure}
+
 
 
 The second source of modification is the formation of the hot and dense quark gluon plasma.
 The hot nuclear matter effects further serve as an independent confirmation that the medium formed is strongly interacting.
 Jets are formed early enough that they traverse the Quark Gluon Plasma and as strongly interacting particles, are both affected by, and affect the QGP.
-This interaction typically results in the jet losing energy and forward momentum \cite{2012176, ATLAS:2017wvp}, with the lost energy being deposited in the medium \cite{Khachatryan2016}.
-Jets can also pick up momentum transverse to the parton direction \cite{Chatrchyan:2012nia}.
+This interaction typically results in the jet losing energy and forward momentum \cite{Chatrchyan:2012nia, ATLAS:2017wvp}, with the lost energy being deposited in the medium \cite{Khachatryan2016}.
+Jets can also pick up momentum transverse to the parton direction.
 The hot nuclear matter effects can be considered to be a combination of collisional and radiative energy losses summarized in Figure~\ref{fig:jetEnergyLoss}.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figures/theory/jetEnergyLoss}
 \caption{The typical diagrams for (left) collisional and (right) radiative energy losses for a parton in a hard scattering as it propagates through the QGP.
-Taken from \cite{Qin:2015srf}}
+Figure from Ref.~\cite{Qin:2015srf}.}
 \label{fig:jetEnergyLoss}
 \end{center}
 \end{figure}
@@ -157,7 +190,6 @@ d \sigma_{AB \rightarrow hX}  \approx & \sum_{abjj'd} f_{a/A} (x_a) \otimes f_{b
 & \otimes P_{j\rightarrow j'} \nonumber \\
 & \otimes D_{h \rightarrow j'} (z_j, \mu_f) \nonumber 
 \end{align}
-
 where the additional $P_{j\rightarrow j'}$ describes the interaction of the hard parton with the colored medium.
 This is typically taken as part of the fragmentation modification as:
 
@@ -172,9 +204,9 @@ This is typically taken as part of the fragmentation modification as:
 \subsection{Jet Algorithms}
 \label{sec:jet_algo}
 Jet algorithms map the momenta of final state particles into the momenta of jets, and form a core component of any jet measurement.
-They can be broadly categorized as sequential recombination and cone algorithms \cite{Atkin_2015}. 
+They can be broadly categorized as sequential recombination and cone algorithms~\cite{Atkin_2015}. 
 
-Cone algorithms cluster particles in the $\eta-\phi$ space \footnote{The pseudorapidity $\eta = -\ln [\tan(\theta/2)]$ is related to the rapidity and is a spatial coordinate that describes the angle $\theta$ of a particle with respect to the beam axis. $\phi$ is the azimuthal angle around the beam axis. The The coordinate system of detectors is typically based on the $\eta-\phi$ plane.} assuming that the particles of a jet will be located in a conical region of the detector.
+Cone algorithms cluster particles in the $\eta-\phi$ space\footnote{The pseudorapidity $\eta = -\ln [\tan(\theta/2)]$ is related to the rapidity and is a spatial coordinate that describes the angle $\theta$ of a particle with respect to the beam axis. $\phi$ is the azimuthal angle around the beam axis. The The coordinate system of detectors is typically based on the $\eta-\phi$ plane.} assuming that the particles of a jet will be located in a conical region of the detector.
 Some examples of cone algorithms are: iterative cone - progressive removal (IC-PR) \cite{ARNISON1983214}, iterative cone - split merge (IC-SM) \cite{Blazey:2000qt}, and SISCone \cite{Salam_2007}.
 
 Sequential recombination algorithms on the other hand work by grouping particles in momentum space, with the result that they have fluctuating areas in $\eta-\phi$ space.
@@ -191,7 +223,7 @@ Figure~\ref{fig:collinearSafe} describes the collinear safety problem.
 \includegraphics[width=.75\textwidth]{theory/collinearSafe}
 \caption{An illustration of collinear unsafe behavior.
 The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
-Taken from \cite{Salam:2009jx}.}
+Figure from Ref.~\cite{Salam:2009jx}.}
 \label{fig:collinearSafe}
 \end{figure}
 
@@ -204,7 +236,7 @@ An unsafe algorithm however would find three overlapping cones based on the addi
 \includegraphics[width=.65\textwidth]{theory/infraredSafe}
 \caption{An illustration of infrared unsafe behavior.
 The particle \pt\ is proportional to the height and the horizontal axis indicates rapidity.
-Taken from \cite{Salam_2007}.}
+Figure from Ref.~\cite{Salam_2007}.}
 \label{fig:infraredSafe}
 \end{figure}
 
@@ -246,7 +278,7 @@ The \antikt\ algorithm is the default used in all LHC collaborations.
 \includegraphics[width=.3\textwidth]{theory/jetReco_CA}\hfill
 \includegraphics[width=.3\textwidth]{theory/jetReco_antikt}\hfill
 \caption{Different clustering algorithms applied to the sample parton-level event.
-Figure taken from \cite{Cacciari:2008gp}.}
+Figures from Ref.~\cite{Cacciari:2008gp}.}
 \label{fig:JetClustering}
 \end{figure}
 
@@ -263,7 +295,7 @@ Figure taken from \cite{Cacciari:2008gp}.}
 %\includegraphics[width=0.55\textwidth]{figures/theory/incljetCS}
 %\caption{The inclusive jet cross section as a function of \pt\ and $|y|$ as measured by ATLAS.
 %The data are compared to NLO pQCD calculations.
-%Taken from \cite{Aaboud:2017wsi}}
+%Taken from Ref.~\cite{Aaboud:2017wsi}.}
 %\label{fig:incljetCS}
 %\end{center}
 %\end{figure}
@@ -273,7 +305,7 @@ Figure taken from \cite{Cacciari:2008gp}.}
 %\includegraphics[width=0.55\textwidth]{figures/theory/inclhadronCS}
 %\caption{The charged particle multiplicities as a function of transverse momentum \pt\ in \sqrts = 13 TeV \pp\ collisions as measured by ATLAS.
 %The data are compared to NLO pQCD calculations.
-%Taken from \cite{201667}.
+%Taken from Ref.~\cite{201667}.
 %}
 %\label{fig:inclhadronCS}
 %\end{center}

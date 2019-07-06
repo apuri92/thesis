@@ -5,6 +5,8 @@ A description of the analysis procedure to reconstruct the $\Dptr$ distribution,
 The analysis structure is illustrated by the diagram in Figure~\ref{fig:analysis_flow} where each part of the analyses is described in a separate subsection and can be summarized as follows: 
 
 
+
+
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{figures/main/general/Shape_analyses_flow}
@@ -41,16 +43,15 @@ The isolation cut removes approximately 0.01\% of jets (see Figure \ref{fig:ISO}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth]{figures/main/performance/jet_iso.pdf}
+\includegraphics[width=0.75\textwidth]{figures/main/performance/jet_iso.pdf}
 \caption{The ratios of the jet spectra with no isolation to that with isolation in the kinematic range of interest for \pbpb\ collisions, in all centralities.
-The isolation requirement rejects less that 0.1\% of jets, and has almost no impact on the final measurement.
-}
+The isolation requirement rejects less that 0.1\% of jets, and has almost no impact on the final measurement.}
 \label{fig:ISO}
 \end{figure}  
 
 No correction for the jet reconstruction efficiency is necessary, as the analysis is performed in the jet \pT\ region where the jet reconstruction is fully efficient~\cite{2015392}.
-The jet energy measured in the calorimeter can be affected by the presence of dead cells or cells with a bad response, by noise spikes in the hadronic end-cap, by a noise in EM calorimeter and by out-of-time energy deposits from cosmic rays and beam backgrounds.
-In the \pp\ analysis, the set of recommended cuts of ``LooseBad'' is used to remove bad jets.
+The jet energy measured in the calorimeter can be affected by the presence of dead cells or cells with a bad response, by noise spikes in the hadronic end-cap or the EM calorimeter, and by out-of-time energy deposits from cosmic rays and beam backgrounds.
+In the \pp\ analysis, these bad jets are removed via a set of standard recommended cuts.
 The rate of these jets in the kinematic region of interest (100--316 \GeV) is less than 0.5\%.
 This cleaning procedure is not applied in \PbPb\ collisions because it is incompatible with the heavy ion jet reconstruction procedure, and also because the low luminosity ensures noise bursts are negligible.
 This is standard procedure for all heavy ion jet analyses.
@@ -75,17 +76,15 @@ The default tracking cuts used both in \pp\ and \PbPb\ analysis are:
 \item{ tracks should have a B-layer hit if it is expected and IB-layer hit is not expected.}
 \item{ tracks should have  less than 3 holes in silicon detectors.}
 \item{ tracks should have 0 holes in pixel detector.}
-\item{ impact parameters of track with respect to primary vertex:  $|d_0|<$$< 0.47\times \exp{(-0.15\times\pT)} + 0.19\times \exp{(0.00034\times\pT)}$~mm, $|z_0*\sin\theta|<$1.0~mm.
-Recommended values are  $|d_0| < 1.5$~mm for tracks with $\pt<10$~GeV and $|d_0| < 0.2$~mm for tracks with $\pt>10$~GeV.
+\item{ impact parameters of track with respect to primary vertex:  $|d_0| < 0.47 e^{(-0.15\pT)} + 0.19 e^{(3.4\rm{E-4}\pT)}$~mm, $|z_0*\sin\theta|<$1.0~mm.
+The recommended values are  $|d_0| < 1.5$~mm for tracks with $\pt<10$~GeV and $|d_0| < 0.2$~mm for tracks with $\pt>10$~GeV.
 This was chosen to guarantee a smooth behavior of the $d_{0}$ parameter as a function of track momentum.}
-\item{ An additional cut on the track to jet \pT\ ratio is included.
-All tracks with 
-
-\begin{equation}
-\pTch >  \ptjet + \sqrt{ (3 \times \sigma_{\mathrm{JER}}(\ptjet))^2 + (3 \times \sigma_{\mathrm{TMR}}(\pTch))^2} 
-\end{equation}
+\item{All tracks with $\pTch >  \ptjet + \sqrt{ (3 \times \sigma_{\mathrm{JER}}(\ptjet))^2 + (3 \times \sigma_{\mathrm{TMR}}(\pTch))^2} $
+%\begin{equation}
+%\pTch >  \ptjet + \sqrt{ (3 \times \sigma_{\mathrm{JER}}(\ptjet))^2 + (3 \times \sigma_{\mathrm{TMR}}(\pTch))^2} 
+%\end{equation}
 are rejected from the analysis, where the TMR stands for track momentum resolution.
-The purpose of this cut is to be consistent with previous fragmentation measurements ~\cite{PhysRevC.98.024908}.
+The purpose of this cut is to be consistent with previous fragmentation measurements~\cite{PhysRevC.98.024908}.
 It has minimal impact on this analysis because the analysis is restricted to tracks below 63 GeV and jets above 100 GeV.}
 \end{itemize}
 
@@ -110,7 +109,7 @@ The comparison of the reconstructed \pttrk\ with the generated kinematics for tr
 Tracks are selected to have 4.2~$<\pttrk<$~10~GeV.
 Below each direct data and MC overlay is the corresponding data to MC ratio.
 The quantities compared are: average number of pixel hits as a function of $\etatrk$ (top left), average number of SCT hits as a function of $\etatrk$ (top right), and number of tracks, $N_{\mathrm{trk}}$, normalized $d_0$ (bottom left), and $z_0 \sin\theta$ distributions (bottom right).
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:trkdataMCcomp_pp}
 \end{figure}
 
@@ -121,7 +120,7 @@ Figure taken from Ref.~\cite{Sickles:2235420}.}
 Tracks are selected to have 4.2~$<\pttrk<$~10~GeV.
 Below each direct data and MC overlay is the corresponding data to MC ratio.
 The quantities compared are: average number of pixel hits as a function of $\etatrk$ (top left), average number of SCT hits as a function of $\etatrk$ (top right), track $d_0$ (bottom left), and track $z_0 \sin\theta$ (bottom right).
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:trkdataMCcomp_pbpb}
 \end{figure}
 
@@ -132,7 +131,7 @@ Figure taken from Ref.~\cite{Sickles:2235420}.}
 Tracks are selected to have 60~$<\pttrk<$~200~GeV and to originate from jet with \pt\ in the interval from 251 to 316 GeV.
 Below each direct data and MC overlay is the corresponding data to MC ratio.
 The quantities compared are: average number of pixel hits as a function of $\etatrk$ (top left), average number of SCT hits as a function of $\etatrk$ (top right), track $d_0$ (bottom left), and track $z_0 \sin\theta$ (bottom right).
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:trkdataMCcomp_pbpb_highpt}
 \end{figure}
 
@@ -148,7 +147,7 @@ Figure taken from Ref.~\cite{Sickles:2235420}.}
 Both plots are for \pp\ MC.
 All tracks shown in this plot have passed the 2015 default tracking cuts defined in this section.
 The \pt\ in the legend corresponds to the bin centers in the following track \pt\ bins: 1.3 -- 1.8 GeV, 5.6 -- 7.5 GeV, 13.3 -- 17.7 GeV, 56.1 -- 74.8 GeV, 99.7 -- 132.9 GeV, \mbox{177.2 -- 236.2 GeV}.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:momres_pp}
 \end{figure}
 
@@ -181,7 +180,7 @@ Strange baryons are included: $\Sigma-$ (PDG ID 3112), $\Sigma+$ (PDG ID 3222), 
 \caption{The impact of each cut applied individually in the \pp\ MC to the starting collection of tracks, as a function of
 \etatrk (top) for 1.3~$< \pttrk<$~4.6~GeV (left) and for 23.7~$<\pttrk<$~31.5~GeV and as a function of track \pT\ for two different pseudorapidity intervals (bottom).
 The final combination of all cuts is shown as well.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:ppcutflow_eta}
 \end{figure}
 
@@ -213,7 +212,7 @@ The correction to track \pt\ as a function of track $\eta$ and track $\phi$ is a
 \includegraphics[width=0.55\textwidth]{figures/main/corrections/MuonPerf.pdf}
 \caption{Comparisons of track momentum scale of positive and negative muons reconstructed using muon spectrometer and inner detector.
 The muon traverse momentum evaluated from muon spectrometer (MC) is compared by that evaluated using the inner detector (ID) and the relative scale is normalized by the momentum that uses both detectors.
-Taken from \cite{Bold:2194917}.}
+Figure from Ref.~\cite{Bold:2194917}.}
 \label{fig:ChMomentumScale}
 \end{figure}
 
@@ -322,7 +321,7 @@ No significant dependence of the fake rate on the collision centrality was found
 \end{tabular}
 \caption{Fake rate for five different \ptjet\ selections in 5.02 TeV \pp\ collisions and four pseudorapidity intervals.
 The fake rate is evaluated for default value of \mcprob\ cut of 0.3 used in 2015 analysis.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:fakeratepp}
 \end{figure}  
 
@@ -337,7 +336,7 @@ in \pbpb\ collisions for different centrality selections as indicated on the plo
 The unmatched tracks include both fake tracks and tracks from the underlying event.
 The panels show two \ptjet\ selections: 126-158~GeV (left) and 251-316~GeV (right).
 The low \pT\ part is omitted as it is dominated by the contribution from the UE.
-Figure taken from Ref.~\cite{Sickles:2235420}.}
+Figure from Ref.~\cite{Sickles:2235420}.}
 \label{fig:fakeratepbpb}
 \end{figure}
 \begin{figure}
@@ -360,7 +359,6 @@ The correction for UE, fake and secondary tracks below 10 GeV in \PbPb\ collisio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Underlying event subtraction of tracks}
 \label{sec:cuts_UE}
-The underlying event subtraction performed on the calorimetric jet energy is described in Sec.~\ref{sec:reconstruction}.
 Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions.
 This background strongly depends on the collisions centrality and on the charged particle \pt.
 In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PhysRevC.98.024908}.
@@ -483,7 +481,7 @@ The impact of the correction in 0-10\% \pbpb\ collisions is shown in Figure~\ref
 %\centering
 %\includegraphics[width=0.45\textwidth]{figures/main/UE/eta_correction.pdf}
 %\caption{Ratio of the $\NchUECone$ distributions with and without the correction for $\eta$ dependence in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
-%Figure taken from Ref.~\cite{Sickles:2235420}.}
+%Figure from Ref.~\cite{Sickles:2235420}.}
 %\label{fig:eta_corr}
 %\end{figure}
 
@@ -512,7 +510,7 @@ The size of the correction is at the level of a few percent, and decreases with 
 \label{fig:flow_corr}
 \end{subfigure}
 \caption{Ratio of the $\NchUECone$ distributions with and without the correction for (left) $\eta$ dependence and (right) elliptic flow in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
-Figures taken from Ref.~\cite{Sickles:2235420}.}
+Figures from Ref.~\cite{Sickles:2235420}.}
 \label{fig:cone_corrections}
 \end{figure}
 
@@ -522,7 +520,7 @@ Figures taken from Ref.~\cite{Sickles:2235420}.}
 %\centering
 %\includegraphics[width=0.45 \textwidth]{figures/main/UE/flow_correction.pdf}
 %\caption{Ratio of the $\NchUECone$ distributions with and without the correction for elliptic flow in the most central 0-10\% \pbpb\ collisions, evaluated with a subset of the data (70k events).
-%Figure taken from Ref.~\cite{Sickles:2235420}.}
+%Figure from Ref.~\cite{Sickles:2235420}.}
 %\label{fig:flow_corr}
 %\end{figure}
 

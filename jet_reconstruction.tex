@@ -8,7 +8,7 @@ It is different from the procedure for \pp\ collisions because of the large unde
 	\centering
 	\includegraphics[width=\textwidth]{figures/setup/atlasHIjetReco} %
 	\caption{A schematic of the ATLAS jet reconstruction procedure.
-	Figures taken from \cite{Cacciari:2008gp, atlasRun1EventDisplay, ATLAS-COM-PHYS-2011-1733, Cole:1450219, perfPlots}.}	
+	Inset figures from Refs.~\cite{Cacciari:2008gp, atlasRun1EventDisplay, ATLAS-COM-PHYS-2011-1733, Cole:1450219, perfPlots}.}	
 	\label{fig:atlasHIjetreco}%
 \end{figure}
 
@@ -20,7 +20,7 @@ The \antikt\ algorithm is first run with the distance parameter $R=0.2$, to give
 These seed jets contain at least one tower with $\Et > 3$ GeV, and have the ratio of the maximum tower transverse energy to the average tower transverse energy, $\Et^{Max} / \langle \Et \rangle > 4$.
 Then the underlying event subtraction procedure is performed.
 A first estimate of the average underlying event energy density $\rho_i (\eta)$ is done in 0.1 slices of $\eta$ in each calorimeter layer $i$ after excluding the regions that overlap with the seed jets.
-A modulation is applied to account for the flow from the QGP (discussed in Section~\ref{sec:qgp}) and the underlying event is subtracted to give $E_{Tj}^{\mathrm{sub}}$:
+A modulation is applied to account for the flow from the QGP (discussed in Section~\ref{sec:qgp_hi}) and the underlying event is subtracted to give $E_{Tj}^{\mathrm{sub}}$:
 
 \begin{align}
 E_{Tj}^{\mathrm{sub}} = E_{Tj} - A_j \rho_i (\eta_j) \Big(1+2 \sum_{n=2}^{4} {v_{n}}_i \big(\cos[2(\phi_j-\Psi_n)] \big) \Big)
@@ -49,24 +49,46 @@ The average subtracted energy normalized by the area of the jet reconstructed je
 It can be seen that in the barrel region for $|\eta| < 0.1$, $R=0.4$ jets have a background that is approximately $300/(\pi\times 0.4^2) \approx 150$ GeV.
 Figure~\ref{fig:jet_event_display} shows an ATLAS event display for a heavy ion collision with a reconstructed jet.
 
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{figures/setup/subtr_energy} %
-	\caption{
-	The subtracted transverse energy $\Delta \Et$, normalized by the area of the jet $A_{\rm{jet}}$ as a function of the sum of the energy deposited in the forward calorimeter $\sum \Et_{\rm FCal}$ in \pbpb\ collisions at $\sqrtsnn = 5.02$ TeV.
-	The jets were reconstructed using the \antikt\ algorithm with $R = 0.4$.
-	Four panels show four selections on the pseudorapidity of the jet.
-	Figures taken from \cite{perfPlots}.}	
+
+\begin{figure}
+\centering
+  \begin{minipage}{0.45\textwidth}
+	\includegraphics[width=1.\textwidth]{figures/setup/subtr_energy} %
+	\caption{The subtracted transverse energy $\Delta \Et$, normalized by the jet area $A_{\rm{jet}}$ as a function of \ETfcal\ in \pbpb\ collisions at $\sqrtsnn = 5.02$ TeV.
+	Figure from Ref.~\cite{perfPlots}.}	
 	\label{fig:subtr_energy}
-\end{figure}
-
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{figures/setup/jet_event_display} %
+  \end{minipage}
+ \qquad 
+  \begin{minipage}{0.43\textwidth}
+	\includegraphics[width=1.\textwidth]{figures/setup/jet_event_display} %
 	\caption{
 	An asymmetric dijet event in \pbpb\ collisions at \sqrtsnn = 2.76 TeV as measured by the ATLAS detector. 
-	Figures taken from \cite{atlasRun1EventDisplay}.}	
+	Figure from Ref.~\cite{atlasRun1EventDisplay}.}	
 	\label{fig:jet_event_display}
+  \end{minipage}
 \end{figure}
+
+
+
+%
+%\begin{figure}[htbp!]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{figures/setup/subtr_energy} %
+%	\caption{
+%	The subtracted transverse energy $\Delta \Et$, normalized by the area of the jet $A_{\rm{jet}}$ as a function of the sum of the energy deposited in the forward calorimeter $\sum \Et_{\rm FCal}$ in \pbpb\ collisions at $\sqrtsnn = 5.02$ TeV.
+%	The jets were reconstructed using the \antikt\ algorithm with $R = 0.4$.
+%	Four panels show four selections on the pseudorapidity of the jet.
+%	Figures taken from Ref.~\cite{perfPlots}.}	
+%	\label{fig:subtr_energy}
+%\end{figure}
+%
+%
+%\begin{figure}[htbp!]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{figures/setup/jet_event_display} %
+%	\caption{
+%	An asymmetric dijet event in \pbpb\ collisions at \sqrtsnn = 2.76 TeV as measured by the ATLAS detector. 
+%	Figures taken from Ref.~\cite{atlasRun1EventDisplay}.}	
+%	\label{fig:jet_event_display}
+%\end{figure}
 

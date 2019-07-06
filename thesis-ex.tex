@@ -7,11 +7,17 @@
 %%
 %% uiucthesis2009.dtx  (with options: `example')
 %% 
-\newcommand*{\ATLASLATEXPATH}{latex/}
-%\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish, coverpage, PAPER]{\ATLASLATEXPATH atlasdoc}
-\RequirePackage{lineno}
-\linenumbers
-\documentclass[fullpage, UKenglish]{uiucthesis2009}
+
+%\newcommand*{\ATLASLATEXPATH}{latex/}
+
+
+\documentclass[fullpage, hidelinks]{uiucthesis2009}
+
+%\RequirePackage{lineno}
+%\linenumbers
+
+\usepackage{graphicx}
+\usepackage{placeins}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -20,35 +26,95 @@
 \usepackage{slashed}
 \usepackage{placeins}
 \usepackage{tabularx}
-\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{subcaption}
 
-\usepackage[backend=bibtex]{\ATLASLATEXPATH atlaspackage}
-\usepackage{\ATLASLATEXPATH atlasbiblatex}
+
+%\usepackage[backend=bibtex]{\ATLASLATEXPATH atlaspackage}
+%\usepackage[showdoi=false,backref=true,block=ragged]{\ATLASLATEXPATH atlasbiblatex}
+
+%\usepackage[
+%    backend=bibtex]{biblatex}
+
+\usepackage[
+    backend=bibtex,
+    url=false,
+    doi=false,
+    maxbibnames=1,
+    hyperref=true,
+    backref=true,
+    style=numeric-comp,
+    sorting=none,
+    giveninits=true,
+]{biblatex}
+
+\renewbibmacro{in:}{}
+\DeclareFieldFormat{string+doi}{%
+\iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+\renewbibmacro*{journal+issuetitle}{%
+%\usebibmacro{string+doi}{%
+\printtext[string+doi]{%
+\usebibmacro{journal}%
+\setunit*{\addspace}%
+\iffieldundef{series}
+{}
+{\newunit
+\printfield{series}%
+\setunit{\addspace}}%
+\usebibmacro{volume+number+eid}%
+\setunit{\addspace}%
+\usebibmacro{issue+date}%
+\setunit{\addcolon\space}%
+\usebibmacro{issue}%
+\setunit{\bibpagespunct}%
+\printfield{pages}%
+\newunit
+}}
+    \renewbibmacro*{note+pages}{%
+      \printfield{note}%
+      \newunit}
+
+\DefineBibliographyStrings{english}{%
+page = {},
+pages = {}
+}
+
+
+\DeclareFieldFormat[article]{title}{\textit{#1}\isdot}
+\DeclareFieldFormat[booklet]{title}{\textit{#1}\isdot}
+\DeclareFieldFormat[report]{title}{\textit{#1}\isdot}
+\DeclareFieldFormat[misc]{title}{\textit{#1}\isdot}
+\DeclareFieldFormat[article]{journaltitle}{#1\isdot}
+\DeclareFieldFormat[article]{journalsubtitle}{#1\isdot}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}\isdot}
+\DeclareFieldFormat{pages}{\mkfirstpage[{\mkpageprefix[bookpagination]}]{#1}}
+
+% Suppress issue number
+\AtEveryBibitem{
+\ifentrytype{article}{\clearfield{number}}{}
+\ifentrytype{article}{\clearfield{issn}}{}}
 
 
 \usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{subcaption}
-%\usepackage[applemac]{inputenc}
-%\captionsetup{compatibility=false}
-\input{macros}
+\hypersetup{
+     colorlinks = true,
+     linkcolor = blue,
+     anchorcolor = blue,
+     citecolor = blue,
+     filecolor = blue,
+     urlcolor = blue,}
 
+
+\input{macros}
 \graphicspath{{logos/}{figures/}}
 \addbibresource{thesis-ex.bib}
-%\addbibresource{bibtex/bib/ATLAS.bib}
-%\addbibresource{bibtex/bib/CMS.bib}
-%\addbibresource{bibtex/bib/ConfNotes.bib}
-%\addbibresource{bibtex/bib/PubNotes.bib}
+\setcounter{tocdepth}{0}
 
 
-\includeonly{   % Of course this list allows many more file
-%  intro,       % should also work with files in different paths
-%  chapter1,
-   thesisintro.tex,
-%  chapter3
-}
+
 
 \begin{document}
+
 
 \title{Measurement of angular and momentum distributions of charged particles within and around jets in P\MakeLowercase{b}+P\MakeLowercase{b} and \MakeLowercase{$pp$} collisions at $\sqrt{s_{\mathrm{NN}}}=$~5.02~T\MakeLowercase{e}V with ATLAS at the LHC}
 \author{Akshat Puri}
@@ -57,7 +123,7 @@
 \phdthesis
 \advisor{Anne Marie Sickles}
 \degreeyear{2019}
-\committee{Professor Matthias Grosse Perdekamp, Chair\\Professor Anne Marie Sickles, Advisor\\ Professor Lance Cooper \\ Professor Bryce Gadaway}
+\committee{Professor Matthias Grosse Perdekamp, Chair\\Assistant Professor Anne Marie Sickles, Director of Research\\Professor Lance Cooper\\Assistant Professor Bryce Gadway}
 \maketitle
 
 \frontmatter
@@ -129,102 +195,37 @@ For my Mother, Father, and Brother
 \mainmatter
 %-------------------------------------------------------------------------------
 
-%%%%%%\chapter{Introduction}
-%%%%%%\label{sec:intro}
-%%%%%%\input{thesisintro.tex}
-
-\chapter{Introduction}
+\chapter{INTRODUCTION}
 \label{sec:theory}
 \input{theory.tex}
 \clearpage
 
-\chapter{Major Jet Measurements}
+\chapter{MEASUREMENTS IN HEAVY ION COLLISIONS}
 \label{sec:jetMeasurements}
 \input{jetMeasurements.tex}
 \clearpage
 
-\chapter{Jet Energy Loss Models}
+\chapter{JET ENERGY LOSS MODELS}
 \label{sec:jetModels}
 \input{jetModels.tex}
 \clearpage
 
-\chapter{Experimental Setup}
+\chapter{EXPERIMENTAL SETUP}
 \label{sec:setup}
 \input{setup.tex}
 \clearpage
 
-\chapter{Measurement of Angular Correlations Between Tracks And Jets}
+\chapter{ANGULAR CORRELATIONS BETWEEN TRACKS AND JETS}
 \label{sec:mainanalysis}
 \input{mainAnalysis.tex}
 \clearpage
 
-\chapter{Summary}
+\chapter{SUMMARY}
 \label{sec:summary}
 \input{summary.tex}
 \clearpage
 
-%\appendix
-%\chapter{HI JER Uncertainty}
-%\label{sec:appendix_hijerDerivation}
-%\input{appendixHIJERDerivation.tex}
-%\clearpage
 
-%\chapter{Data Sets}
-%\label{sec:appendixdata}
-%\input{appendixZ.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Bin-by-bin Unfolding Procedure}
-%\label{sec:appendixbbb}
-%\input{appendixA.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{\Dphi\ Correction Factors From \pp\ MC Samples}
-%\label{sec:appendixcfactorpp}
-%\input{appendixB.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{\Dphi\ Correction Factors From \pPb\ MC Samples}
-%\label{sec:appendixcfactorpPb}
-%\input{appendixY.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Effect of Isolation Cuts}
-%\label{sec:appendixisolation}
-%\input{appendixD.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Effect of New JES Systematic Uncertainties}
-%\label{sec:appendixjes}
-%\input{appendixE.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%\section{Appendix: Comparison of Results Before and After HEC/JES Fix}
-%%\label{sec:appendixhec}
-%%\input{appendixF.tex}
-%%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Fitting Systematic Uncertainties}
-%\label{sec:appendixfitting}
-%\input{appendixC.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Unfolded \conetwo\ Distributions from Data with Systematic Uncertainties}
-%\label{sec:appendixfinalplots}
-%\input{appendixX.tex}
-%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%\chapter{Comparison of Results From \pp\ Data and MC Samples}
-%%\label{sec:appendixppdatavsmc}
-%%\input{appendixQ.tex}
-%%\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%\section{Appendix: $r_{\mathrm{trk}}$ in \pPb}
-%%\label{sec:appendixG}
-%%\input{appendixG.tex}
-\clearpage%---------------
-
-\printbibliography
-%[heading=bibintoc,title={References}]
+\printbibliography[heading=bibintoc,title={REFERENCES}]
 
 \end{document}
