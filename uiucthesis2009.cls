@@ -110,7 +110,7 @@
     \ClassError{uiucthesis2009}{A committee must be specified for e-deposit dissertations.}%
     {Use \protect\committee\space with members separated by \protect\\'s.}}
 \fi
-\def\copyrightnotice{\copyright~\@degreeyear~by \@author. All rights reserved.}
+\def\copyrightnotice{\copyright~\@degreeyear~\@author}
 \newif\if@thesiscrpage \@thesiscrpagetrue
 \let\nocopyrightpage\@thesiscrpagefalse
 \if@thesisdraft\nocopyrightpage\fi
