@@ -37,11 +37,6 @@
 \titlespacing*{\chapter}
    {0pt}{50pt}{40pt}
 
-%\usepackage[backend=bibtex]{\ATLASLATEXPATH atlaspackage}
-%\usepackage[showdoi=false,backref=true,block=ragged]{\ATLASLATEXPATH atlasbiblatex}
-
-%\usepackage[
-%    backend=bibtex]{biblatex}
 
 \usepackage[
     backend=bibtex,
@@ -55,8 +50,11 @@
     giveninits=true,
 ]{biblatex}
 
+
+%remove "in" in references
 \renewbibmacro{in:}{}
 
+%make journal name the hyperlink
 \DeclareFieldFormat{string+doi}{%
 \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
 \renewbibmacro*{journal+issuetitle}{%
@@ -118,7 +116,9 @@ pages = {}
 \input{macros}
 \graphicspath{{logos/}{figures/}}
 \addbibresource{thesis-ex.bib}
-\setcounter{tocdepth}{0}
+
+%TOC depth
+%\setcounter{tocdepth}{0}
 
 
 
